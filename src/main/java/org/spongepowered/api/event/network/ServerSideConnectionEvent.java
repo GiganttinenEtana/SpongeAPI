@@ -39,9 +39,9 @@ import org.spongepowered.api.network.channel.raw.RawDataChannel;
 import org.spongepowered.api.profile.GameProfile;
 import org.spongepowered.api.service.ban.BanService;
 import org.spongepowered.api.service.whitelist.WhitelistService;
-import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.api.world.server.ServerLocation;
 import org.spongepowered.api.world.server.ServerWorld;
+import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.math.vector.Vector3d;
 
 import java.net.InetAddress;

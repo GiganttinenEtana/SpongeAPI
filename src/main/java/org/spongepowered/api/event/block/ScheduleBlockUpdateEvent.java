@@ -37,7 +37,7 @@ import java.util.function.Predicate;
  * Fired when a {@link ScheduledUpdate scheduled block update}
  * is being proposed to the engine.
  */
-public interface ScheduleBlockUpdateEvent<T extends Object> extends GenericEvent<T>, Cancellable {
+public interface ScheduleBlockUpdateEvent<T> extends GenericEvent<T>, Cancellable {
 
     /**
      * Gets a list of the {@link ScheduleUpdateTicket}s for this event.

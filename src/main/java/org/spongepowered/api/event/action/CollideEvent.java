@@ -28,8 +28,8 @@ import org.spongepowered.api.block.BlockSnapshot;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.Event;
-import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.api.world.server.ServerLocation;
+import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 
 /**
  * Fired when an {@link Entity} or {@link BlockSnapshot} collide with each other.

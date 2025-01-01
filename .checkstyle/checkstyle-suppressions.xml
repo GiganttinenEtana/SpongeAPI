@@ -17,4 +17,5 @@
     <suppress checks="MethodTypeParameterName"/>
     <suppress checks="CommentsIndentation"/>
     <suppress checks="InterfaceTypeParameterName"/>
+    <suppress files="[\\/]generated[\\/]" checks="[a-zA-Z0-9]*"/>
 </suppressions>

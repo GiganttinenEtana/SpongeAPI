@@ -75,6 +75,11 @@ public interface InteractItemEvent extends InteractEvent {
 
         interface Post extends CompositeEvent<Secondary>, Secondary {
 
+            @Override
+            default ItemStackSnapshot itemStack() {
+                return this.baseEvent().itemStack();
+            }
+
         }
 
     }

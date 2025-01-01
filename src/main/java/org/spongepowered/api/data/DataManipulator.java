@@ -30,8 +30,8 @@ import org.spongepowered.api.data.value.MergeFunction;
 import org.spongepowered.api.data.value.Value;
 import org.spongepowered.api.data.value.ValueContainer;
 import org.spongepowered.api.entity.Entity;
-import org.spongepowered.eventgen.annotations.TransformWith;
 import org.spongepowered.api.world.World;
+import org.spongepowered.eventgen.annotations.TransformWith;
 
 import java.util.Arrays;
 import java.util.Objects;

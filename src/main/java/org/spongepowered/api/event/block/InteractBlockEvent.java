@@ -35,9 +35,9 @@ import org.spongepowered.api.event.impl.AbstractCompositeEvent;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.util.Direction;
 import org.spongepowered.api.util.Tristate;
+import org.spongepowered.api.world.server.ServerLocation;
 import org.spongepowered.eventgen.annotations.GenerateFactoryMethod;
 import org.spongepowered.eventgen.annotations.ImplementedBy;
-import org.spongepowered.api.world.server.ServerLocation;
 import org.spongepowered.math.vector.Vector3d;
 
 /**
@@ -193,6 +193,40 @@ public interface InteractBlockEvent extends InteractEvent {
         @ImplementedBy(AbstractCompositeEvent.class)
         interface Post extends Secondary, CompositeEvent<Secondary> {
 
+            @Override
+            default Tristate originalUseItemResult() {
+                return this.baseEvent().originalUseItemResult();
+            }
+
+            @Override
+            default Tristate originalUseBlockResult() {
+                return this.baseEvent().originalUseBlockResult();
+            }
+
+            @Override
+            default Tristate useItemResult() {
+                return this.baseEvent().useItemResult();
+            }
+
+            @Override
+            default Tristate useBlockResult() {
+                return this.baseEvent().useBlockResult();
+            }
+
+            @Override
+            default Vector3d interactionPoint() {
+                return this.baseEvent().interactionPoint();
+            }
+
+            @Override
+            default BlockSnapshot block() {
+                return this.baseEvent().block();
+            }
+
+            @Override
+            default Direction targetSide() {
+                return this.baseEvent().targetSide();
+            }
         }
 
     }

@@ -30,11 +30,11 @@ import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.Event;
 import org.spongepowered.api.event.Order;
 import org.spongepowered.api.event.impl.entity.AbstractAffectEntityEvent;
+import org.spongepowered.api.world.explosion.Explosion;
+import org.spongepowered.api.world.server.ServerLocation;
 import org.spongepowered.eventgen.annotations.ImplementedBy;
 import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.eventgen.annotations.PropertySettings;
-import org.spongepowered.api.world.explosion.Explosion;
-import org.spongepowered.api.world.server.ServerLocation;
 
 import java.util.List;
 import java.util.function.Predicate;

@@ -1,7 +1,6 @@
 import net.ltgt.gradle.errorprone.errorprone
 import org.jetbrains.gradle.ext.delegateActions
 import org.jetbrains.gradle.ext.settings
-import org.jetbrains.gradle.ext.taskTriggers
 
 
 plugins {
@@ -44,7 +43,9 @@ tasks {
 
 sourceSets {
     main {
-        java.srcDirs(generatedEventSourcesDir)
+        java {
+            srcDirs(generatedEventSourcesDir)
+        }
     }
 }
 
@@ -145,6 +146,13 @@ dependencies {
     testImplementation(libs.mockito)
 }
 
+spotless {
+    java {
+        target("src/main/java/**/*.java")
+        targetExclude("src/main/generated/**/*.java")
+    }
+}
+
 tasks {
 
     compileJava {
@@ -169,6 +177,15 @@ tasks {
             }
             indraGit.applyVcsInformationToManifest(this)
         }
+    }
+    checkstyleMain {
+        dependsOn(compileJava)
+    }
+    spotlessJava {
+        dependsOn(compileJava)
+    }
+    sourcesJar {
+        dependsOn(compileJava)
     }
 
     withType(JavaCompile::class).configureEach {
