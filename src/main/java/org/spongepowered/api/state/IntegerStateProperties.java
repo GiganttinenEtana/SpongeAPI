@@ -141,6 +141,10 @@ public final class IntegerStateProperties {
         return IntegerStateProperty.of("ROTATION_16");
     }
 
+    public static IntegerStateProperty property_SEGMENT_AMOUNT() {
+        return IntegerStateProperty.of("SEGMENT_AMOUNT");
+    }
+
     public static IntegerStateProperty property_STABILITY_DISTANCE() {
         return IntegerStateProperty.of("STABILITY_DISTANCE");
     }

@@ -1006,6 +1006,8 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> LAVA_CAULDRON = BlockTypes.key(ResourceKey.minecraft("lava_cauldron"));
 
+    public static final DefaultedRegistryReference<BlockType> LEAF_LITTER = BlockTypes.key(ResourceKey.minecraft("leaf_litter"));
+
     public static final DefaultedRegistryReference<BlockType> LECTERN = BlockTypes.key(ResourceKey.minecraft("lectern"));
 
     public static final DefaultedRegistryReference<BlockType> LEVER = BlockTypes.key(ResourceKey.minecraft("lever"));
@@ -2191,6 +2193,8 @@ public final class BlockTypes {
     public static final DefaultedRegistryReference<BlockType> WHITE_WALL_BANNER = BlockTypes.key(ResourceKey.minecraft("white_wall_banner"));
 
     public static final DefaultedRegistryReference<BlockType> WHITE_WOOL = BlockTypes.key(ResourceKey.minecraft("white_wool"));
+
+    public static final DefaultedRegistryReference<BlockType> WILDFLOWERS = BlockTypes.key(ResourceKey.minecraft("wildflowers"));
 
     public static final DefaultedRegistryReference<BlockType> WITHER_ROSE = BlockTypes.key(ResourceKey.minecraft("wither_rose"));
 

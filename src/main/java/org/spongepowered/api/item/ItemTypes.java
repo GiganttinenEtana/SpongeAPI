@@ -1328,6 +1328,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> LEAD = ItemTypes.key(ResourceKey.minecraft("lead"));
 
+    public static final DefaultedRegistryReference<ItemType> LEAF_LITTER = ItemTypes.key(ResourceKey.minecraft("leaf_litter"));
+
     public static final DefaultedRegistryReference<ItemType> LEATHER = ItemTypes.key(ResourceKey.minecraft("leather"));
 
     public static final DefaultedRegistryReference<ItemType> LEATHER_BOOTS = ItemTypes.key(ResourceKey.minecraft("leather_boots"));
@@ -2737,6 +2739,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> WHITE_TULIP = ItemTypes.key(ResourceKey.minecraft("white_tulip"));
 
     public static final DefaultedRegistryReference<ItemType> WHITE_WOOL = ItemTypes.key(ResourceKey.minecraft("white_wool"));
+
+    public static final DefaultedRegistryReference<ItemType> WILDFLOWERS = ItemTypes.key(ResourceKey.minecraft("wildflowers"));
 
     public static final DefaultedRegistryReference<ItemType> WILD_ARMOR_TRIM_SMITHING_TEMPLATE = ItemTypes.key(ResourceKey.minecraft("wild_armor_trim_smithing_template"));
 

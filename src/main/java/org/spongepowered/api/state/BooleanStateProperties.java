@@ -33,10 +33,6 @@ public final class BooleanStateProperties {
     private BooleanStateProperties() {
     }
 
-    public static BooleanStateProperty property_ACTIVE() {
-        return BooleanStateProperty.of("ACTIVE");
-    }
-
     public static BooleanStateProperty property_ATTACHED() {
         return BooleanStateProperty.of("ATTACHED");
     }

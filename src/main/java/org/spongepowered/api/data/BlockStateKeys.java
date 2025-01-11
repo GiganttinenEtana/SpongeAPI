@@ -30,6 +30,7 @@ import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BellAttachmentType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.InstrumentType;
@@ -55,8 +56,6 @@ import org.spongepowered.api.util.Direction;
  */
 @SuppressWarnings("unused")
 public final class BlockStateKeys {
-
-    public static final Key<Value<Boolean>> ACTIVE = BlockStateKeys.key(ResourceKey.minecraft("property/active"), Boolean.class);
 
     public static final Key<Value<Integer>> AGE_1 = BlockStateKeys.key(ResourceKey.minecraft("property/age"), Integer.class);
 
@@ -117,6 +116,8 @@ public final class BlockStateKeys {
     public static final Key<Value<Boolean>> CRACKED = BlockStateKeys.key(ResourceKey.minecraft("property/cracked"), Boolean.class);
 
     public static final Key<Value<Boolean>> CRAFTING = BlockStateKeys.key(ResourceKey.minecraft("property/crafting"), Boolean.class);
+
+    public static final Key<Value<CreakingHeartState>> CREAKING_HEART_STATE = BlockStateKeys.key(ResourceKey.minecraft("property/creaking_heart_state"), CreakingHeartState.class);
 
     public static final Key<Value<Integer>> DELAY = BlockStateKeys.key(ResourceKey.minecraft("property/delay"), Integer.class);
 
@@ -241,6 +242,8 @@ public final class BlockStateKeys {
     public static final Key<Value<Integer>> ROTATION_16 = BlockStateKeys.key(ResourceKey.minecraft("property/rotation"), Integer.class);
 
     public static final Key<Value<SculkSensorState>> SCULK_SENSOR_PHASE = BlockStateKeys.key(ResourceKey.minecraft("property/sculk_sensor_phase"), SculkSensorState.class);
+
+    public static final Key<Value<Integer>> SEGMENT_AMOUNT = BlockStateKeys.key(ResourceKey.minecraft("property/segment_amount"), Integer.class);
 
     public static final Key<Value<Boolean>> SHORT = BlockStateKeys.key(ResourceKey.minecraft("property/short"), Boolean.class);
 

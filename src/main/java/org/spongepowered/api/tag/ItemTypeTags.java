@@ -63,6 +63,8 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> BOATS = ItemTypeTags.key(ResourceKey.minecraft("boats"));
 
+    public static final Tag<ItemType> BOOK_CLONING_TARGET = ItemTypeTags.key(ResourceKey.minecraft("book_cloning_target"));
+
     public static final Tag<ItemType> BOOKSHELF_BOOKS = ItemTypeTags.key(ResourceKey.minecraft("bookshelf_books"));
 
     public static final Tag<ItemType> BREAKS_DECORATED_POTS = ItemTypeTags.key(ResourceKey.minecraft("breaks_decorated_pots"));

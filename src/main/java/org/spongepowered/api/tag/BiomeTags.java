@@ -157,11 +157,15 @@ public final class BiomeTags {
 
     public static final Tag<Biome> SNOW_GOLEM_MELTS = BiomeTags.key(ResourceKey.minecraft("snow_golem_melts"));
 
+    public static final Tag<Biome> SPAWNS_COLD_VARIANT_FARM_ANIMALS = BiomeTags.key(ResourceKey.minecraft("spawns_cold_variant_farm_animals"));
+
     public static final Tag<Biome> SPAWNS_COLD_VARIANT_FROGS = BiomeTags.key(ResourceKey.minecraft("spawns_cold_variant_frogs"));
 
     public static final Tag<Biome> SPAWNS_GOLD_RABBITS = BiomeTags.key(ResourceKey.minecraft("spawns_gold_rabbits"));
 
     public static final Tag<Biome> SPAWNS_SNOW_FOXES = BiomeTags.key(ResourceKey.minecraft("spawns_snow_foxes"));
+
+    public static final Tag<Biome> SPAWNS_WARM_VARIANT_FARM_ANIMALS = BiomeTags.key(ResourceKey.minecraft("spawns_warm_variant_farm_animals"));
 
     public static final Tag<Biome> SPAWNS_WARM_VARIANT_FROGS = BiomeTags.key(ResourceKey.minecraft("spawns_warm_variant_frogs"));
 

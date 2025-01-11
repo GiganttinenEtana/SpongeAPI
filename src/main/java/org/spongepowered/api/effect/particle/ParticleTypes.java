@@ -236,6 +236,8 @@ public final class ParticleTypes {
 
     public static final DefaultedRegistryReference<ParticleType> SWEEP_ATTACK = ParticleTypes.key(ResourceKey.minecraft("sweep_attack"));
 
+    public static final DefaultedRegistryReference<ParticleType> TINTED_LEAVES = ParticleTypes.key(ResourceKey.minecraft("tinted_leaves"));
+
     public static final DefaultedRegistryReference<ParticleType> TOTEM_OF_UNDYING = ParticleTypes.key(ResourceKey.minecraft("totem_of_undying"));
 
     public static final DefaultedRegistryReference<ParticleType> TRAIL = ParticleTypes.key(ResourceKey.minecraft("trail"));

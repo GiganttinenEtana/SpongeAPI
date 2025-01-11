@@ -54,6 +54,7 @@ import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.DyeColor;
@@ -331,6 +332,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<CommandTreeNodeType<? extends @NonNull Object>> COMMAND_TREE_NODE_TYPE = RegistryTypes.spongeKeyInGame("command_tree_node_type");
 
     public static final DefaultedRegistryType<ComparatorMode> COMPARATOR_MODE = RegistryTypes.spongeKeyInGame("comparator_mode");
+
+    public static final DefaultedRegistryType<CreakingHeartState> CREAKING_HEART_STATES = RegistryTypes.spongeKeyInGame("creaking_heart_state");
 
     public static final DefaultedRegistryType<Criterion> CRITERION = RegistryTypes.spongeKeyInGame("criterion");
 

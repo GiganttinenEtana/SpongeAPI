@@ -301,6 +301,8 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> REPLACEABLE = BlockTypeTags.key(ResourceKey.minecraft("replaceable"));
 
+    public static final Tag<BlockType> REPLACEABLE_BY_MUSHROOMS = BlockTypeTags.key(ResourceKey.minecraft("replaceable_by_mushrooms"));
+
     public static final Tag<BlockType> REPLACEABLE_BY_TREES = BlockTypeTags.key(ResourceKey.minecraft("replaceable_by_trees"));
 
     public static final Tag<BlockType> SAND = BlockTypeTags.key(ResourceKey.minecraft("sand"));
@@ -356,6 +358,8 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> STRIDER_WARM_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("strider_warm_blocks"));
 
     public static final Tag<BlockType> SWORD_EFFICIENT = BlockTypeTags.key(ResourceKey.minecraft("sword_efficient"));
+
+    public static final Tag<BlockType> SWORD_INSTANTLY_MINES = BlockTypeTags.key(ResourceKey.minecraft("sword_instantly_mines"));
 
     public static final Tag<BlockType> TERRACOTTA = BlockTypeTags.key(ResourceKey.minecraft("terracotta"));
 

@@ -750,9 +750,19 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_HONEY_BLOCK_STEP = SoundTypes.key(ResourceKey.minecraft("block.honey_block.step"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_BREAK = SoundTypes.key(ResourceKey.minecraft("block.iron.break"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_DOOR_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.iron_door.close"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_DOOR_OPEN = SoundTypes.key(ResourceKey.minecraft("block.iron_door.open"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_FALL = SoundTypes.key(ResourceKey.minecraft("block.iron.fall"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_HIT = SoundTypes.key(ResourceKey.minecraft("block.iron.hit"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_PLACE = SoundTypes.key(ResourceKey.minecraft("block.iron.place"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_STEP = SoundTypes.key(ResourceKey.minecraft("block.iron.step"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_IRON_TRAPDOOR_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.iron_trapdoor.close"));
 
@@ -787,6 +797,16 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> BLOCK_LAVA_EXTINGUISH = SoundTypes.key(ResourceKey.minecraft("block.lava.extinguish"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_LAVA_POP = SoundTypes.key(ResourceKey.minecraft("block.lava.pop"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_LEAF_LITTER_BREAK = SoundTypes.key(ResourceKey.minecraft("block.leaf_litter.break"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_LEAF_LITTER_FALL = SoundTypes.key(ResourceKey.minecraft("block.leaf_litter.fall"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_LEAF_LITTER_HIT = SoundTypes.key(ResourceKey.minecraft("block.leaf_litter.hit"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_LEAF_LITTER_PLACE = SoundTypes.key(ResourceKey.minecraft("block.leaf_litter.place"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_LEAF_LITTER_STEP = SoundTypes.key(ResourceKey.minecraft("block.leaf_litter.step"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_LEVER_CLICK = SoundTypes.key(ResourceKey.minecraft("block.lever.click"));
 
