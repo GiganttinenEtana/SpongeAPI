@@ -1,13 +1,7 @@
 import net.ltgt.gradle.errorprone.errorprone
 import org.jetbrains.gradle.ext.delegateActions
 import org.jetbrains.gradle.ext.settings
-import org.jetbrains.gradle.ext.taskTriggers
 
-buildscript {
-    dependencies {
-        classpath(libs.spoon) // bump for EIG
-    }
-}
 
 plugins {
     eclipse
@@ -16,12 +10,14 @@ plugins {
     alias(libs.plugins.indra.crossdoc)
     alias(libs.plugins.indra.publishing)
     alias(libs.plugins.indra.publishing.sonatype)
-    alias(libs.plugins.eventImplGen)
     alias(libs.plugins.ideaExt)
     alias(libs.plugins.errorprone)
     alias(libs.plugins.nexusPublish)
 }
 
+// Enable event generation to be considered part of
+// the main source set
+val generatedEventSourcesDir = project.file("src/main/generated")
 val javaTarget: String by project
 val ap by sourceSets.registering {
     compileClasspath += sourceSets.main.get().compileClasspath + sourceSets.main.get().output
@@ -34,12 +30,32 @@ configurations {
        }
     }
 }
+tasks {
+    register("printSourceDirs") {
+        doLast {
+            sourceSets.forEach { set ->
+                println("SourceSet: ${set.name}")
+                println("Java Source Dirs: ${set.java.srcDirs}" )
+            }
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs(generatedEventSourcesDir)
+        }
+    }
+}
 
 // Project dependencies
 dependencies {
     // Directly tied to what's available from Minecraft
     api(libs.log4j.api)
     api(libs.gson)
+    api(libs.eventImplGen.annotations)
+    annotationProcessor(libs.eventImplGen.processor)
 
     // Adventure
     api(platform(libs.adventure.bom))
@@ -130,27 +146,23 @@ dependencies {
     testImplementation(libs.mockito)
 }
 
-tasks {
-    genEventImpl {
-        sourceCompatibility = "17" // TODO use javaTarget here
-        destinationDirectory = project.layout.buildDirectory.dir("generated/event-factory")
+spotless {
+    java {
+        target("src/main/java/**/*.java")
+        targetExclude("src/main/generated/**/*.java")
+    }
+}
 
-        outputFactory = "org.spongepowered.api.event.SpongeEventFactory"
-        include("org/spongepowered/api/event/*/**/*")
-        exclude("org/spongepowered/api/event/action/InteractEvent.java")
-        exclude("org/spongepowered/api/event/cause/")
-        exclude("org/spongepowered/api/event/entity/AffectEntityEvent.java")
-        exclude("org/spongepowered/api/event/filter/")
-        exclude("org/spongepowered/api/event/impl/")
-        exclude("org/spongepowered/api/event/lifecycle/ProvideServiceEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterBuilderEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterRegistryEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterRegistryValueEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterCommandEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterFactoryEvent.java")
-        exclude("org/spongepowered/api/event/lifecycle/RegisterWorldEvent.java")
-        inclusiveAnnotations = setOf("org.spongepowered.api.util.annotation.eventgen.GenerateFactoryMethod")
-        exclusiveAnnotations = setOf("org.spongepowered.api.util.annotation.eventgen.NoFactoryMethod")
+tasks {
+
+    compileJava {
+        options.generatedSourceOutputDirectory = generatedEventSourcesDir
+        options.compilerArgs.addAll(listOf(
+            "-AeventGenInclusiveFolders=org/spongepowered/api/event",
+            "-AeventGenExclusiveFolders=org/spongepowered/api/event/cause,org/spongepowered/api/event/filter,org/spongepowered/api/event/impl,org/spongepowered/api/event/lifecycle",
+            "-AeventGenFactory=org.spongepowered.api.event.SpongeEventFactory",
+            "-AeventGenDebug=true",
+        ))
     }
 
     jar {
@@ -165,6 +177,15 @@ tasks {
             }
             indraGit.applyVcsInformationToManifest(this)
         }
+    }
+    checkstyleMain {
+        dependsOn(compileJava)
+    }
+    spotlessJava {
+        dependsOn(compileJava)
+    }
+    sourcesJar {
+        dependsOn(compileJava)
     }
 
     withType(JavaCompile::class).configureEach {
@@ -215,15 +236,12 @@ idea {
                 delegateBuildRunToGradle = false
                 testRunner = org.jetbrains.gradle.ext.ActionDelegationConfig.TestRunner.PLATFORM
             }
-            taskTriggers {
-                beforeBuild(tasks.genEventImpl)
-            }
         }
     }
 }
 
 eclipse {
-    synchronizationTasks(tasks.genEventImpl)
+//    synchronizationTasks(tasks.genEventImpl)
 }
 
 val organization: String by project

@@ -27,13 +27,13 @@ package org.spongepowered.api.event.world.chunk;
 import org.spongepowered.api.ResourceKey;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.Event;
-import org.spongepowered.api.util.annotation.eventgen.NoFactoryMethod;
 import org.spongepowered.api.world.World;
 import org.spongepowered.api.world.chunk.BlockChunk;
 import org.spongepowered.api.world.chunk.Chunk;
 import org.spongepowered.api.world.chunk.EntityChunk;
 import org.spongepowered.api.world.chunk.WorldChunk;
 import org.spongepowered.api.world.server.ServerWorld;
+import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.math.vector.Vector3i;
 
 public interface ChunkEvent extends Event {

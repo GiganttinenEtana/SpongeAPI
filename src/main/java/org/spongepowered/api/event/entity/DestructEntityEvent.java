@@ -29,8 +29,8 @@ import org.spongepowered.api.entity.living.Living;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.message.AudienceMessageEvent;
 import org.spongepowered.api.event.message.MessageCancellable;
-import org.spongepowered.api.util.annotation.eventgen.GenerateFactoryMethod;
 import org.spongepowered.api.world.gamerule.GameRules;
+import org.spongepowered.eventgen.annotations.GenerateFactoryMethod;
 
 /**
  * An event where the {@link Entity} is being either removed usually due to

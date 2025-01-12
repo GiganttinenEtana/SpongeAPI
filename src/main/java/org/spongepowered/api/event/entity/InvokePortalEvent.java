@@ -27,9 +27,10 @@ package org.spongepowered.api.event.entity;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.Event;
-import org.spongepowered.api.util.annotation.eventgen.AbsoluteSortPosition;
-import org.spongepowered.api.util.annotation.eventgen.NoFactoryMethod;
 import org.spongepowered.api.world.portal.PortalLogic;
+import org.spongepowered.eventgen.annotations.AbsoluteSortPosition;
+import org.spongepowered.eventgen.annotations.GenerateFactoryMethod;
+import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 import org.spongepowered.math.vector.Vector3d;
 
 import java.util.Optional;
@@ -59,6 +60,7 @@ public interface InvokePortalEvent extends Event {
      * Called when entering a portal.
      * Cancel to prevent portal effects.
      */
+    @GenerateFactoryMethod
     interface Enter extends InvokePortalEvent, Cancellable {
 
         /**
@@ -88,6 +90,7 @@ public interface InvokePortalEvent extends Event {
      * Canceling resets the portal transition time
      * Setting custom portal logic can change the teleport behaviour.
      */
+    @GenerateFactoryMethod
     interface Prepare extends InvokePortalEvent, Cancellable {
 
         /**
@@ -102,6 +105,7 @@ public interface InvokePortalEvent extends Event {
      * Called after a {@link PortalLogic} calculated and found or generated the portal exit.
      * Note that {@link ChangeEntityWorldEvent} still fire after this.
      */
+    @GenerateFactoryMethod
     interface Execute extends InvokePortalEvent, ChangeEntityWorldEvent.Reposition, RotateEntityEvent {
 
         /**
