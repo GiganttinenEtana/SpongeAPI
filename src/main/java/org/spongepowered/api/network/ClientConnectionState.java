@@ -33,6 +33,15 @@ import org.spongepowered.api.entity.living.player.client.LocalPlayer;
 public interface ClientConnectionState extends EngineConnectionState {
 
     /**
+     * Gets the associated {@link ClientSideConnection connection} for
+     * this connection state.
+     *
+     * @return The connection
+     */
+    @Override
+    ClientSideConnection connection();
+
+    /**
      * Represents the intent state of the connection
      * from the client to the server on the client side.
      */
