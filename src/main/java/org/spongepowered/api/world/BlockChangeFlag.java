@@ -25,6 +25,8 @@
 package org.spongepowered.api.world;
 
 import org.spongepowered.api.block.BlockTypes;
+import org.spongepowered.api.block.entity.BlockEntity;
+import org.spongepowered.api.block.entity.carrier.chest.Chest;
 
 /**
  * A flag of sorts that determines whether a block change will perform various
@@ -103,7 +105,7 @@ public interface BlockChangeFlag {
     /**
      * Gets whether this flag is considering that blocks are being moved
      * in the world, much like how pistons will move blocks. This has some
-     * effect on {@link org.spongepowered.api.block.entity.BlockEntity} creation
+     * effect on {@link BlockEntity} creation
      * reaction or drop delays. The behaviors are dependent on the block in
      * particular.
      *
@@ -132,6 +134,16 @@ public interface BlockChangeFlag {
      * accompanied later by a manual update after some ticks
      */
     boolean ignoreRender();
+
+    /**
+     * Gets whether the block change is during a structure placement, which
+     * disables certain {@link BlockEntity} behaviors like {@link Chest} dropping
+     * items during a break. This can take place during the growth of a tree,
+     * a piston moving, or other similar actions.
+     *
+     * @return True if the block change is during a structure placement.
+     */
+    boolean structurePlacement();
 
     /**
      * Gets the equivalent {@link BlockChangeFlag} of this flag with all
@@ -184,6 +196,8 @@ public interface BlockChangeFlag {
     BlockChangeFlag withIgnoreRender(boolean ignoreRender);
 
     BlockChangeFlag withForcedReRender(boolean forcedReRender);
+
+    BlockChangeFlag withStructurePlacement(boolean structurePlacement);
 
     /**
      * Gets the inverted {@link BlockChangeFlag} of this flag.
