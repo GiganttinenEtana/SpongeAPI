@@ -25,6 +25,7 @@
 package org.spongepowered.api.world;
 
 import org.spongepowered.api.block.BlockTypes;
+import org.spongepowered.api.block.entity.BlockEntity;
 
 /**
  * A flag of sorts that determines whether a block change will perform various
@@ -134,6 +135,17 @@ public interface BlockChangeFlag {
     boolean ignoreRender();
 
     /**
+     * Gets whatever this block change is going to perform natural
+     * block destruction logic, which can potentially cause other
+     * side effects like block drops from a {@link BlockEntity}.
+     * The behaviors are dependent on the block in particular.
+     *
+     * @return True if the block change should perform
+     * natural block destruction logic.
+     */
+    boolean performBlockDestruction();
+
+    /**
      * Gets the equivalent {@link BlockChangeFlag} of this flag with all
      * other flags while having the desired {@code updateNeighbors}
      * as defined by the parameter.
@@ -184,6 +196,16 @@ public interface BlockChangeFlag {
     BlockChangeFlag withIgnoreRender(boolean ignoreRender);
 
     BlockChangeFlag withForcedReRender(boolean forcedReRender);
+
+    /**
+     * Gets the equivalent {@link BlockChangeFlag} of this flag with all
+     * other flags while having the desired {@code performBlockDestruction}
+     * as defined by the parameter.
+     *
+     * @param performBlockDestruction Whether to perform block destruction
+     * @return The relative flag with the desired perform destruction
+     */
+    BlockChangeFlag withPerformBlockDestruction(boolean performBlockDestruction);
 
     /**
      * Gets the inverted {@link BlockChangeFlag} of this flag.
