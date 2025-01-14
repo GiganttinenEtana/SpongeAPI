@@ -32,6 +32,15 @@ import org.spongepowered.api.entity.living.player.server.ServerPlayer;
 public interface ServerConnectionState extends EngineConnectionState {
 
     /**
+     * Gets the associated {@link ServerSideConnection connection} for
+     * this connection state.
+     *
+     * @return The connection
+     */
+    @Override
+    ServerSideConnection connection();
+
+    /**
      * Represents a intent state between a minecraft client and server.
      */
     interface Intent extends EngineConnectionState.Intent, ServerConnectionState {

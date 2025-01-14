@@ -32,13 +32,15 @@ import org.spongepowered.math.vector.Vector3d;
  */
 public enum Axis implements Cycleable<Axis>, StringRepresentable {
 
-    X(new Vector3d(1, 0, 0)),
-    Y(new Vector3d(0, 1, 0)),
-    Z(new Vector3d(0, 0, 1));
+    X("x", new Vector3d(1, 0, 0)),
+    Y("y", new Vector3d(0, 1, 0)),
+    Z("z", new Vector3d(0, 0, 1));
 
+    private final String name;
     private final Vector3d direction;
 
-    Axis(final Vector3d vector3d) {
+    Axis(final String name, final Vector3d vector3d) {
+        this.name = name;
         this.direction = vector3d;
     }
 
@@ -146,7 +148,11 @@ public enum Axis implements Cycleable<Axis>, StringRepresentable {
 
     @Override
     public String serializationString() {
-        return this.name();
+        return this.name;
     }
 
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }
