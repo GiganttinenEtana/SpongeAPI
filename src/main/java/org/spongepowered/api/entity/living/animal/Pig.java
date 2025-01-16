@@ -24,11 +24,24 @@
  */
 package org.spongepowered.api.entity.living.animal;
 
-import org.spongepowered.api.entity.Saddleable;
+import org.spongepowered.api.data.Keys;
+import org.spongepowered.api.data.type.PigType;
+import org.spongepowered.api.data.value.Value;
 
 /**
  * Represents a Pig.
  */
-public interface Pig extends Animal, Saddleable {
+@SuppressWarnings("removal")
+public interface Pig extends Animal, org.spongepowered.api.entity.Saddleable {
+
+    /**
+     * Gets the variant {@link PigType} of this Pig.
+     *
+     * @see <a href="https://minecraft.wiki/w/Java_Edition_25w02a#Mobs">Pig Variant Changes</a>
+     * @return The {@link PigType} of this Pig.
+     */
+    default Value<PigType> variant() {
+        return this.requireValue(Keys.PIG_TYPE).asMutable();
+    }
 
 }

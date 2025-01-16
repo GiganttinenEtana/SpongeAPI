@@ -54,6 +54,8 @@ public final class EquipmentTypes {
 
     public static final DefaultedRegistryReference<EquipmentType> OFFHAND = EquipmentTypes.key(ResourceKey.sponge("offhand"));
 
+    public static final DefaultedRegistryReference<EquipmentType> SADDLE = EquipmentTypes.key(ResourceKey.sponge("saddle"));
+
     private EquipmentTypes() {
     }
 

@@ -1966,6 +1966,10 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> TERRACOTTA = BlockTypes.key(ResourceKey.minecraft("terracotta"));
 
+    public static final DefaultedRegistryReference<BlockType> TEST_BLOCK = BlockTypes.key(ResourceKey.minecraft("test_block"));
+
+    public static final DefaultedRegistryReference<BlockType> TEST_INSTANCE_BLOCK = BlockTypes.key(ResourceKey.minecraft("test_instance_block"));
+
     public static final DefaultedRegistryReference<BlockType> TINTED_GLASS = BlockTypes.key(ResourceKey.minecraft("tinted_glass"));
 
     public static final DefaultedRegistryReference<BlockType> TNT = BlockTypes.key(ResourceKey.minecraft("tnt"));

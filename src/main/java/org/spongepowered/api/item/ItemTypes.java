@@ -2484,6 +2484,10 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> TEST_BLOCK = ItemTypes.key(ResourceKey.minecraft("test_block"));
+
+    public static final DefaultedRegistryReference<ItemType> TEST_INSTANCE_BLOCK = ItemTypes.key(ResourceKey.minecraft("test_instance_block"));
+
     public static final DefaultedRegistryReference<ItemType> TIDE_ARMOR_TRIM_SMITHING_TEMPLATE = ItemTypes.key(ResourceKey.minecraft("tide_armor_trim_smithing_template"));
 
     public static final DefaultedRegistryReference<ItemType> TINTED_GLASS = ItemTypes.key(ResourceKey.minecraft("tinted_glass"));

@@ -27,7 +27,6 @@ package org.spongepowered.api.entity.living.animal.horse;
 import org.spongepowered.api.data.Keys;
 import org.spongepowered.api.data.value.Value;
 import org.spongepowered.api.entity.Ownable;
-import org.spongepowered.api.entity.Saddleable;
 import org.spongepowered.api.entity.living.animal.Animal;
 import org.spongepowered.api.item.inventory.Carrier;
 
@@ -35,7 +34,8 @@ import org.spongepowered.api.item.inventory.Carrier;
 /**
  * An abstract representation of a Horse.
  */
-public interface HorseLike extends Animal, Ownable, Saddleable, Carrier {
+@SuppressWarnings("removal")
+public interface HorseLike extends Animal, Ownable, org.spongepowered.api.entity.Saddleable, Carrier {
 
     /**
      * {@link Keys#IS_TAMED}

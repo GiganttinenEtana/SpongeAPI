@@ -75,6 +75,7 @@ import org.spongepowered.api.data.type.PandaGene;
 import org.spongepowered.api.data.type.ParrotType;
 import org.spongepowered.api.data.type.PhantomPhase;
 import org.spongepowered.api.data.type.PickupRule;
+import org.spongepowered.api.data.type.PigType;
 import org.spongepowered.api.data.type.PistonType;
 import org.spongepowered.api.data.type.PortionType;
 import org.spongepowered.api.data.type.ProfessionType;
@@ -88,6 +89,7 @@ import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.SpellType;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
+import org.spongepowered.api.data.type.TestBlockMode;
 import org.spongepowered.api.data.type.Tilt;
 import org.spongepowered.api.data.type.TrialSpawnerState;
 import org.spongepowered.api.data.type.TropicalFishShape;
@@ -200,7 +202,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<ArtType> ART_TYPE = RegistryTypes.minecraftKeyInServer("painting_variant");
 
-    public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.minecraftKeyInGame("armor_material");
+    public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.spongeKeyInGame("armor_material");
 
     public static final DefaultedRegistryType<AttributeType> ATTRIBUTE_TYPE = RegistryTypes.minecraftKeyInGame("attribute");
 
@@ -451,6 +453,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<PickupRule> PICKUP_RULE = RegistryTypes.spongeKeyInGame("pickup_rule");
 
+    public static final DefaultedRegistryType<PigType> PIG_TYPE = RegistryTypes.minecraftKeyInGame("pig_variant");
+
     public static final DefaultedRegistryType<PistonType> PISTON_TYPE = RegistryTypes.spongeKeyInGame("piston_type");
 
     public static final DefaultedRegistryType<PlaceholderParser> PLACEHOLDER_PARSER = RegistryTypes.spongeKeyInGame("placeholder_parser");
@@ -496,6 +500,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<TaskPriority> TASK_PRIORITY = RegistryTypes.spongeKeyInGame("task_priority");
 
     public static final DefaultedRegistryType<TeleportHelperFilter> TELEPORT_HELPER_FILTER = RegistryTypes.spongeKeyInGame("teleport_helper_filter");
+
+    public static final DefaultedRegistryType<TestBlockMode> TEST_BLOCK_MODE = RegistryTypes.spongeKeyInGame("test_block_mode");
 
     public static final DefaultedRegistryType<TextAlignment> TEXT_ALIGNMENT = RegistryTypes.spongeKeyInGame("text_alignment");
 

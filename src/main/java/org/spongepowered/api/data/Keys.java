@@ -79,6 +79,7 @@ import org.spongepowered.api.data.type.PandaGenes;
 import org.spongepowered.api.data.type.ParrotType;
 import org.spongepowered.api.data.type.PhantomPhase;
 import org.spongepowered.api.data.type.PickupRule;
+import org.spongepowered.api.data.type.PigType;
 import org.spongepowered.api.data.type.PistonType;
 import org.spongepowered.api.data.type.PortionType;
 import org.spongepowered.api.data.type.ProfessionType;
@@ -2623,6 +2624,14 @@ public final class Keys {
      * The {@link PickupRule} of an {@link ArrowLike}.
      */
     public static final Key<Value<PickupRule>> PICKUP_RULE = Keys.key(ResourceKey.sponge("pickup_rule"), PickupRule.class);
+
+    /**
+     * The {@link PigType} for a {@link Pig}, which can vary based on
+     * {@link Biome}.
+     *
+     * @see <a href="https://minecraft.wiki/w/Java_Edition_25w02a#Mobs">Pig Variant Changes</a>
+     */
+    public static final Key<Value<PigType>> PIG_TYPE = Keys.key(ResourceKey.sponge("pig_variant"), PigType.class);
 
     /**
      * Whether a {@link WorldType} is safe for {@link Piglin} to not transform

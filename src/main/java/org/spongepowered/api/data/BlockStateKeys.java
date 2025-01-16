@@ -42,6 +42,7 @@ import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
+import org.spongepowered.api.data.type.TestBlockMode;
 import org.spongepowered.api.data.type.Tilt;
 import org.spongepowered.api.data.type.TrialSpawnerState;
 import org.spongepowered.api.data.type.VaultState;
@@ -268,6 +269,8 @@ public final class BlockStateKeys {
     public static final Key<Value<StairShape>> STAIRS_SHAPE = BlockStateKeys.key(ResourceKey.minecraft("property/shape"), StairShape.class);
 
     public static final Key<Value<StructureMode>> STRUCTUREBLOCK_MODE = BlockStateKeys.key(ResourceKey.minecraft("property/mode"), StructureMode.class);
+
+    public static final Key<Value<TestBlockMode>> TEST_BLOCK_MODE = BlockStateKeys.key(ResourceKey.minecraft("property/test_block_mode"), TestBlockMode.class);
 
     public static final Key<Value<Tilt>> TILT = BlockStateKeys.key(ResourceKey.minecraft("property/tilt"), Tilt.class);
 

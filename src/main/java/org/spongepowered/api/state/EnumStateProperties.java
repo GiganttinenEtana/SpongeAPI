@@ -41,6 +41,7 @@ import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
+import org.spongepowered.api.data.type.TestBlockMode;
 import org.spongepowered.api.data.type.Tilt;
 import org.spongepowered.api.data.type.TrialSpawnerState;
 import org.spongepowered.api.data.type.VaultState;
@@ -180,6 +181,10 @@ public final class EnumStateProperties {
 
     public static EnumStateProperty<StructureMode> property_STRUCTUREBLOCK_MODE() {
         return EnumStateProperty.of("STRUCTUREBLOCK_MODE");
+    }
+
+    public static EnumStateProperty<TestBlockMode> property_TEST_BLOCK_MODE() {
+        return EnumStateProperty.of("TEST_BLOCK_MODE");
     }
 
     public static EnumStateProperty<Tilt> property_TILT() {

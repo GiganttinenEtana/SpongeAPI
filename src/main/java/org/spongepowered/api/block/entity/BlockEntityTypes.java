@@ -124,6 +124,10 @@ public final class BlockEntityTypes {
 
     public static final DefaultedRegistryReference<BlockEntityType> STRUCTURE_BLOCK = BlockEntityTypes.key(ResourceKey.minecraft("structure_block"));
 
+    public static final DefaultedRegistryReference<BlockEntityType> TEST_BLOCK = BlockEntityTypes.key(ResourceKey.minecraft("test_block"));
+
+    public static final DefaultedRegistryReference<BlockEntityType> TEST_INSTANCE_BLOCK = BlockEntityTypes.key(ResourceKey.minecraft("test_instance_block"));
+
     public static final DefaultedRegistryReference<BlockEntityType> TRAPPED_CHEST = BlockEntityTypes.key(ResourceKey.minecraft("trapped_chest"));
 
     public static final DefaultedRegistryReference<BlockEntityType> TRIAL_SPAWNER = BlockEntityTypes.key(ResourceKey.minecraft("trial_spawner"));
