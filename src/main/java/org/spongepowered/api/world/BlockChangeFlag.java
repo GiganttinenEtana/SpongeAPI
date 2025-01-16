@@ -105,9 +105,8 @@ public interface BlockChangeFlag {
     /**
      * Gets whether this flag is considering that blocks are being moved
      * in the world, much like how pistons will move blocks. This has some
-     * effect on {@link BlockEntity} creation
-     * reaction or drop delays. The behaviors are dependent on the block in
-     * particular.
+     * effect on {@link BlockEntity} creation reaction or drop delays. The
+     * behaviors are dependent on the block in particular.
      *
      * @return True if the flag is considering blocks are moving
      */
@@ -136,14 +135,16 @@ public interface BlockChangeFlag {
     boolean ignoreRender();
 
     /**
-     * Gets whether the block change is during a structure placement, which
-     * disables certain {@link BlockEntity} behaviors like {@link Chest} dropping
-     * items during a break. This can take place during the growth of a tree,
-     * a piston moving, or other similar actions.
+     * Gets whatever this block change is going to perform natural
+     * block destruction logic, which can potentially cause other
+     * side effects like block drops from a {@link BlockEntity},
+     * like a {@link Chest chest} dropping its contents.
+     * The behaviors are dependent on the block in particular.
      *
-     * @return True if the block change is during a structure placement.
+     * @return True if the block change should perform
+     * natural block destruction logic.
      */
-    boolean structurePlacement();
+    boolean performBlockDestruction();
 
     /**
      * Gets the equivalent {@link BlockChangeFlag} of this flag with all
@@ -197,7 +198,15 @@ public interface BlockChangeFlag {
 
     BlockChangeFlag withForcedReRender(boolean forcedReRender);
 
-    BlockChangeFlag withStructurePlacement(boolean structurePlacement);
+    /**
+     * Gets the equivalent {@link BlockChangeFlag} of this flag with all
+     * other flags while having the desired {@code performBlockDestruction}
+     * as defined by the parameter.
+     *
+     * @param performBlockDestruction Whether to perform block destruction
+     * @return The relative flag with the desired perform destruction
+     */
+    BlockChangeFlag withPerformBlockDestruction(boolean performBlockDestruction);
 
     /**
      * Gets the inverted {@link BlockChangeFlag} of this flag.

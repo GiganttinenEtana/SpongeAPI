@@ -44,30 +44,30 @@ import org.spongepowered.math.vector.Vector3i;
  * </ul>
  */
 public enum Direction implements StringRepresentable {
-    NORTH(new Vector3d(0, 0, -1), Division.CARDINAL),
-    NORTH_NORTHEAST(new Vector3d(C.S8, 0, -C.C8), Division.SECONDARY_ORDINAL),
-    NORTHEAST(new Vector3d(1, 0, -1), Division.ORDINAL),
-    EAST_NORTHEAST(new Vector3d(C.C8, 0, -C.S8), Division.SECONDARY_ORDINAL),
+    NORTH("north", new Vector3d(0, 0, -1), Division.CARDINAL),
+    NORTH_NORTHEAST("north_northeast", new Vector3d(C.S8, 0, -C.C8), Division.SECONDARY_ORDINAL),
+    NORTHEAST("northeast", new Vector3d(1, 0, -1), Division.ORDINAL),
+    EAST_NORTHEAST("east_northeast", new Vector3d(C.C8, 0, -C.S8), Division.SECONDARY_ORDINAL),
 
-    EAST(new Vector3d(1, 0, 0), Division.CARDINAL),
-    EAST_SOUTHEAST(new Vector3d(C.C8, 0, C.S8), Division.SECONDARY_ORDINAL),
-    SOUTHEAST(new Vector3d(1, 0, 1), Division.ORDINAL),
-    SOUTH_SOUTHEAST(new Vector3d(C.S8, 0, C.C8), Division.SECONDARY_ORDINAL),
+    EAST("east", new Vector3d(1, 0, 0), Division.CARDINAL),
+    EAST_SOUTHEAST("east_southeast", new Vector3d(C.C8, 0, C.S8), Division.SECONDARY_ORDINAL),
+    SOUTHEAST("southeast", new Vector3d(1, 0, 1), Division.ORDINAL),
+    SOUTH_SOUTHEAST("south_southeast", new Vector3d(C.S8, 0, C.C8), Division.SECONDARY_ORDINAL),
 
-    SOUTH(new Vector3d(0, 0, 1), Division.CARDINAL),
-    SOUTH_SOUTHWEST(new Vector3d(-C.S8, 0, C.C8), Division.SECONDARY_ORDINAL),
-    SOUTHWEST(new Vector3d(-1, 0, 1), Division.ORDINAL),
-    WEST_SOUTHWEST(new Vector3d(-C.C8, 0, C.S8), Division.SECONDARY_ORDINAL),
+    SOUTH("south", new Vector3d(0, 0, 1), Division.CARDINAL),
+    SOUTH_SOUTHWEST("south_southwest", new Vector3d(-C.S8, 0, C.C8), Division.SECONDARY_ORDINAL),
+    SOUTHWEST("southwest", new Vector3d(-1, 0, 1), Division.ORDINAL),
+    WEST_SOUTHWEST("west_southwest", new Vector3d(-C.C8, 0, C.S8), Division.SECONDARY_ORDINAL),
 
-    WEST(new Vector3d(-1, 0, 0), Division.CARDINAL),
-    WEST_NORTHWEST(new Vector3d(-C.C8, 0, -C.S8), Division.SECONDARY_ORDINAL),
-    NORTHWEST(new Vector3d(-1, 0, -1), Division.ORDINAL),
-    NORTH_NORTHWEST(new Vector3d(-C.S8, 0, -C.C8), Division.SECONDARY_ORDINAL),
+    WEST("west", new Vector3d(-1, 0, 0), Division.CARDINAL),
+    WEST_NORTHWEST("west_northwest", new Vector3d(-C.C8, 0, -C.S8), Division.SECONDARY_ORDINAL),
+    NORTHWEST("northwest", new Vector3d(-1, 0, -1), Division.ORDINAL),
+    NORTH_NORTHWEST("north_northwest", new Vector3d(-C.S8, 0, -C.C8), Division.SECONDARY_ORDINAL),
 
-    UP(new Vector3d(0, 1, 0), Division.CARDINAL),
-    DOWN(new Vector3d(0, -1, 0), Division.CARDINAL),
+    UP("up", new Vector3d(0, 1, 0), Division.CARDINAL),
+    DOWN("down", new Vector3d(0, -1, 0), Division.CARDINAL),
 
-    NONE(new Vector3d(0, 0, 0), Division.NONE);
+    NONE("none", new Vector3d(0, 0, 0), Division.NONE);
 
     private static final Direction[] SECONDARY_ORDINAL_SET = {
         Direction.NORTH, Direction.NORTH_NORTHEAST, Direction.NORTHEAST, Direction.EAST_NORTHEAST,
@@ -82,6 +82,7 @@ public enum Direction implements StringRepresentable {
     private static final Direction[] CARDINAL_SET = {
         Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST
     };
+    private final String name;
     private final Vector3d offset;
     private final Vector3i blockOffset;
     private final Division division;
@@ -114,7 +115,8 @@ public enum Direction implements StringRepresentable {
         Direction.SOUTH_SOUTHWEST.opposite = Direction.NORTH_NORTHEAST;
     }
 
-    Direction(Vector3d direction, Division division) {
+    Direction(final String name, final Vector3d direction, final Division division) {
+        this.name = name;
         if (direction.lengthSquared() == 0) {
             // Prevent normalization of the zero direction
             this.offset = direction;
@@ -344,7 +346,12 @@ public enum Direction implements StringRepresentable {
 
     @Override
     public String serializationString() {
-        return this.name();
+        return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 
     private interface C {

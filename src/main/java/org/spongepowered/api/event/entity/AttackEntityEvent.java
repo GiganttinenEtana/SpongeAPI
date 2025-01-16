@@ -45,11 +45,11 @@ import org.spongepowered.api.item.ItemTypes;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.item.inventory.ItemStackSnapshot;
 import org.spongepowered.api.util.Tuple;
-import org.spongepowered.api.util.annotation.eventgen.ImplementedBy;
-import org.spongepowered.api.util.annotation.eventgen.PropertySettings;
 import org.spongepowered.api.world.World;
 import org.spongepowered.api.world.difficulty.Difficulties;
 import org.spongepowered.api.world.difficulty.Difficulty;
+import org.spongepowered.eventgen.annotations.ImplementedBy;
+import org.spongepowered.eventgen.annotations.PropertySettings;
 
 import java.util.List;
 import java.util.Map;

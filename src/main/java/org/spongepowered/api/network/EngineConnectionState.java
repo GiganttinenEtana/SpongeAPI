@@ -34,6 +34,14 @@ import org.spongepowered.api.profile.GameProfile;
 public interface EngineConnectionState {
 
     /**
+     * Gets the associated {@link EngineConnection connection} for
+     * this connection state.
+     *
+     * @return The connection
+     */
+    EngineConnection connection();
+
+    /**
      * Gets whatever the connection was established because
      * the client was transferred.
      *
