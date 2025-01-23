@@ -201,7 +201,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<ArtType> ART_TYPE = RegistryTypes.minecraftKeyInServer("painting_variant");
 
-    public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.minecraftKeyInGame("armor_material");
+    public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.spongeKeyInGame("armor_material");
 
     public static final DefaultedRegistryType<AttributeType> ATTRIBUTE_TYPE = RegistryTypes.minecraftKeyInGame("attribute");
 
