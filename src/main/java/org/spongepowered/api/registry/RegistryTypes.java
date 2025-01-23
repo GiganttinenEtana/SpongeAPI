@@ -97,6 +97,7 @@ import org.spongepowered.api.data.type.VaultState;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.effect.particle.ParticleOption;
 import org.spongepowered.api.effect.particle.ParticleType;
 import org.spongepowered.api.effect.potion.PotionEffectType;
@@ -520,6 +521,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<WallConnectionState> WALL_CONNECTION_STATE = RegistryTypes.spongeKeyInGame("wall_connection_state");
 
     public static final DefaultedRegistryType<WeatherType> WEATHER_TYPE = RegistryTypes.spongeKeyInGame("weather_type");
+
+    public static final DefaultedRegistryType<WolfVariant> WOLF_VAIRANT = RegistryTypes.minecraftKeyInServer("wolf_vairant");
 
     public static final DefaultedRegistryType<WireAttachmentType> WIRE_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("wire_attachment_type");
 
