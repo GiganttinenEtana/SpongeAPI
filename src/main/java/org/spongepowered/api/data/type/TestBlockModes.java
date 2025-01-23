@@ -44,7 +44,6 @@ public class TestBlockModes {
 
     public static final DefaultedRegistryReference<TestBlockMode> START = TestBlockModes.key(ResourceKey.sponge("start"));
 
-
     public static Registry<TestBlockMode> registry() {
         return Sponge.game().registry(RegistryTypes.TEST_BLOCK_MODE);
     }

@@ -270,7 +270,7 @@ public final class BlockStateKeys {
 
     public static final Key<Value<StructureMode>> STRUCTUREBLOCK_MODE = BlockStateKeys.key(ResourceKey.minecraft("property/mode"), StructureMode.class);
 
-    public static final Key<Value<TestBlockMode>> TEST_BLOCK_MODE = BlockStateKeys.key(ResourceKey.minecraft("property/test_block_mode"), TestBlockMode.class);
+    public static final Key<Value<TestBlockMode>> TEST_BLOCK_MODE = BlockStateKeys.key(ResourceKey.minecraft("property/mode"), TestBlockMode.class);
 
     public static final Key<Value<Tilt>> TILT = BlockStateKeys.key(ResourceKey.minecraft("property/tilt"), Tilt.class);
 

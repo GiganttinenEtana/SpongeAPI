@@ -320,6 +320,8 @@ public final class EntityTypes {
 
     public static final DefaultedRegistryReference<EntityType<LightningBolt>> LIGHTNING_BOLT = EntityTypes.key(ResourceKey.minecraft("lightning_bolt"));
 
+    public static final DefaultedRegistryReference<EntityType<Potion>> LINGERING_POTION = EntityTypes.key(ResourceKey.minecraft("lingering_potion"));
+
     public static final DefaultedRegistryReference<EntityType<Llama>> LLAMA = EntityTypes.key(ResourceKey.minecraft("llama"));
 
     public static final DefaultedRegistryReference<EntityType<LlamaSpit>> LLAMA_SPIT = EntityTypes.key(ResourceKey.minecraft("llama_spit"));
@@ -370,8 +372,6 @@ public final class EntityTypes {
 
     public static final DefaultedRegistryReference<EntityType<PolarBear>> POLAR_BEAR = EntityTypes.key(ResourceKey.minecraft("polar_bear"));
 
-    public static final DefaultedRegistryReference<EntityType<Potion>> POTION = EntityTypes.key(ResourceKey.minecraft("potion"));
-
     public static final DefaultedRegistryReference<EntityType<Pufferfish>> PUFFERFISH = EntityTypes.key(ResourceKey.minecraft("pufferfish"));
 
     public static final DefaultedRegistryReference<EntityType<Rabbit>> RABBIT = EntityTypes.key(ResourceKey.minecraft("rabbit"));
@@ -407,6 +407,8 @@ public final class EntityTypes {
     public static final DefaultedRegistryReference<EntityType<SpectralArrow>> SPECTRAL_ARROW = EntityTypes.key(ResourceKey.minecraft("spectral_arrow"));
 
     public static final DefaultedRegistryReference<EntityType<Spider>> SPIDER = EntityTypes.key(ResourceKey.minecraft("spider"));
+
+    public static final DefaultedRegistryReference<EntityType<Potion>> SPLASH_POTION = EntityTypes.key(ResourceKey.minecraft("splash_potion"));
 
     public static final DefaultedRegistryReference<EntityType<Boat>> SPRUCE_BOAT = EntityTypes.key(ResourceKey.minecraft("spruce_boat"));
 
