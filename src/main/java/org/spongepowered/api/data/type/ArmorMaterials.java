@@ -40,7 +40,7 @@ import org.spongepowered.api.registry.RegistryTypes;
 @RegistryScopes(scopes = RegistryScope.GAME)
 public final class ArmorMaterials {
 
-    public static final DefaultedRegistryReference<ArmorMaterial> ARMADILLO = ArmorMaterials.key(ResourceKey.minecraft("armadillo"));
+    public static final DefaultedRegistryReference<ArmorMaterial> ARMADILLO_SCUTE = ArmorMaterials.key(ResourceKey.minecraft("armadillo_scute"));
 
     public static final DefaultedRegistryReference<ArmorMaterial> CHAINMAIL = ArmorMaterials.key(ResourceKey.minecraft("chainmail"));
 
@@ -54,7 +54,7 @@ public final class ArmorMaterials {
 
     public static final DefaultedRegistryReference<ArmorMaterial> NETHERITE = ArmorMaterials.key(ResourceKey.minecraft("netherite"));
 
-    public static final DefaultedRegistryReference<ArmorMaterial> TURTLE = ArmorMaterials.key(ResourceKey.minecraft("turtle"));
+    public static final DefaultedRegistryReference<ArmorMaterial> TURTLE_SCUTE = ArmorMaterials.key(ResourceKey.minecraft("turtle_scute"));
 
     private ArmorMaterials() {
     }
