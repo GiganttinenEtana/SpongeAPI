@@ -22,44 +22,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.animal;
+package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.data.Keys;
-import org.spongepowered.api.data.type.DyeColor;
-import org.spongepowered.api.data.type.WolfVariant;
-import org.spongepowered.api.data.value.Value;
-import org.spongepowered.api.entity.Angerable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
-/**
- * Represents a Wolf.
- */
-public interface Wolf extends TameableAnimal, Angerable {
+@CatalogedBy(WolfVariants.class)
+public interface WolfVariant extends DefaultedRegistryValue {
 
-    /**
-     * {@link Keys#WOLF_VARIANT}
-     * @return The wolf's variant
-     */
-    default Value.Mutable<WolfVariant> variant() {
-        return this.requireValue(Keys.WOLF_VARIANT).asMutable();
-    }
-
-    /**
-     * {@link Keys#DYE_COLOR}
-     * @return The collar color
-     */
-    default Value.Mutable<DyeColor> collarColor() {
-        return this.requireValue(Keys.DYE_COLOR).asMutable();
-    }
-
-    /**
-     * {@link Keys#IS_BEGGING_FOR_FOOD}
-     *
-     * <p>In vanilla, a wolf begs when a player comes close
-     * with food. The head of the wolf will also tilt as a result.</p>
-     *
-     * @return Whether this wolf is begging for food
-     */
-    default Value.Mutable<Boolean> beggingForFood() {
-        return this.requireValue(Keys.IS_BEGGING_FOR_FOOD).asMutable();
-    }
 }

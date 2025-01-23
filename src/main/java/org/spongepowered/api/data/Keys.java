@@ -98,6 +98,7 @@ import org.spongepowered.api.data.type.TropicalFishShape;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.data.value.ListValue;
 import org.spongepowered.api.data.value.MapValue;
 import org.spongepowered.api.data.value.SetValue;
@@ -3491,6 +3492,11 @@ public final class Keys {
      * The entities targeted by the three {@link Wither} heads. In vanilla the wither only targets {@link Living}. {@code null} for no target entity.
      */
     public static final Key<ListValue<Entity>> WITHER_TARGETS = Keys.listKey(ResourceKey.sponge("wither_targets"), Entity.class);
+
+    /**
+     * The {@link WolfVariant} of a {@link Wolf}.
+     */
+    public static final Key<Value<WolfVariant>> WOLF_VARIANT = Keys.key(ResourceKey.sponge("wolf_variant"), WolfVariant.class);
 
     /**
      * The {@link Sheep} who is being targeted by the {@link SpellTypes#WOLOLO}
