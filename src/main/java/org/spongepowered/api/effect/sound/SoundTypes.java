@@ -526,6 +526,8 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_CROP_BREAK = SoundTypes.key(ResourceKey.minecraft("block.crop.break"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_DEADBUSH_IDLE = SoundTypes.key(ResourceKey.minecraft("block.deadbush.idle"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_DECORATED_POT_BREAK = SoundTypes.key(ResourceKey.minecraft("block.decorated_pot.break"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_DECORATED_POT_FALL = SoundTypes.key(ResourceKey.minecraft("block.decorated_pot.fall"));
@@ -1194,9 +1196,13 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SAND_HIT = SoundTypes.key(ResourceKey.minecraft("block.sand.hit"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SAND_IDLE = SoundTypes.key(ResourceKey.minecraft("block.sand.idle"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_SAND_PLACE = SoundTypes.key(ResourceKey.minecraft("block.sand.place"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SAND_STEP = SoundTypes.key(ResourceKey.minecraft("block.sand.step"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SAND_WIND = SoundTypes.key(ResourceKey.minecraft("block.sand.wind"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SCAFFOLDING_BREAK = SoundTypes.key(ResourceKey.minecraft("block.scaffolding.break"));
 

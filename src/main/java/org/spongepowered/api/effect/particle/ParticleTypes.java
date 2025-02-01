@@ -136,6 +136,8 @@ public final class ParticleTypes {
 
     public static final DefaultedRegistryReference<ParticleType> FALLING_WATER = ParticleTypes.key(ResourceKey.minecraft("falling_water"));
 
+    public static final DefaultedRegistryReference<ParticleType> FIREFLY = ParticleTypes.key(ResourceKey.minecraft("firefly"));
+
     public static final DefaultedRegistryReference<ParticleType> FIREWORK = ParticleTypes.key(ResourceKey.minecraft("firework"));
 
     public static final DefaultedRegistryReference<ParticleType> FISHING = ParticleTypes.key(ResourceKey.minecraft("fishing"));

@@ -324,6 +324,8 @@ public final class PlacedFeatures {
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_BERRY_RARE = PlacedFeatures.key(ResourceKey.minecraft("patch_berry_rare"));
 
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_BUSH = PlacedFeatures.key(ResourceKey.minecraft("patch_bush"));
+
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_CACTUS = PlacedFeatures.key(ResourceKey.minecraft("patch_cactus"));
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_CACTUS_DECORATED = PlacedFeatures.key(ResourceKey.minecraft("patch_cactus_decorated"));
@@ -339,6 +341,12 @@ public final class PlacedFeatures {
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_DEAD_BUSH_BADLANDS = PlacedFeatures.key(ResourceKey.minecraft("patch_dead_bush_badlands"));
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIRE = PlacedFeatures.key(ResourceKey.minecraft("patch_fire"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIREFLY_BUSH_NEAR_WATER = PlacedFeatures.key(ResourceKey.minecraft("patch_firefly_bush_near_water"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIREFLY_BUSH_NEAR_WATER_SWAMP = PlacedFeatures.key(ResourceKey.minecraft("patch_firefly_bush_near_water_swamp"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIREFLY_BUSH_SWAMP = PlacedFeatures.key(ResourceKey.minecraft("patch_firefly_bush_swamp"));
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_GRASS_BADLANDS = PlacedFeatures.key(ResourceKey.minecraft("patch_grass_badlands"));
 

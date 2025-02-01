@@ -53,8 +53,6 @@ public final class DamageTypeTags {
 
     public static final Tag<DamageType> BYPASSES_ARMOR = DamageTypeTags.key(ResourceKey.minecraft("bypasses_armor"));
 
-    public static final Tag<DamageType> BYPASSES_BLOCKING = DamageTypeTags.key(ResourceKey.minecraft("bypasses_blocking"));
-
     public static final Tag<DamageType> BYPASSES_EFFECTS = DamageTypeTags.key(ResourceKey.minecraft("bypasses_effects"));
 
     public static final Tag<DamageType> BYPASSES_ENCHANTMENTS = DamageTypeTags.key(ResourceKey.minecraft("bypasses_enchantments"));
@@ -62,6 +60,8 @@ public final class DamageTypeTags {
     public static final Tag<DamageType> BYPASSES_INVULNERABILITY = DamageTypeTags.key(ResourceKey.minecraft("bypasses_invulnerability"));
 
     public static final Tag<DamageType> BYPASSES_RESISTANCE = DamageTypeTags.key(ResourceKey.minecraft("bypasses_resistance"));
+
+    public static final Tag<DamageType> BYPASSES_SHIELD = DamageTypeTags.key(ResourceKey.minecraft("bypasses_shield"));
 
     public static final Tag<DamageType> BYPASSES_WOLF_ARMOR = DamageTypeTags.key(ResourceKey.minecraft("bypasses_wolf_armor"));
 

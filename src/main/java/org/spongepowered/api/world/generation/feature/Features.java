@@ -320,6 +320,8 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> PATCH_BROWN_MUSHROOM = Features.key(ResourceKey.minecraft("patch_brown_mushroom"));
 
+    public static final DefaultedRegistryReference<Feature> PATCH_BUSH = Features.key(ResourceKey.minecraft("patch_bush"));
+
     public static final DefaultedRegistryReference<Feature> PATCH_CACTUS = Features.key(ResourceKey.minecraft("patch_cactus"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_CRIMSON_ROOTS = Features.key(ResourceKey.minecraft("patch_crimson_roots"));
@@ -327,6 +329,12 @@ public final class Features {
     public static final DefaultedRegistryReference<Feature> PATCH_DEAD_BUSH = Features.key(ResourceKey.minecraft("patch_dead_bush"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_FIRE = Features.key(ResourceKey.minecraft("patch_fire"));
+
+    public static final DefaultedRegistryReference<Feature> PATCH_FIREFLY_BUSH = Features.key(ResourceKey.minecraft("patch_firefly_bush"));
+
+    public static final DefaultedRegistryReference<Feature> PATCH_FIREFLY_BUSH_NEAR_WATER = Features.key(ResourceKey.minecraft("patch_firefly_bush_near_water"));
+
+    public static final DefaultedRegistryReference<Feature> PATCH_FIREFLY_BUSH_SPARSE = Features.key(ResourceKey.minecraft("patch_firefly_bush_sparse"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_GRASS = Features.key(ResourceKey.minecraft("patch_grass"));
 

@@ -336,6 +336,8 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> BUDDING_AMETHYST = BlockTypes.key(ResourceKey.minecraft("budding_amethyst"));
 
+    public static final DefaultedRegistryReference<BlockType> BUSH = BlockTypes.key(ResourceKey.minecraft("bush"));
+
     public static final DefaultedRegistryReference<BlockType> CACTUS = BlockTypes.key(ResourceKey.minecraft("cactus"));
 
     public static final DefaultedRegistryReference<BlockType> CAKE = BlockTypes.key(ResourceKey.minecraft("cake"));
@@ -791,6 +793,8 @@ public final class BlockTypes {
     public static final DefaultedRegistryReference<BlockType> FERN = BlockTypes.key(ResourceKey.minecraft("fern"));
 
     public static final DefaultedRegistryReference<BlockType> FIRE = BlockTypes.key(ResourceKey.minecraft("fire"));
+
+    public static final DefaultedRegistryReference<BlockType> FIREFLY_BUSH = BlockTypes.key(ResourceKey.minecraft("firefly_bush"));
 
     public static final DefaultedRegistryReference<BlockType> FIRE_CORAL = BlockTypes.key(ResourceKey.minecraft("fire_coral"));
 

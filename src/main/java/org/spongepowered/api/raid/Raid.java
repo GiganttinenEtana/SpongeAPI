@@ -29,19 +29,11 @@ import org.spongepowered.api.data.type.RaidStatus;
 import org.spongepowered.api.entity.living.Living;
 import org.spongepowered.api.entity.living.monster.raider.Raider;
 import org.spongepowered.api.world.difficulty.Difficulties;
-import org.spongepowered.api.world.server.ServerWorld;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface Raid {
-
-    /**
-     * Gets the {@link ServerWorld} this raid is taking place in.
-     *
-     * @return The world
-     */
-    ServerWorld world();
 
     /**
      * Gets the {@link BossBar} being displayed to clients of this raid.

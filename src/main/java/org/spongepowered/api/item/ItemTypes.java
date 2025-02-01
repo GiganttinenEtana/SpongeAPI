@@ -400,6 +400,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> BURN_POTTERY_SHERD = ItemTypes.key(ResourceKey.minecraft("burn_pottery_sherd"));
 
+    public static final DefaultedRegistryReference<ItemType> BUSH = ItemTypes.key(ResourceKey.minecraft("bush"));
+
     public static final DefaultedRegistryReference<ItemType> CACTUS = ItemTypes.key(ResourceKey.minecraft("cactus"));
 
     public static final DefaultedRegistryReference<ItemType> CAKE = ItemTypes.key(ResourceKey.minecraft("cake"));
@@ -977,6 +979,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> FIELD_MASONED_BANNER_PATTERN = ItemTypes.key(ResourceKey.minecraft("field_masoned_banner_pattern"));
 
     public static final DefaultedRegistryReference<ItemType> FILLED_MAP = ItemTypes.key(ResourceKey.minecraft("filled_map"));
+
+    public static final DefaultedRegistryReference<ItemType> FIREFLY_BUSH = ItemTypes.key(ResourceKey.minecraft("firefly_bush"));
 
     public static final DefaultedRegistryReference<ItemType> FIREWORK_ROCKET = ItemTypes.key(ResourceKey.minecraft("firework_rocket"));
 
