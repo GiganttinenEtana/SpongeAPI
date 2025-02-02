@@ -299,7 +299,7 @@ public interface ServerPlayer extends Player, Subject {
      * @return True if played before, false otherwise
      */
     default boolean hasPlayedBefore() {
-        return !this.firstJoined().equals(this.lastPlayed());
+        return !this.firstJoined().map(Value::get).equals(this.lastJoined().map(Value::get));
     }
 
     /**
