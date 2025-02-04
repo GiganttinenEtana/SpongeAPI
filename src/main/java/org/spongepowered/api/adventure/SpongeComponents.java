@@ -26,6 +26,8 @@ package org.spongepowered.api.adventure;
 
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.ComponentLike;
+import net.kyori.adventure.text.VirtualComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.flattener.ComponentFlattener;
 import org.spongepowered.api.Sponge;
@@ -33,6 +35,7 @@ import org.spongepowered.api.command.CommandCause;
 import org.spongepowered.api.registry.DefaultedRegistryReference;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * Additional SpongeAPI-specific methods for working with {@link Component}s and related.
@@ -111,6 +114,17 @@ public final class SpongeComponents {
         return SpongeComponents.factory().flattener();
     }
 
+    /**
+     * Creates a new {@link VirtualComponent} that will be used to
+     * render each {@link Audience} their own version of
+     * the received message.
+     *
+     * @return The virtual component
+     */
+    public static VirtualComponent receiverVirtualComponent(final Function<Audience, ComponentLike> apply) {
+        return SpongeComponents.factory().receiverVirtualComponent(apply);
+    }
+
     private static Factory factory() {
         return Sponge.game().factoryProvider().provide(Factory.class);
     }
@@ -137,5 +151,6 @@ public final class SpongeComponents {
 
         ComponentFlattener flattener();
 
+        VirtualComponent receiverVirtualComponent(Function<Audience, ComponentLike> apply);
     }
 }
