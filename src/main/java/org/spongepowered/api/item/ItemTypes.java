@@ -290,6 +290,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> BLUE_DYE = ItemTypes.key(ResourceKey.minecraft("blue_dye"));
 
+    public static final DefaultedRegistryReference<ItemType> BLUE_EGG = ItemTypes.key(ResourceKey.minecraft("blue_egg"));
+
     public static final DefaultedRegistryReference<ItemType> BLUE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("blue_glazed_terracotta"));
 
     public static final DefaultedRegistryReference<ItemType> BLUE_ICE = ItemTypes.key(ResourceKey.minecraft("blue_ice"));
@@ -368,6 +370,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> BROWN_DYE = ItemTypes.key(ResourceKey.minecraft("brown_dye"));
 
+    public static final DefaultedRegistryReference<ItemType> BROWN_EGG = ItemTypes.key(ResourceKey.minecraft("brown_egg"));
+
     public static final DefaultedRegistryReference<ItemType> BROWN_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("brown_glazed_terracotta"));
 
     public static final DefaultedRegistryReference<ItemType> BROWN_MUSHROOM = ItemTypes.key(ResourceKey.minecraft("brown_mushroom"));
@@ -403,6 +407,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> BUSH = ItemTypes.key(ResourceKey.minecraft("bush"));
 
     public static final DefaultedRegistryReference<ItemType> CACTUS = ItemTypes.key(ResourceKey.minecraft("cactus"));
+
+    public static final DefaultedRegistryReference<ItemType> CACTUS_FLOWER = ItemTypes.key(ResourceKey.minecraft("cactus_flower"));
 
     public static final DefaultedRegistryReference<ItemType> CAKE = ItemTypes.key(ResourceKey.minecraft("cake"));
 
@@ -2232,6 +2238,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> SHIELD = ItemTypes.key(ResourceKey.minecraft("shield"));
 
+    public static final DefaultedRegistryReference<ItemType> SHORT_DRY_GRASS = ItemTypes.key(ResourceKey.minecraft("short_dry_grass"));
+
     public static final DefaultedRegistryReference<ItemType> SHORT_GRASS = ItemTypes.key(ResourceKey.minecraft("short_grass"));
 
     public static final DefaultedRegistryReference<ItemType> SHROOMLIGHT = ItemTypes.key(ResourceKey.minecraft("shroomlight"));
@@ -2481,6 +2489,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> TADPOLE_BUCKET = ItemTypes.key(ResourceKey.minecraft("tadpole_bucket"));
 
     public static final DefaultedRegistryReference<ItemType> TADPOLE_SPAWN_EGG = ItemTypes.key(ResourceKey.minecraft("tadpole_spawn_egg"));
+
+    public static final DefaultedRegistryReference<ItemType> TALL_DRY_GRASS = ItemTypes.key(ResourceKey.minecraft("tall_dry_grass"));
 
     public static final DefaultedRegistryReference<ItemType> TALL_GRASS = ItemTypes.key(ResourceKey.minecraft("tall_grass"));
 

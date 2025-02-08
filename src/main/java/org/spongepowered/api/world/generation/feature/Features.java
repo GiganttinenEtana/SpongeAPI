@@ -328,6 +328,8 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> PATCH_DEAD_BUSH = Features.key(ResourceKey.minecraft("patch_dead_bush"));
 
+    public static final DefaultedRegistryReference<Feature> PATCH_DRY_GRASS = Features.key(ResourceKey.minecraft("patch_dry_grass"));
+
     public static final DefaultedRegistryReference<Feature> PATCH_FIRE = Features.key(ResourceKey.minecraft("patch_fire"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_FIREFLY_BUSH = Features.key(ResourceKey.minecraft("patch_firefly_bush"));

@@ -340,6 +340,8 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> CACTUS = BlockTypes.key(ResourceKey.minecraft("cactus"));
 
+    public static final DefaultedRegistryReference<BlockType> CACTUS_FLOWER = BlockTypes.key(ResourceKey.minecraft("cactus_flower"));
+
     public static final DefaultedRegistryReference<BlockType> CAKE = BlockTypes.key(ResourceKey.minecraft("cake"));
 
     public static final DefaultedRegistryReference<BlockType> CALCITE = BlockTypes.key(ResourceKey.minecraft("calcite"));
@@ -1776,6 +1778,8 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> SEA_PICKLE = BlockTypes.key(ResourceKey.minecraft("sea_pickle"));
 
+    public static final DefaultedRegistryReference<BlockType> SHORT_DRY_GRASS = BlockTypes.key(ResourceKey.minecraft("short_dry_grass"));
+
     public static final DefaultedRegistryReference<BlockType> SHORT_GRASS = BlockTypes.key(ResourceKey.minecraft("short_grass"));
 
     public static final DefaultedRegistryReference<BlockType> SHROOMLIGHT = BlockTypes.key(ResourceKey.minecraft("shroomlight"));
@@ -1961,6 +1965,8 @@ public final class BlockTypes {
     public static final DefaultedRegistryReference<BlockType> SUSPICIOUS_SAND = BlockTypes.key(ResourceKey.minecraft("suspicious_sand"));
 
     public static final DefaultedRegistryReference<BlockType> SWEET_BERRY_BUSH = BlockTypes.key(ResourceKey.minecraft("sweet_berry_bush"));
+
+    public static final DefaultedRegistryReference<BlockType> TALL_DRY_GRASS = BlockTypes.key(ResourceKey.minecraft("tall_dry_grass"));
 
     public static final DefaultedRegistryReference<BlockType> TALL_GRASS = BlockTypes.key(ResourceKey.minecraft("tall_grass"));
 

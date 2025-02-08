@@ -340,6 +340,10 @@ public final class PlacedFeatures {
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_DEAD_BUSH_BADLANDS = PlacedFeatures.key(ResourceKey.minecraft("patch_dead_bush_badlands"));
 
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_DRY_GRASS_BADLANDS = PlacedFeatures.key(ResourceKey.minecraft("patch_dry_grass_badlands"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> PATCH_DRY_GRASS_DESERT = PlacedFeatures.key(ResourceKey.minecraft("patch_dry_grass_desert"));
+
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIRE = PlacedFeatures.key(ResourceKey.minecraft("patch_fire"));
 
     public static final DefaultedRegistryReference<PlacedFeature> PATCH_FIREFLY_BUSH_NEAR_WATER = PlacedFeatures.key(ResourceKey.minecraft("patch_firefly_bush_near_water"));

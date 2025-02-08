@@ -40,6 +40,8 @@ import org.spongepowered.api.registry.RegistryTypes;
 @RegistryScopes(scopes = RegistryScope.GAME)
 public final class GameRules {
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> ALLOW_FIRE_TICKS_AWAY_FROM_PLAYER = GameRules.key(ResourceKey.sponge("allow_fire_ticks_away_from_player"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> ANNOUNCE_ADVANCEMENTS = GameRules.key(ResourceKey.sponge("announce_advancements"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> BLOCK_EXPLOSION_DROP_DECAY = GameRules.key(ResourceKey.sponge("block_explosion_drop_decay"));

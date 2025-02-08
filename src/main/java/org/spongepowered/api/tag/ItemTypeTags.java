@@ -131,6 +131,8 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> DYEABLE = ItemTypeTags.key(ResourceKey.minecraft("dyeable"));
 
+    public static final Tag<ItemType> EGGS = ItemTypeTags.key(ResourceKey.minecraft("eggs"));
+
     public static final Tag<ItemType> EMERALD_ORES = ItemTypeTags.key(ResourceKey.minecraft("emerald_ores"));
 
     public static final Tag<ItemType> ENCHANTABLE_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("enchantable/armor"));

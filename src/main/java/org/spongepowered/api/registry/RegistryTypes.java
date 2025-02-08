@@ -53,6 +53,7 @@ import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
+import org.spongepowered.api.data.type.ChickenVariant;
 import org.spongepowered.api.data.type.ComparatorMode;
 import org.spongepowered.api.data.type.CowVariant;
 import org.spongepowered.api.data.type.CreakingHeartState;
@@ -320,6 +321,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<ChatVisibility> CHAT_VISIBILITY = RegistryTypes.spongeKeyInGame("chat_visibility");
 
     public static final DefaultedRegistryType<ChestAttachmentType> CHEST_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("chest_attachment_type");
+
+    public static final DefaultedRegistryType<ChickenVariant> CHICKEN_VARIANT = RegistryTypes.minecraftKeyInGame("chicken_variant");
 
     public static final DefaultedRegistryType<ChunkRegenerateFlag> CHUNK_REGENERATE_FLAG = RegistryTypes.spongeKeyInGame("chunk_regenerate_flag");
 

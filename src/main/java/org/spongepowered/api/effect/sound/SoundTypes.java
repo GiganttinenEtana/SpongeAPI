@@ -284,6 +284,10 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_BUBBLE_COLUMN_WHIRLPOOL_INSIDE = SoundTypes.key(ResourceKey.minecraft("block.bubble_column.whirlpool_inside"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_CACTUS_FLOWER_BREAK = SoundTypes.key(ResourceKey.minecraft("block.cactus_flower.break"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_CACTUS_FLOWER_PLACE = SoundTypes.key(ResourceKey.minecraft("block.cactus_flower.place"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_CAKE_ADD_CANDLE = SoundTypes.key(ResourceKey.minecraft("block.cake.add_candle"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_CALCITE_BREAK = SoundTypes.key(ResourceKey.minecraft("block.calcite.break"));
@@ -615,6 +619,8 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> BLOCK_FENCE_GATE_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.fence_gate.close"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_FENCE_GATE_OPEN = SoundTypes.key(ResourceKey.minecraft("block.fence_gate.open"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_FIREFLY_BUSH_IDLE = SoundTypes.key(ResourceKey.minecraft("block.firefly_bush.idle"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_FIRE_AMBIENT = SoundTypes.key(ResourceKey.minecraft("block.fire.ambient"));
 

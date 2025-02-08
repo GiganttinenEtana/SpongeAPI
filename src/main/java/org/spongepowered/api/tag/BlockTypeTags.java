@@ -137,8 +137,6 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> DARK_OAK_LOGS = BlockTypeTags.key(ResourceKey.minecraft("dark_oak_logs"));
 
-    public static final Tag<BlockType> DEAD_BUSH_MAY_PLACE_ON = BlockTypeTags.key(ResourceKey.minecraft("dead_bush_may_place_on"));
-
     public static final Tag<BlockType> DEEPSLATE_ORE_REPLACEABLES = BlockTypeTags.key(ResourceKey.minecraft("deepslate_ore_replaceables"));
 
     public static final Tag<BlockType> DIAMOND_ORES = BlockTypeTags.key(ResourceKey.minecraft("diamond_ores"));
@@ -154,6 +152,10 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> DRAGON_TRANSPARENT = BlockTypeTags.key(ResourceKey.minecraft("dragon_transparent"));
 
     public static final Tag<BlockType> DRIPSTONE_REPLACEABLE_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("dripstone_replaceable_blocks"));
+
+    public static final Tag<BlockType> DRY_VEGETATION_MAY_PLACE_ON = BlockTypeTags.key(ResourceKey.minecraft("dry_vegetation_may_place_on"));
+
+    public static final Tag<BlockType> EDIBLE_FOR_SHEEP = BlockTypeTags.key(ResourceKey.minecraft("edible_for_sheep"));
 
     public static final Tag<BlockType> EMERALD_ORES = BlockTypeTags.key(ResourceKey.minecraft("emerald_ores"));
 
