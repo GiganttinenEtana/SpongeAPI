@@ -53,7 +53,7 @@ public interface RegisterTagEvent extends LifecycleEvent {
     interface TagStep<T> {
 
         default TagStep<T> delete() {
-            return this.filter($ -> false);
+            return this.filter(k -> false);
         }
 
         TagStep<T> filter(Predicate<DefaultedRegistryReference<T>> predicate);
