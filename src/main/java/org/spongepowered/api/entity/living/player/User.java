@@ -25,6 +25,7 @@
 package org.spongepowered.api.entity.living.player;
 
 import org.spongepowered.api.ResourceKey;
+import org.spongepowered.api.Server;
 import org.spongepowered.api.block.entity.EnderChest;
 import org.spongepowered.api.data.DataHolder;
 import org.spongepowered.api.data.Keys;
@@ -203,4 +204,13 @@ public interface User extends DataHolder.Mutable, ArmorEquipable, Tamer, Subject
         return this.requireValue(Keys.VANISH_STATE).asMutable();
     }
 
+    /**
+     * Gets if the {@link User} has played on the {@link Server} before. Added
+     * as a utility.
+     *
+     * @return True if played before, false otherwise
+     */
+    default boolean hasPlayedBefore() {
+        return !this.firstJoined().map(Value::get).equals(this.lastJoined().map(Value::get));
+    }
 }
