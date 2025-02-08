@@ -29,7 +29,10 @@ import org.spongepowered.api.block.BlockSnapshot;
 import org.spongepowered.api.data.Transaction;
 import org.spongepowered.api.data.persistence.DataContainer;
 import org.spongepowered.api.data.persistence.Queries;
+import org.spongepowered.api.world.BlockChangeFlag;
+import org.spongepowered.api.world.BlockChangeFlags;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Objects;
 import java.util.StringJoiner;
@@ -46,6 +49,9 @@ import java.util.StringJoiner;
 public final class BlockTransaction extends Transaction<BlockSnapshot> {
 
     private final Operation operation;
+
+    private @Nullable WeakReference<BlockSnapshot> custom;
+    private @Nullable BlockChangeFlag customFlag;
 
     public BlockTransaction(final BlockSnapshot original, final BlockSnapshot defaultReplacement,
         final Operation operation
@@ -64,6 +70,37 @@ public final class BlockTransaction extends Transaction<BlockSnapshot> {
 
     public Operation operation() {
         return this.operation;
+    }
+
+    /**
+     * Sets the custom snapshot. If setting <code>null</code>, this will
+     * reset to use the {@link #defaultReplacement()} snapshot.
+     *
+     * @param custom The custom snapshot
+     * @param flag TThe various change flags controlling some interactions
+     */
+    public void setCustom(final @Nullable BlockSnapshot custom, final BlockChangeFlag flag) {
+        this.setCustom(custom);
+        if (custom != null) {
+            this.custom = new WeakReference<>(custom);
+            this.customFlag = flag;
+        } else {
+            this.custom = null;
+            this.customFlag = null;
+        }
+    }
+
+    /**
+     * Gets the {@link BlockChangeFlag flag} that is used to place
+     * the custom {@link BlockSnapshot}.
+     *
+     * @return The flag
+     */
+    public BlockChangeFlag customFlag() {
+        if (this.custom().isEmpty() || this.custom == null || this.custom.get() != this.custom().get()) {
+            return BlockChangeFlags.DEFAULT_PLACEMENT;
+        }
+        return this.customFlag;
     }
 
     @Override
