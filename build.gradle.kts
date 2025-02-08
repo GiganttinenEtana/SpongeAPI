@@ -146,6 +146,7 @@ tasks {
         exclude("org/spongepowered/api/event/lifecycle/RegisterBuilderEvent.java")
         exclude("org/spongepowered/api/event/lifecycle/RegisterRegistryEvent.java")
         exclude("org/spongepowered/api/event/lifecycle/RegisterRegistryValueEvent.java")
+        exclude("org/spongepowered/api/event/lifecycle/RegisterTagEvent.java")
         exclude("org/spongepowered/api/event/lifecycle/RegisterCommandEvent.java")
         exclude("org/spongepowered/api/event/lifecycle/RegisterFactoryEvent.java")
         exclude("org/spongepowered/api/event/lifecycle/RegisterWorldEvent.java")
