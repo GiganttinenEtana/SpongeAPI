@@ -200,6 +200,8 @@ public final class BlockStateKeys {
 
     public static final Key<Value<Boolean>> LOCKED = BlockStateKeys.key(ResourceKey.minecraft("property/locked"), Boolean.class);
 
+    public static final Key<Value<Boolean>> MAP = BlockStateKeys.key(ResourceKey.minecraft("property/map"), Boolean.class);
+
     public static final Key<Value<ComparatorMode>> MODE_COMPARATOR = BlockStateKeys.key(ResourceKey.minecraft("property/mode"), ComparatorMode.class);
 
     public static final Key<Value<Integer>> MOISTURE = BlockStateKeys.key(ResourceKey.minecraft("property/moisture"), Integer.class);

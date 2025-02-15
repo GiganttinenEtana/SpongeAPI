@@ -93,6 +93,8 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> CAMEL_SAND_STEP_SOUND_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("camel_sand_step_sound_blocks"));
 
+    public static final Tag<BlockType> CAMELS_SPAWNABLE_ON = BlockTypeTags.key(ResourceKey.minecraft("camels_spawnable_on"));
+
     public static final Tag<BlockType> CAMPFIRES = BlockTypeTags.key(ResourceKey.minecraft("campfires"));
 
     public static final Tag<BlockType> CANDLE_CAKES = BlockTypeTags.key(ResourceKey.minecraft("candle_cakes"));
