@@ -29,7 +29,9 @@ import org.spongepowered.api.effect.ForwardingViewer;
 import org.spongepowered.api.effect.Viewer;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.entity.living.player.Player;
+import org.spongepowered.api.event.CauseStackManager;
 import org.spongepowered.api.registry.RegistryHolder;
+import org.spongepowered.api.scheduler.Scheduler;
 import org.spongepowered.api.service.context.ContextSource;
 import org.spongepowered.api.util.annotation.DoNotStore;
 import org.spongepowered.api.world.chunk.WorldChunk;
@@ -227,4 +229,38 @@ public interface World<W extends World<W, L>, L extends Location<W, L>> extends
      */
     Iterable<WorldChunk> loadedChunks();
 
+    /**
+     * Gets the {@link Scheduler} used to schedule sync tasks on this {@link World}.
+     *
+     * <p><strong>Note:</strong> Accessing objects outside of this {@link World}
+     * from the scheduled tasks can lead to hard to diagnose problems
+     * or unrecoverable crashes.</p>
+     *
+     * @return The sync scheduler
+     */
+    default Scheduler scheduler() {
+        return this.engine().scheduler();
+    }
+
+    /**
+     * Gets the {@link CauseStackManager} for handling the current event cause
+     * stack and context information.
+     *
+     * <p><strong>Note:</strong> Accessing this outside of {@link World#onWorldThread()}
+     * can lead to hard to diagnose problems or unrecoverable crashes.</p>
+     *
+     * @return The cause stack manager
+     */
+    default CauseStackManager causeStackManager() {
+        return this.engine().causeStackManager();
+    }
+
+    /**
+     * Checks if the {@link Thread#currentThread() current thread} is the main thread of the world.
+     *
+     * @return {@code true} if main thread, {@code false} if not
+     */
+    default boolean onWorldThread() {
+        return this.engine().onMainThread();
+    }
 }
