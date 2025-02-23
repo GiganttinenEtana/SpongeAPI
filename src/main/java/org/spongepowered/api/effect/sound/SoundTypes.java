@@ -2980,15 +2980,85 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf.ambient"));
 
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_ANGRY_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_angry.whine"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_BIG_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_big.whine"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_CUTE_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_cute.whine"));
+
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf.death"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf.growl"));
 
-    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_HOWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf.howl"));
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_GRUMPY_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_grumpy.whine"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf.hurt"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_PUGLIN_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_puglin.whine"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.ambient"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_GROWL = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.growl"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_HURT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_PANT = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.pant"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SAD_WHINE = SoundTypes.key(ResourceKey.minecraft("entity.wolf_sad.whine"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_WOLF_SHAKE = SoundTypes.key(ResourceKey.minecraft("entity.wolf.shake"));
 
