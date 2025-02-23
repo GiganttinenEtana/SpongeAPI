@@ -99,6 +99,7 @@ import org.spongepowered.api.data.type.TropicalFishShape;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfSoundVariant;
 import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.data.value.ListValue;
 import org.spongepowered.api.data.value.MapValue;
@@ -3526,6 +3527,13 @@ public final class Keys {
      * The {@link WolfVariant} of a {@link Wolf}.
      */
     public static final Key<Value<WolfVariant>> WOLF_VARIANT = Keys.key(ResourceKey.sponge("wolf_variant"), WolfVariant.class);
+
+    /**
+     * The {@link WolfSoundVariant} of a {@link Wolf}.
+     *
+     * @see <a href="https://minecraft.wiki/w/Wolf#Sound_variants_2">Wolves wiki</a>
+     */
+    public static final Key<Value<WolfSoundVariant>> WOLF_SOUND_VARIANT = Keys.key(ResourceKey.sponge("wolf_sound_variant"), WolfSoundVariant.class);
 
     /**
      * The {@link Sheep} who is being targeted by the {@link SpellTypes#WOLOLO}

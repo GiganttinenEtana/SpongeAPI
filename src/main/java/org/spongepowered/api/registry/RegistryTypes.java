@@ -99,6 +99,7 @@ import org.spongepowered.api.data.type.VaultState;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfSoundVariant;
 import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.effect.particle.ParticleOption;
 import org.spongepowered.api.effect.particle.ParticleType;
@@ -529,6 +530,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<WeatherType> WEATHER_TYPE = RegistryTypes.spongeKeyInGame("weather_type");
 
     public static final DefaultedRegistryType<WolfVariant> WOLF_VAIRANT = RegistryTypes.minecraftKeyInServer("wolf_vairant");
+
+    public static final DefaultedRegistryType<WolfSoundVariant> WOLF_SOUND_VARIANT = RegistryTypes.spongeKeyInGame("wolf_sound_variant");
 
     public static final DefaultedRegistryType<WireAttachmentType> WIRE_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("wire_attachment_type");
 
