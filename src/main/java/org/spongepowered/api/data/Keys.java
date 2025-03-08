@@ -54,6 +54,7 @@ import org.spongepowered.api.data.meta.BannerPatternLayer;
 import org.spongepowered.api.data.type.ArmorMaterial;
 import org.spongepowered.api.data.type.ArtType;
 import org.spongepowered.api.data.type.AttachmentSurface;
+import org.spongepowered.api.data.type.AxolotlVariant;
 import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.BodyParts;
@@ -146,6 +147,7 @@ import org.spongepowered.api.entity.living.Bat;
 import org.spongepowered.api.entity.living.Humanoid;
 import org.spongepowered.api.entity.living.Living;
 import org.spongepowered.api.entity.living.animal.Animal;
+import org.spongepowered.api.entity.living.animal.Axolotl;
 import org.spongepowered.api.entity.living.animal.Cat;
 import org.spongepowered.api.entity.living.animal.Chicken;
 import org.spongepowered.api.entity.living.animal.Fox;
@@ -470,6 +472,11 @@ public final class Keys {
      * The {@link Axis} direction of a {@link BlockState}.
      */
     public static final Key<Value<Axis>> AXIS = Keys.key(ResourceKey.sponge("axis"), Axis.class);
+
+    /**
+     * The {@link AxolotlVariant} of an {@link Axolotl}.
+     */
+    public static final Key<Value<AxolotlVariant>> AXOLOTL_VARIANT = Keys.key(ResourceKey.sponge("axolotl_variant"), AxolotlVariant.class);
 
     /**
      * The ticks until a {@link Ageable} turns into an adult.

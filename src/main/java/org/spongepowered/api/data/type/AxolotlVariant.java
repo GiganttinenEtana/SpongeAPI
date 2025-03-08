@@ -22,25 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.animal;
+package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.data.Keys;
-import org.spongepowered.api.data.type.AxolotlVariant;
-import org.spongepowered.api.data.value.Value;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
-/**
- * Represents an Axolotl.
- */
-public interface Axolotl extends Animal {
-
-    /**
-     * Gets the {@link AxolotlVariant} of this Axolotl. Can be
-     * set back.
-     *
-     * @see org.spongepowered.api.data.type.AxolotlVariants
-     * @return The AxolotlVariant of this Axolotl.
-     */
-    default Value<AxolotlVariant> variant() {
-        return this.requireValue(Keys.AXOLOTL_VARIANT);
-    }
+@CatalogedBy(AxolotlVariants.class)
+public interface AxolotlVariant extends DefaultedRegistryValue, StringRepresentable {
 }
