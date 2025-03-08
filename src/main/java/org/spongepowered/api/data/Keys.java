@@ -166,6 +166,7 @@ import org.spongepowered.api.entity.living.animal.horse.PackHorse;
 import org.spongepowered.api.entity.living.animal.horse.llama.Llama;
 import org.spongepowered.api.entity.living.animal.horse.llama.TraderLlama;
 import org.spongepowered.api.entity.living.aquatic.Dolphin;
+import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
 import org.spongepowered.api.entity.living.golem.IronGolem;
@@ -2767,6 +2768,12 @@ public final class Keys {
      * The {@link Villager} or {@link ZombieVillager}'s {@link ProfessionType} level.
      */
     public static final Key<Value<Integer>> PROFESSION_LEVEL = Keys.key(ResourceKey.sponge("profession_level"), Integer.class);
+
+    /**
+     * The "puffiness" state of a {@link Pufferfish}, ranges from 0 to 2 per
+     * the <a href="https://minecraft.wiki/w/Pufferfish#Entity_data">Minecraft Wiki</a>.
+     */
+    public static final Key<Value<Integer>> PUFFER_FISH_PUFFINESS_STATE = Keys.key(ResourceKey.sponge("puffer_fish_size"), Integer.class);
 
     /**
      * The {@link Entity} or {@link BlockState} push reaction when a {@link Piston} pushes it.
