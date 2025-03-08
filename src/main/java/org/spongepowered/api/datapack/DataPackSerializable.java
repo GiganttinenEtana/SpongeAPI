@@ -22,40 +22,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.world.generation.structure;
+package org.spongepowered.api.datapack;
 
-import org.spongepowered.api.Sponge;
-import org.spongepowered.api.datapack.DataPack;
-import org.spongepowered.api.datapack.DataPackEntry;
-import org.spongepowered.api.util.CopyableBuilder;
-import org.spongepowered.api.util.ResourceKeyedBuilder;
-import org.spongepowered.api.world.schematic.Schematic;
+import org.spongepowered.api.data.persistence.DataContainer;
+import org.spongepowered.api.registry.RegistryHolder;
+
+import java.util.Optional;
 
 /**
- * The template for a vanilla structure schematic.
+ * Represents a type that can be serialized into a {@link DataContainer}
+ * and is a valid data pack entry.
  */
-public interface SchematicTemplate extends DataPackEntry<SchematicTemplate> {
-
-    static Builder builder() {
-        return Sponge.game().builderProvider().provide(Builder.class).reset();
-    }
+public interface DataPackSerializable {
 
     /**
-     * Returns the schematic.
+     * Creates a serialized representation of this type
+     * if possible. Not all types have serializable representation.
      *
-     * @return The schematic
+     * @param registryHolder The registry holder.
+     * @return The serialized data container.
      */
-    Schematic schematic();
-
-    interface Builder extends ResourceKeyedBuilder<SchematicTemplate, Builder>, CopyableBuilder<SchematicTemplate, Builder> {
-
-        /**
-         * Sets the data pack
-         *
-         * @param pack The data pack
-         * @return This builder, for chaining
-         */
-        Builder pack(DataPack<SchematicTemplate> pack);
-
-    }
+    Optional<DataContainer> toDataPack(RegistryHolder registryHolder);
 }

@@ -29,6 +29,7 @@ import net.kyori.adventure.key.KeyedValue;
 import net.kyori.adventure.text.Component;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.spongepowered.api.ResourceKeyed;
+import org.spongepowered.api.Sponge;
 import org.spongepowered.api.data.Keys;
 import org.spongepowered.api.entity.living.player.gamemode.GameMode;
 import org.spongepowered.api.entity.living.trader.WanderingTrader;
@@ -43,6 +44,7 @@ import org.spongepowered.api.world.difficulty.Difficulty;
 import org.spongepowered.api.world.gamerule.GameRuleHolder;
 import org.spongepowered.api.world.generation.config.WorldGenerationConfig;
 import org.spongepowered.api.world.server.ServerWorld;
+import org.spongepowered.api.world.server.WorldArchetypeType;
 import org.spongepowered.api.world.storage.WorldProperties;
 import org.spongepowered.api.world.weather.Weather;
 import org.spongepowered.api.world.weather.WeatherUniverse;
@@ -50,6 +52,7 @@ import org.spongepowered.api.world.weather.WeatherUniverse;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, Nameable, Identifiable, ResourceKeyed, WeatherUniverse.Mutable {
 
@@ -372,5 +375,343 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
     @Override
     default Weather weather() {
         return this.require(Keys.WEATHER);
+    }
+
+    /**
+     * Customize the load process of a {@link ServerWorldProperties}.
+     */
+    interface LoadOptions {
+
+        static LoadOptions.Builder builder() {
+            return Sponge.game().builderProvider().provide(LoadOptions.Builder.class);
+        }
+
+        /**
+         * Load a new {@link ServerWorldProperties} from disk
+         * but do not attempt to use the already loaded instance
+         * or to create a new one.
+         *
+         * <p>The operation fails if properties could not be loaded
+         * from disk.</p>
+         *
+         * @return The load options.
+         */
+        static LoadOptions load() {
+            return LoadOptions.builder()
+                .load()
+                .build();
+        }
+
+        /**
+         * Load a new {@link ServerWorldProperties} from disk
+         * but do not attempt to use the already loaded instance
+         * or to create a new one.
+         *
+         * <p>The operation fails if properties could not be loaded
+         * from disk.</p>
+         *
+         * @param loadCallback The consumer to call after successful
+         *                     load operation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions load(Consumer<ServerWorldProperties> loadCallback) {
+            return LoadOptions.builder()
+                .load()
+                .loadCallback(loadCallback)
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties}
+         * instance but do not attempt load it from the disk
+         * or create it.
+         *
+         * <p>The operation fails if properties were not already loaded.</p>
+         *
+         * @return The load options.
+         */
+        static LoadOptions get() {
+            return LoadOptions.builder()
+                .get()
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties}
+         * instance but do not attempt load it from the disk
+         * or create it.
+         *
+         * <p>The operation fails if properties were not already loaded.</p>
+         *
+         * @param getCallback The consumer to call after successful
+         *                    get operation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions get(Consumer<ServerWorldProperties> getCallback) {
+            return LoadOptions.builder()
+                .get()
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties}
+         * or attempt to load it from disk but do not create a new one.
+         *
+         * <p>The operation fails if properties were not loaded
+         * nor could it be loaded from disk.</p>
+         *
+         * @return The load options.
+         */
+        static LoadOptions getOrLoad() {
+            return LoadOptions.builder()
+                .get()
+                .load()
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties}
+         * or attempt to load it from disk but do not create a new one.
+         *
+         * <p>The operation fails if properties were not loaded
+         * nor could it be loaded from disk.</p>
+         *
+         * @param getCallback The consumer to call after successful
+         *                    get operation for additional configuration.
+         * @param loadCallback The consumer to call after successful
+         *                     load operation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions getOrLoad(Consumer<ServerWorldProperties> getCallback, Consumer<ServerWorldProperties> loadCallback) {
+            return LoadOptions.builder()
+                .get()
+                .getCallback(getCallback)
+                .load()
+                .loadCallback(loadCallback)
+                .build();
+        }
+
+        /**
+         * Load a new {@link ServerWorldProperties} from disk
+         * or create a new one with the provided {@link WorldArchetypeType}.
+         * Do not attempt to use the already loaded instance.
+         *
+         * <p>This operation fails if properties were already loaded.</p>
+         *
+         * @param worldArchetype The archetype to use for creation.
+         * @return The load options.
+         */
+        static LoadOptions loadOrCreate(WorldArchetypeType worldArchetype) {
+            return LoadOptions.builder()
+                .load()
+                .create(worldArchetype)
+                .build();
+        }
+
+        /**
+         * Load a new {@link ServerWorldProperties} from disk
+         * or create a new one with the provided {@link WorldArchetypeType}.
+         * Do not attempt to use the already loaded instance.
+         *
+         * <p>This operation fails if properties were already loaded.</p>
+         *
+         * @param worldArchetype The archetype to use for creation.
+         * @param createCallback The consumer to call after successful
+         *                       creation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions loadOrCreate(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+            return LoadOptions.builder()
+                .load()
+                .create(worldArchetype)
+                .createCallback(createCallback)
+                .build();
+        }
+
+        /**
+         * Load a new {@link ServerWorldProperties} from disk
+         * or create a new one with the provided {@link WorldArchetypeType}.
+         * Do not attempt to use the already loaded instance.
+         *
+         * <p>This operation fails if properties were already loaded.</p>
+         *
+         * @param loadCallback The consumer to call after successful
+         *                     load operation for additional configuration.
+         * @param worldArchetype The archetype to use for creation.
+         * @param createCallback The consumer to call after successful
+         *                       creation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions loadOrCreate(Consumer<ServerWorldProperties> loadCallback, WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+            return LoadOptions.builder()
+                .load()
+                .loadCallback(loadCallback)
+                .create(worldArchetype)
+                .createCallback(createCallback)
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties} or
+         * attempt to load it from disk. If not found, create a new one
+         * with the provided {@link WorldArchetypeType}.
+         *
+         * @param worldArchetype The archetype to use for creation.
+         * @return The load options.
+         */
+        static LoadOptions getLoadOrCreate(WorldArchetypeType worldArchetype) {
+            return LoadOptions.builder()
+                .get()
+                .load()
+                .create(worldArchetype)
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties} or
+         * attempt to load it from disk. If not found, create a new one
+         * with the provided {@link WorldArchetypeType}.
+         *
+         * @param worldArchetype The archetype to use for creation.
+         * @param createCallback The consumer to call after successful
+         *                       creation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions getLoadOrCreate(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+            return LoadOptions.builder()
+                .get()
+                .load()
+                .create(worldArchetype)
+                .createCallback(createCallback)
+                .build();
+        }
+
+        /**
+         * Get the already loaded {@link ServerWorldProperties} or
+         * attempt to load it from disk. If not found, create a new one
+         * with the provided {@link WorldArchetypeType}.
+         *
+         * @param getCallback The consumer to call after successful
+         *                    get operation for additional configuration.
+         * @param loadCallback The consumer to call after successful
+         *                     load operation for additional configuration.
+         * @param worldArchetype The archetype to use for creation.
+         * @param createCallback The consumer to call after successful
+         *                       creation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions getLoadOrCreate(Consumer<ServerWorldProperties> getCallback, Consumer<ServerWorldProperties> loadCallback, WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+            return LoadOptions.builder()
+                .get()
+                .getCallback(getCallback)
+                .load()
+                .loadCallback(loadCallback)
+                .create(worldArchetype)
+                .createCallback(createCallback)
+                .build();
+        }
+
+        /**
+         * Create a new {@link ServerWorldProperties} with the given
+         * {@link WorldArchetypeType} but do not attempt to load
+         * it from disk or use the already loaded instance.
+         *
+         * <p>The operation fails if properties could not be created.</p>
+         *
+         * @param worldArchetype The archetype to use.
+         * @return The load options.
+         */
+        static LoadOptions create(WorldArchetypeType worldArchetype) {
+            return LoadOptions.builder()
+                .create(worldArchetype)
+                .build();
+        }
+
+        /**
+         * Create a new {@link ServerWorldProperties} with the given
+         * {@link WorldArchetypeType} but do not attempt to load
+         * it from disk or use the already loaded instance.
+         *
+         * <p>The operation fails if properties could not be created.</p>
+         *
+         * @param worldArchetype The archetype to use.
+         * @param createCallback The consumer to call after successful
+         *                       creation for additional configuration.
+         * @return The load options.
+         */
+        static LoadOptions create(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+            return LoadOptions.builder()
+                .create(worldArchetype)
+                .createCallback(createCallback)
+                .build();
+        }
+
+        /**
+         * Gets the {@link GetOperation get operation} for this option.
+         *
+         * <p>If not present, the operation should fail on get.</p>
+         *
+         * @return The option when found, if present.
+         */
+        Optional<GetOperation> getOperation();
+
+        /**
+         * Gets the {@link LoadOperation load operation} for this option.
+         *
+         * <p>If not present, the operation should fail on load.</p>
+         *
+         * @return The option when found, if present.
+         */
+        Optional<LoadOperation> loadOperation();
+
+        /**
+         * Gets the {@link CreateOperation creation operation} for this option.
+         *
+         * <p>If not present, the operation should fail on creation.</p>
+         *
+         * @return The operation when created, if present.
+         */
+        Optional<CreateOperation> createOperation();
+
+        interface GetOperation {
+
+            Optional<Consumer<ServerWorldProperties>> getCallback();
+        }
+
+        interface LoadOperation {
+
+            Optional<Consumer<ServerWorldProperties>> loadCallback();
+        }
+
+        interface CreateOperation {
+
+            WorldArchetypeType worldArchetype();
+
+            Optional<Consumer<ServerWorldProperties>> createCallback();
+        }
+
+        interface Builder extends org.spongepowered.api.util.Builder<LoadOptions, Builder> {
+
+            Builder.GetStep get();
+
+            Builder.LoadStep load();
+
+            Builder.CreateStep create(WorldArchetypeType worldArchetype);
+
+            interface GetStep extends Builder {
+
+                GetStep getCallback(Consumer<ServerWorldProperties> getCallback);
+            }
+
+            interface LoadStep extends Builder {
+
+                LoadStep loadCallback(Consumer<ServerWorldProperties> loadCallback);
+            }
+
+            interface CreateStep extends Builder {
+
+                CreateStep createCallback(Consumer<ServerWorldProperties> initializeCallback);
+            }
+        }
     }
 }

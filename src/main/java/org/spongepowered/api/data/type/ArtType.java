@@ -24,15 +24,24 @@
  */
 package org.spongepowered.api.data.type;
 
+import org.spongepowered.api.ResourceKey;
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.datapack.DataPackSerializable;
 import org.spongepowered.api.entity.hanging.Painting;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.Builder;
+import org.spongepowered.api.util.CopyableBuilder;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 /**
  * Represents a piece of art to be displayed by {@link Painting}s.
  */
 @CatalogedBy(ArtTypes.class)
-public interface ArtType extends DefaultedRegistryValue {
+public interface ArtType extends DefaultedRegistryValue, DataPackSerializable {
+
+    static Builder builder() {
+        return Sponge.game().builderProvider().provide(Builder.class);
+    }
 
     /**
      * Gets the height in blocks this art piece spans.
@@ -48,4 +57,10 @@ public interface ArtType extends DefaultedRegistryValue {
      */
     int width();
 
+    interface Builder extends org.spongepowered.api.util.Builder<ArtType, Builder>, CopyableBuilder<ArtType, Builder> {
+
+        Builder dimensions(int width, int height);
+
+        Builder asset(ResourceKey assetId);
+    }
 }

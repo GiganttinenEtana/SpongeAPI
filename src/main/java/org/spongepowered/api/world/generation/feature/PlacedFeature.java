@@ -24,7 +24,11 @@
  */
 package org.spongepowered.api.world.generation.feature;
 
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.datapack.DataPackSerializable;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.Builder;
+import org.spongepowered.api.util.CopyableBuilder;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 import org.spongepowered.api.world.server.ServerLocation;
 import org.spongepowered.api.world.server.ServerWorld;
@@ -37,7 +41,16 @@ import java.util.List;
  * <p>Modifiers can impact position, rarity, count and more.</p>
  */
 @CatalogedBy(PlacedFeatures.class)
-public interface PlacedFeature extends DefaultedRegistryValue {
+public interface PlacedFeature extends DefaultedRegistryValue, DataPackSerializable {
+
+    /**
+     * Creates a new {@link Builder} to create a {@link PlacedFeature}.
+     *
+     * @return The new builder
+     */
+    static PlacedFeature.Builder builder() {
+        return Sponge.game().builderProvider().provide(PlacedFeature.Builder.class);
+    }
 
     /**
      * Returns the feature.
@@ -72,4 +85,25 @@ public interface PlacedFeature extends DefaultedRegistryValue {
      */
     boolean place(ServerLocation location);
 
+    /**
+     * A builder to create {@link PlacedFeature}s.
+     */
+    interface Builder extends org.spongepowered.api.util.Builder<PlacedFeature, Builder>, CopyableBuilder<PlacedFeature, Builder> {
+
+        /**
+         * Sets the {@link Feature}.
+         *
+         * @param feature The feature
+         * @return The builder, for chaining
+         */
+        Builder feature(Feature feature);
+
+        /**
+         * Adds a {@link PlacementModifier placement modifier}.
+         *
+         * @param modifier The placement modifier
+         * @return The builder, for chaining
+         */
+        Builder addModifier(PlacementModifier modifier);
+    }
 }

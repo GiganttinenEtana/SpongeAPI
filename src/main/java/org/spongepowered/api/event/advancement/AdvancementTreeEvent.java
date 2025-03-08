@@ -26,6 +26,7 @@ package org.spongepowered.api.event.advancement;
 
 import org.spongepowered.api.advancement.AdvancementTree;
 import org.spongepowered.api.event.Event;
+import org.spongepowered.api.registry.RegistryHolder;
 
 /**
  * A base interface for all the {@link AdvancementTree} events.
@@ -47,5 +48,11 @@ public interface AdvancementTreeEvent extends Event {
      */
     interface GenerateLayout extends AdvancementTreeEvent {
 
+        /**
+         * Gets the owning {@link RegistryHolder registry holder}.
+         *
+         * @return The registry holder.
+         */
+        RegistryHolder registryHolder();
     }
 }

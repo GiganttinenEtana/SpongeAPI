@@ -24,6 +24,11 @@
  */
 package org.spongepowered.api.world.generation.config.noise;
 
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.datapack.DataPackSerializable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.Builder;
+import org.spongepowered.api.util.CopyableBuilder;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 import java.util.List;
@@ -32,7 +37,16 @@ import java.util.List;
  * Noise used in world generation
  */
 @CatalogedBy(Noises.class)
-public interface Noise {
+public interface Noise extends DefaultedRegistryValue, DataPackSerializable {
+
+    /**
+     * Creates a new {@link Builder} to create a {@link Noise}.
+     *
+     * @return The new builder
+     */
+    static Noise.Builder builder() {
+        return Sponge.game().builderProvider().provide(Noise.Builder.class);
+    }
 
     /**
      * Returns the first octave
@@ -47,4 +61,34 @@ public interface Noise {
      * @return The amplitudes
      */
     List<Double> amplitudes();
+
+    /**
+     * A builder to create {@link Noise}s.
+     */
+    interface Builder extends org.spongepowered.api.util.Builder<Noise, Builder>, CopyableBuilder<Noise, Builder> {
+
+        /**
+         * Sets the octave.
+         *
+         * @param octave The octave.
+         * @return This builder, for chaining
+         */
+        Builder octave(int octave);
+
+        /**
+         * Sets the amplitudes.
+         *
+         * @param amplitudes The amplitudes
+         * @return This builder, for chaining
+         */
+        Builder amplitudes(double... amplitudes);
+
+        /**
+         * Sets the amplitudes.
+         *
+         * @param amplitudes The amplitudes
+         * @return This builder, for chaining
+         */
+        Builder amplitudes(List<Double> amplitudes);
+    }
 }
