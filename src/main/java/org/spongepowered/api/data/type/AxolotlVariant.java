@@ -22,16 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.aquatic.fish.school;
+package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.data.Keys;
-import org.spongepowered.api.data.type.SalmonSize;
-import org.spongepowered.api.data.value.Value;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
-public interface Salmon extends SchoolingFish {
-
-    default Value.Mutable<SalmonSize> size() {
-        return this.requireValue(Keys.SALMON_SIZE).asMutable();
-    }
-
+@CatalogedBy(AxolotlVariants.class)
+public interface AxolotlVariant extends DefaultedRegistryValue, StringRepresentable {
 }

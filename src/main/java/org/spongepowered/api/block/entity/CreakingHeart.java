@@ -24,16 +24,11 @@
  */
 package org.spongepowered.api.block.entity;
 
-import org.jetbrains.annotations.ApiStatus;
-import org.spongepowered.api.util.annotation.Experimental;
-
 /**
  * Represents a CreakingHeart block entity.
  *
  * @see <a href="https://minecraft.wiki/Creaking_Heart">Creaking Heart</a>
  */
-@Experimental("winter_drop")
-@ApiStatus.Experimental
 public interface CreakingHeart extends BlockEntity {
 
 }

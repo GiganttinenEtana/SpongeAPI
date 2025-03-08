@@ -54,6 +54,7 @@ import org.spongepowered.api.data.meta.BannerPatternLayer;
 import org.spongepowered.api.data.type.ArmorMaterial;
 import org.spongepowered.api.data.type.ArtType;
 import org.spongepowered.api.data.type.AttachmentSurface;
+import org.spongepowered.api.data.type.AxolotlVariant;
 import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.BodyParts;
@@ -85,6 +86,7 @@ import org.spongepowered.api.data.type.ProfessionType;
 import org.spongepowered.api.data.type.PushReaction;
 import org.spongepowered.api.data.type.RabbitType;
 import org.spongepowered.api.data.type.RailDirection;
+import org.spongepowered.api.data.type.SalmonSize;
 import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SkinPart;
 import org.spongepowered.api.data.type.SlabPortion;
@@ -145,6 +147,7 @@ import org.spongepowered.api.entity.living.Bat;
 import org.spongepowered.api.entity.living.Humanoid;
 import org.spongepowered.api.entity.living.Living;
 import org.spongepowered.api.entity.living.animal.Animal;
+import org.spongepowered.api.entity.living.animal.Axolotl;
 import org.spongepowered.api.entity.living.animal.Cat;
 import org.spongepowered.api.entity.living.animal.Chicken;
 import org.spongepowered.api.entity.living.animal.Fox;
@@ -165,6 +168,8 @@ import org.spongepowered.api.entity.living.animal.horse.PackHorse;
 import org.spongepowered.api.entity.living.animal.horse.llama.Llama;
 import org.spongepowered.api.entity.living.animal.horse.llama.TraderLlama;
 import org.spongepowered.api.entity.living.aquatic.Dolphin;
+import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
+import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
 import org.spongepowered.api.entity.living.golem.IronGolem;
 import org.spongepowered.api.entity.living.golem.Shulker;
@@ -467,6 +472,11 @@ public final class Keys {
      * The {@link Axis} direction of a {@link BlockState}.
      */
     public static final Key<Value<Axis>> AXIS = Keys.key(ResourceKey.sponge("axis"), Axis.class);
+
+    /**
+     * The {@link AxolotlVariant} of an {@link Axolotl}.
+     */
+    public static final Key<Value<AxolotlVariant>> AXOLOTL_VARIANT = Keys.key(ResourceKey.sponge("axolotl_variant"), AxolotlVariant.class);
 
     /**
      * The ticks until a {@link Ageable} turns into an adult.
@@ -2787,6 +2797,12 @@ public final class Keys {
     public static final Key<Value<Integer>> PROFESSION_LEVEL = Keys.key(ResourceKey.sponge("profession_level"), Integer.class);
 
     /**
+     * The "puffiness" state of a {@link Pufferfish}, ranges from 0 to 2 per
+     * the <a href="https://minecraft.wiki/w/Pufferfish#Entity_data">Minecraft Wiki</a>.
+     */
+    public static final Key<Value<Integer>> PUFFER_FISH_PUFFINESS_STATE = Keys.key(ResourceKey.sponge("puffer_fish_size"), Integer.class);
+
+    /**
      * The {@link Entity} or {@link BlockState} push reaction when a {@link Piston} pushes it.
      * Readonly
      */
@@ -2920,6 +2936,11 @@ public final class Keys {
      * The time a {@link Ravager} is roaring.
      */
     public static final Key<Value<Ticks>> ROARING_TIME = Keys.key(ResourceKey.sponge("roaring_time"), Ticks.class);
+
+    /**
+     * The {@link SalmonSize} of a {@link Salmon} entity.
+     */
+    public static final Key<Value<SalmonSize>> SALMON_SIZE = Keys.key(ResourceKey.sponge("salmon_size"), SalmonSize.class);
 
     /**
      * The current saturation of a {@link Player}.

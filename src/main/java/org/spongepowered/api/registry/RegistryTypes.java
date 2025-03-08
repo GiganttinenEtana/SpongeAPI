@@ -46,6 +46,7 @@ import org.spongepowered.api.data.persistence.DataFormat;
 import org.spongepowered.api.data.type.ArmorMaterial;
 import org.spongepowered.api.data.type.ArtType;
 import org.spongepowered.api.data.type.AttachmentSurface;
+import org.spongepowered.api.data.type.AxolotlVariant;
 import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BannerPatternShape;
 import org.spongepowered.api.data.type.BellAttachmentType;
@@ -81,6 +82,7 @@ import org.spongepowered.api.data.type.PushReaction;
 import org.spongepowered.api.data.type.RabbitType;
 import org.spongepowered.api.data.type.RaidStatus;
 import org.spongepowered.api.data.type.RailDirection;
+import org.spongepowered.api.data.type.SalmonSize;
 import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SkinPart;
 import org.spongepowered.api.data.type.SlabPortion;
@@ -203,6 +205,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.spongeKeyInGame("armor_material");
 
     public static final DefaultedRegistryType<AttributeType> ATTRIBUTE_TYPE = RegistryTypes.minecraftKeyInGame("attribute");
+
+    public static final DefaultedRegistryType<AxolotlVariant> AXOLOTL_VARIANT = RegistryTypes.spongeKeyInGame("axolotl_variant");
 
     public static final DefaultedRegistryType<Biome> BIOME = RegistryTypes.minecraftKeyInServer("worldgen/biome");
 
@@ -472,6 +476,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<TemperatureModifier> TEMPERATURE_MODIFIER = RegistryTypes.spongeKeyInGame("temperature_modifier");
 
     public static final DefaultedRegistryType<Rotation> ROTATION = RegistryTypes.spongeKeyInGame("rotation");
+
+    public static final DefaultedRegistryType<SalmonSize> SALMON_SIZE = RegistryTypes.spongeKeyInGame("salmon_size");
 
     public static final DefaultedRegistryType<SculkSensorState> SCULK_SENSOR_STATE = RegistryTypes.spongeKeyInGame("sculk_sensor_state");
 
