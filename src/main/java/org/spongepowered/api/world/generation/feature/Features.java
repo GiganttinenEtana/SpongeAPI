@@ -130,6 +130,16 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> END_SPIKE = Features.key(ResourceKey.minecraft("end_spike"));
 
+    public static final DefaultedRegistryReference<Feature> FALLEN_BIRCH_TREE = Features.key(ResourceKey.minecraft("fallen_birch_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_JUNGLE_TREE = Features.key(ResourceKey.minecraft("fallen_jungle_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_OAK_TREE = Features.key(ResourceKey.minecraft("fallen_oak_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_SPRUCE_TREE = Features.key(ResourceKey.minecraft("fallen_spruce_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_SUPER_BIRCH_TREE = Features.key(ResourceKey.minecraft("fallen_super_birch_tree"));
+
     public static final DefaultedRegistryReference<Feature> FANCY_OAK = Features.key(ResourceKey.minecraft("fancy_oak"));
 
     public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES = Features.key(ResourceKey.minecraft("fancy_oak_bees"));
@@ -422,6 +432,10 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> TALL_MANGROVE = Features.key(ResourceKey.minecraft("tall_mangrove"));
 
+    public static final DefaultedRegistryReference<Feature> TREES_BADLANDS = Features.key(ResourceKey.minecraft("trees_badlands"));
+
+    public static final DefaultedRegistryReference<Feature> TREES_BIRCH = Features.key(ResourceKey.minecraft("trees_birch"));
+
     public static final DefaultedRegistryReference<Feature> TREES_BIRCH_AND_OAK_LEAF_LITTER = Features.key(ResourceKey.minecraft("trees_birch_and_oak_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> TREES_FLOWER_FOREST = Features.key(ResourceKey.minecraft("trees_flower_forest"));
@@ -437,6 +451,8 @@ public final class Features {
     public static final DefaultedRegistryReference<Feature> TREES_PLAINS = Features.key(ResourceKey.minecraft("trees_plains"));
 
     public static final DefaultedRegistryReference<Feature> TREES_SAVANNA = Features.key(ResourceKey.minecraft("trees_savanna"));
+
+    public static final DefaultedRegistryReference<Feature> TREES_SNOWY = Features.key(ResourceKey.minecraft("trees_snowy"));
 
     public static final DefaultedRegistryReference<Feature> TREES_SPARSE_JUNGLE = Features.key(ResourceKey.minecraft("trees_sparse_jungle"));
 

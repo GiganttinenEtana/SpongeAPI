@@ -124,6 +124,16 @@ public final class PlacedFeatures {
 
     public static final DefaultedRegistryReference<PlacedFeature> END_SPIKE = PlacedFeatures.key(ResourceKey.minecraft("end_spike"));
 
+    public static final DefaultedRegistryReference<PlacedFeature> FALLEN_BIRCH_TREE = PlacedFeatures.key(ResourceKey.minecraft("fallen_birch_tree"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> FALLEN_JUNGLE_TREE = PlacedFeatures.key(ResourceKey.minecraft("fallen_jungle_tree"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> FALLEN_OAK_TREE = PlacedFeatures.key(ResourceKey.minecraft("fallen_oak_tree"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> FALLEN_SPRUCE_TREE = PlacedFeatures.key(ResourceKey.minecraft("fallen_spruce_tree"));
+
+    public static final DefaultedRegistryReference<PlacedFeature> FALLEN_SUPER_BIRCH_TREE = PlacedFeatures.key(ResourceKey.minecraft("fallen_super_birch_tree"));
+
     public static final DefaultedRegistryReference<PlacedFeature> FANCY_OAK_BEES = PlacedFeatures.key(ResourceKey.minecraft("fancy_oak_bees"));
 
     public static final DefaultedRegistryReference<PlacedFeature> FANCY_OAK_BEES_0002_LEAF_LITTER = PlacedFeatures.key(ResourceKey.minecraft("fancy_oak_bees_0002_leaf_litter"));
