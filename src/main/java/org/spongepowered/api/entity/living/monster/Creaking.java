@@ -32,9 +32,6 @@ import org.spongepowered.math.vector.Vector3i;
 
 import java.util.Optional;
 
-/**
- * A Creaking is a type of monster that originates from the {@link org.spongepowered.api.world.biome.Biomes#PALE_GARDEN}
- */
 @Experimental("winter_drop")
 public interface Creaking extends Monster {
 
