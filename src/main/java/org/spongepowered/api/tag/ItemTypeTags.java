@@ -179,6 +179,8 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> FISHES = ItemTypeTags.key(ResourceKey.minecraft("fishes"));
 
+    public static final Tag<ItemType> FLOWERS = ItemTypeTags.key(ResourceKey.minecraft("flowers"));
+
     public static final Tag<ItemType> FOOT_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("foot_armor"));
 
     public static final Tag<ItemType> FOX_FOOD = ItemTypeTags.key(ResourceKey.minecraft("fox_food"));

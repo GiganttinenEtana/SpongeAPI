@@ -142,6 +142,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> SPECTATORS_GENERATE_CHUNKS = GameRules.key(ResourceKey.sponge("spectators_generate_chunks"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> TNT_EXPLODES = GameRules.key(ResourceKey.sponge("tnt_explodes"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> TNT_EXPLOSION_DROP_DECAY = GameRules.key(ResourceKey.sponge("tnt_explosion_drop_decay"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> UNIVERSAL_ANGER = GameRules.key(ResourceKey.sponge("universal_anger"));
