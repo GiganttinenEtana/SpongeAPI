@@ -24,15 +24,22 @@
  */
 package org.spongepowered.api.world.biome;
 
+import org.spongepowered.api.Sponge;
 import org.spongepowered.api.data.DataHolder;
+import org.spongepowered.api.data.Key;
 import org.spongepowered.api.data.Keys;
+import org.spongepowered.api.data.value.Value;
+import org.spongepowered.api.datapack.DataPackSerializable;
 import org.spongepowered.api.effect.sound.SoundType;
 import org.spongepowered.api.entity.EntityCategories;
 import org.spongepowered.api.entity.EntityCategory;
 import org.spongepowered.api.entity.EntityType;
 import org.spongepowered.api.entity.living.golem.SnowGolem;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.tag.Taggable;
+import org.spongepowered.api.util.Builder;
 import org.spongepowered.api.util.Color;
+import org.spongepowered.api.util.CopyableBuilder;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 import org.spongepowered.api.world.biome.ambient.ParticleConfig;
 import org.spongepowered.api.world.biome.ambient.SoundConfig;
@@ -53,7 +60,16 @@ import java.util.Optional;
  * Represents a biome.
  */
 @CatalogedBy(Biomes.class)
-public interface Biome extends DataHolder, Taggable<Biome> {
+public interface Biome extends DefaultedRegistryValue, DataHolder, Taggable<Biome>, DataPackSerializable {
+
+    /**
+     * Creates a new {@link Builder} to create a {@link Biome}.
+     *
+     * @return The new builder
+     */
+    static Builder builder() {
+        return Sponge.game().builderProvider().provide(Builder.class);
+    }
 
     // Biome Climate
 
@@ -270,4 +286,19 @@ public interface Biome extends DataHolder, Taggable<Biome> {
         return this.get(Keys.BACKGROUND_MUSIC);
     }
 
+    /**
+     * A builder to create {@link Biome}s.
+     */
+    interface Builder extends org.spongepowered.api.util.Builder<Biome, Builder>, CopyableBuilder<Biome, Builder> {
+
+        /**
+         * Adds the given {@link Key} with the given value.
+         *
+         * @param key The key to assign the value with
+         * @param value The value to assign with the key
+         * @param <V> The type of the value
+         * @return This builder, for chaining
+         */
+        <V> Builder add(Key<? extends Value<V>> key, V value);
+    }
 }

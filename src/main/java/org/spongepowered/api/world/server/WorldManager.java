@@ -118,25 +118,26 @@ public interface WorldManager {
     Collection<ServerWorld> worldsOfType(WorldType type);
 
     /**
-     * Loads a {@link ServerWorld world} from a {@link WorldTemplate template}.
-     *
-     * <p>If a world is already loaded by the {@link ResourceKey key} of the template,
-     * the world will be returned instead.</p>
-     *
-     * @param template The template
-     * @return The world
-     */
-    CompletableFuture<ServerWorld> loadWorld(WorldTemplate template);
-
-    /**
      * Loads a {@link ServerWorld world} by a {@link ResourceKey key}.
      *
-     * <p>If a world with the given name is already loaded then it is returned instead.</p>
+     * <p>If a world with the given name is already loaded, the operation fails.</p>
      *
      * @param key The key
-     * @return The world
+     * @return The world, if loaded.
      */
-    CompletableFuture<ServerWorld> loadWorld(ResourceKey key);
+    default CompletableFuture<Optional<ServerWorld>> loadWorld(ResourceKey key) {
+        return this.loadWorld(key, ServerWorldProperties.LoadOptions.load());
+    }
+
+    /**
+     * Loads a {@link ServerWorld world} by a {@link ResourceKey key}
+     * with the provided {@link ServerWorldProperties.LoadOptions load options}.
+     *
+     * @param key The key
+     * @param propertiesLoadOptions The options used to load the {@link ServerWorldProperties properties}.
+     * @return The world, if found.
+     */
+    CompletableFuture<Optional<ServerWorld>> loadWorld(ResourceKey key, ServerWorldProperties.LoadOptions propertiesLoadOptions);
 
     /**
      * Unloads a {@link ServerWorld world} by a {@link ResourceKey key}.
@@ -161,14 +162,26 @@ public interface WorldManager {
     CompletableFuture<Boolean> unloadWorld(ServerWorld world);
 
     /**
-     * Loads an offline {@link ServerWorldProperties properties}.
+     * Loads the {@link ServerWorldProperties properties}.
      *
      * <p>It is left up to the implementation on what conditions cause a failure of loading properties.</p>
      *
      * @param key The key
      * @return The properties
      */
-    CompletableFuture<Optional<ServerWorldProperties>> loadProperties(ResourceKey key);
+    default CompletableFuture<Optional<ServerWorldProperties>> loadProperties(ResourceKey key) {
+        return this.loadProperties(key, ServerWorldProperties.LoadOptions.load());
+    }
+
+    /**
+     * Loads the {@link ServerWorldProperties properties} with
+     * the provided {@link ServerWorldProperties.LoadOptions load options}.
+     *
+     * @param key The key
+     * @param propertiesLoadOptions The options used to load the {@link ServerWorldProperties properties}.
+     * @return The properties
+     */
+    CompletableFuture<Optional<ServerWorldProperties>> loadProperties(ResourceKey key, ServerWorldProperties.LoadOptions propertiesLoadOptions);
 
     /**
      * Saves a {@link ServerWorldProperties properties}.

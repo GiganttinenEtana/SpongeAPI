@@ -26,6 +26,10 @@ package org.spongepowered.api.world.generation.config.noise;
 
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.block.BlockState;
+import org.spongepowered.api.datapack.DataPackSerializable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.Builder;
+import org.spongepowered.api.util.CopyableBuilder;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 import org.spongepowered.api.world.biome.BiomeAttributes;
 import org.spongepowered.api.world.generation.ConfigurableChunkGenerator;
@@ -39,10 +43,15 @@ import java.util.List;
  * Noise generator config used in {@link ConfigurableChunkGenerator configurable chunk generators}.
  */
 @CatalogedBy(NoiseGeneratorConfigs.class)
-public interface NoiseGeneratorConfig extends ChunkGeneratorConfig {
+public interface NoiseGeneratorConfig extends ChunkGeneratorConfig, DefaultedRegistryValue, DataPackSerializable {
 
-    static NoiseGeneratorConfigTemplate.Builder builder() {
-        return Sponge.game().builderProvider().provide(NoiseGeneratorConfigTemplate.Builder.class);
+    /**
+     * Creates a new {@link Builder} to create a {@link NoiseGeneratorConfig}.
+     *
+     * @return The new builder
+     */
+    static NoiseGeneratorConfig.Builder builder() {
+        return Sponge.game().builderProvider().provide(NoiseGeneratorConfig.Builder.class);
     }
 
     /**
@@ -124,4 +133,95 @@ public interface NoiseGeneratorConfig extends ChunkGeneratorConfig {
      */
     boolean mobGeneration();
 
+    /**
+     * A builder to create {@link NoiseGeneratorConfig}s.
+     */
+    interface Builder extends org.spongepowered.api.util.Builder<NoiseGeneratorConfig, Builder>, CopyableBuilder<NoiseGeneratorConfig, Builder> {
+
+        /**
+         * Sets the noise configuration
+         *
+         * @param config The noise configuration
+         * @return This builder, for chaining
+         */
+        Builder noiseConfig(NoiseConfig config);
+
+        /**
+         * Sets the surface rule.
+         *
+         * @param rule The surface rule
+         * @return This builder, for chaining
+         */
+        Builder surfaceRule(SurfaceRule rule);
+
+        /**
+         * Sets the default block used for terrain.
+         *
+         * @param block The block
+         * @return This builder, for chaining
+         */
+        Builder defaultBlock(BlockState block);
+
+        /**
+         * Sets the default fluid used for seas and lakes.
+         *
+         * @param fluid The fluid
+         * @return This builder, for chaining
+         */
+        Builder defaultFluid(BlockState fluid);
+
+        /**
+         * Sets the sea level.
+         *
+         * @param y The sea level
+         * @return This builder, for chaining
+         */
+        Builder seaLevel(int y);
+
+        /**
+         * Sets whether to generate aquifers.
+         *
+         * @param enableAquifers true to enable aquifers
+         * @return This builder, for chaining
+         */
+        Builder aquifers(boolean enableAquifers);
+
+        /**
+         * Sets whether to generate or veins.
+         *
+         * @param enableOreVeins true to enable ore veins
+         * @return This builder, for chaining
+         */
+        Builder oreVeins(boolean enableOreVeins);
+
+        /**
+         * Sets whether to enable mob generation.
+         *
+         * @param mobGeneration true to enable mob generation
+         * @return This builder, for chaining
+         */
+        Builder mobGeneration(boolean mobGeneration);
+
+        /**
+         * Sets whether to use the legacy random source.
+         * @param useLegacyRandomSource true when using the legacy random source
+         * @return This builder, for chaining
+         */
+        Builder randomSource(boolean useLegacyRandomSource);
+
+        /**
+         * Sets the noise router.
+         * @param router The noise router
+         * @return This builder, for chaining
+         */
+        Builder noiseRouter(NoiseRouter router);
+
+        /**
+         * Sets the biome attributes in which the initial {@link ServerWorldProperties#spawnPosition()} is allowed.
+         *
+         * @param spawnTargets The spawn targets
+         * @return This builder, for chaining
+         */
+        Builder spawnTargets(List<BiomeAttributes> spawnTargets);
+    }
 }

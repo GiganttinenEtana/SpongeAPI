@@ -24,8 +24,23 @@
  */
 package org.spongepowered.api.entity.living.animal;
 
+import org.spongepowered.api.data.Keys;
+import org.spongepowered.api.data.type.AxolotlVariant;
+import org.spongepowered.api.data.value.Value;
+
 /**
  * Represents an Axolotl.
  */
 public interface Axolotl extends Animal {
+
+    /**
+     * Gets the {@link AxolotlVariant} of this Axolotl. Can be
+     * set back.
+     *
+     * @see org.spongepowered.api.data.type.AxolotlVariants
+     * @return The AxolotlVariant of this Axolotl.
+     */
+    default Value<AxolotlVariant> variant() {
+        return this.requireValue(Keys.AXOLOTL_VARIANT);
+    }
 }

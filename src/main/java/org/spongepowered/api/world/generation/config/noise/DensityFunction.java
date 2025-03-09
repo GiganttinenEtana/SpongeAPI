@@ -24,11 +24,13 @@
  */
 package org.spongepowered.api.world.generation.config.noise;
 
+import org.spongepowered.api.datapack.DataPackSerializable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 import org.spongepowered.math.vector.Vector3i;
 
 @CatalogedBy(DensityFunctions.class)
-public interface DensityFunction {
+public interface DensityFunction extends DefaultedRegistryValue, DataPackSerializable {
 
     /**
      * Returns the minimum value possible.
@@ -59,5 +61,4 @@ public interface DensityFunction {
      * @return The noise value at given position
      */
     double compute(int x, int y, int z);
-
 }

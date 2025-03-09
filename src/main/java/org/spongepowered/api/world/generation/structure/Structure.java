@@ -25,6 +25,7 @@
 package org.spongepowered.api.world.generation.structure;
 
 import org.spongepowered.api.data.persistence.DataView;
+import org.spongepowered.api.datapack.DataPackSerializable;
 import org.spongepowered.api.entity.EntityCategory;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
@@ -43,7 +44,7 @@ import java.util.Map;
  * A structure used in world generation.
  */
 @CatalogedBy(Structures.class)
-public interface Structure extends DefaultedRegistryValue {
+public interface Structure extends DefaultedRegistryValue, DataPackSerializable {
 
     /**
      * Places the structure at given position and world

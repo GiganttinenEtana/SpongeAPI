@@ -27,6 +27,7 @@ package org.spongepowered.api.registry;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.spongepowered.api.ResourceKey;
 import org.spongepowered.api.Sponge;
+import org.spongepowered.api.advancement.Advancement;
 import org.spongepowered.api.advancement.AdvancementType;
 import org.spongepowered.api.advancement.criteria.trigger.Trigger;
 import org.spongepowered.api.adventure.ChatType;
@@ -46,6 +47,7 @@ import org.spongepowered.api.data.persistence.DataFormat;
 import org.spongepowered.api.data.type.ArmorMaterial;
 import org.spongepowered.api.data.type.ArtType;
 import org.spongepowered.api.data.type.AttachmentSurface;
+import org.spongepowered.api.data.type.AxolotlVariant;
 import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BannerPatternShape;
 import org.spongepowered.api.data.type.BellAttachmentType;
@@ -85,6 +87,7 @@ import org.spongepowered.api.data.type.PushReaction;
 import org.spongepowered.api.data.type.RabbitType;
 import org.spongepowered.api.data.type.RaidStatus;
 import org.spongepowered.api.data.type.RailDirection;
+import org.spongepowered.api.data.type.SalmonSize;
 import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SkinPart;
 import org.spongepowered.api.data.type.SlabPortion;
@@ -192,6 +195,7 @@ import org.spongepowered.api.world.generation.structure.jigsaw.JigsawPool;
 import org.spongepowered.api.world.generation.structure.jigsaw.ProcessorList;
 import org.spongepowered.api.world.generation.structure.jigsaw.ProcessorType;
 import org.spongepowered.api.world.schematic.PaletteType;
+import org.spongepowered.api.world.server.WorldArchetypeType;
 import org.spongepowered.api.world.teleport.TeleportHelperFilter;
 import org.spongepowered.api.world.weather.WeatherType;
 
@@ -204,11 +208,15 @@ public final class RegistryTypes {
 
     // @formatter:off
 
+    public static final DefaultedRegistryType<Advancement> ADVANCEMENT = RegistryTypes.spongeKeyInGame("advancement");
+
     public static final DefaultedRegistryType<ArtType> ART_TYPE = RegistryTypes.minecraftKeyInServer("painting_variant");
 
     public static final DefaultedRegistryType<ArmorMaterial> ARMOR_MATERIAL = RegistryTypes.spongeKeyInGame("armor_material");
 
     public static final DefaultedRegistryType<AttributeType> ATTRIBUTE_TYPE = RegistryTypes.minecraftKeyInGame("attribute");
+
+    public static final DefaultedRegistryType<AxolotlVariant> AXOLOTL_VARIANT = RegistryTypes.spongeKeyInGame("axolotl_variant");
 
     public static final DefaultedRegistryType<Biome> BIOME = RegistryTypes.minecraftKeyInServer("worldgen/biome");
 
@@ -337,7 +345,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<CommandRegistrarType<?>> COMMAND_REGISTRAR_TYPE = RegistryTypes.spongeKeyInGame("command_registrar_type");
 
-    public static final DefaultedRegistryType<CommandTreeNodeType<? extends @NonNull Object>> COMMAND_TREE_NODE_TYPE = RegistryTypes.spongeKeyInGame("command_tree_node_type");
+    public static final DefaultedRegistryType<CommandTreeNodeType<? extends @NonNull Object>> COMMAND_TREE_NODE_TYPE = RegistryTypes.spongeKeyInServer("command_tree_node_type");
 
     public static final DefaultedRegistryType<ComparatorMode> COMPARATOR_MODE = RegistryTypes.spongeKeyInGame("comparator_mode");
 
@@ -381,7 +389,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<FireworkShape> FIREWORK_SHAPE = RegistryTypes.spongeKeyInGame("firework_shape");
 
-    public static final DefaultedRegistryType<FlatGeneratorConfig> FLAT_GENERATOR_CONFIG = RegistryTypes.spongeKeyInGame("flat_generator_config");
+    public static final DefaultedRegistryType<FlatGeneratorConfig> FLAT_GENERATOR_CONFIG = RegistryTypes.spongeKeyInServer("flat_generator_config");
 
     public static final DefaultedRegistryType<FoxType> FOX_TYPE = RegistryTypes.spongeKeyInGame("fox_type");
 
@@ -479,6 +487,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<RailDirection> RAIL_DIRECTION = RegistryTypes.spongeKeyInGame("rail_direction");
 
+    public static final DefaultedRegistryType<Recipe<?>> RECIPE = RegistryTypes.spongeKeyInGame("recipe");
+
     public static final DefaultedRegistryType<ValueParameter<?>> REGISTRY_KEYED_VALUE_PARAMETER = RegistryTypes.spongeKeyInGame("value_parameter");
 
     public static final DefaultedRegistryType<ResolveOperation> RESOLVE_OPERATION = RegistryTypes.spongeKeyInGame("resolve_operation");
@@ -486,6 +496,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<TemperatureModifier> TEMPERATURE_MODIFIER = RegistryTypes.spongeKeyInGame("temperature_modifier");
 
     public static final DefaultedRegistryType<Rotation> ROTATION = RegistryTypes.spongeKeyInGame("rotation");
+
+    public static final DefaultedRegistryType<SalmonSize> SALMON_SIZE = RegistryTypes.spongeKeyInGame("salmon_size");
 
     public static final DefaultedRegistryType<SculkSensorState> SCULK_SENSOR_STATE = RegistryTypes.spongeKeyInGame("sculk_sensor_state");
 
@@ -533,6 +545,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<WolfSoundVariant> WOLF_SOUND_VARIANT = RegistryTypes.spongeKeyInGame("wolf_sound_variant");
 
+    public static final DefaultedRegistryType<WorldArchetypeType> WORLD_ARCHETYPE_TYPE = RegistryTypes.minecraftKeyInServer("dimension");
+
     public static final DefaultedRegistryType<WireAttachmentType> WIRE_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("wire_attachment_type");
 
     // @formatter:on
@@ -547,5 +561,9 @@ public final class RegistryTypes {
 
     private static <V> DefaultedRegistryType<V> spongeKeyInGame(final String key) {
         return RegistryType.of(RegistryRoots.SPONGE, ResourceKey.sponge(Objects.requireNonNull(key, "key"))).asDefaultedType(Sponge::game);
+    }
+
+    private static <V> DefaultedRegistryType<V> spongeKeyInServer(final String key) {
+        return RegistryType.of(RegistryRoots.SPONGE, ResourceKey.sponge(Objects.requireNonNull(key, "key"))).asDefaultedType(Sponge::server);
     }
 }

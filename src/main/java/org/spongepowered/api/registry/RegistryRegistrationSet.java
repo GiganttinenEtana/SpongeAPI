@@ -22,15 +22,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.item.recipe;
+package org.spongepowered.api.registry;
 
-import org.spongepowered.api.datapack.DataPackEntry;
+import org.spongepowered.api.ResourceKey;
+import org.spongepowered.api.Sponge;
 
-/**
- * A registration of a {@link Recipe} by an API consumer.
- *
- * <p>All registrations through the API will generate into the Vanilla data pack system</p>
- */
-public interface RecipeRegistration extends DataPackEntry<RecipeRegistration> {
-    Recipe<?> recipe();
+import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+public interface RegistryRegistrationSet<T> {
+
+    RegistryType<T> registryType();
+
+    Map<ResourceKey, Function<RegistryHolder, T>> values();
+
+    static <T> Builder<T> builder(RegistryType<T> registryType, Supplier<RegistryHolder> defaultHolder) {
+        return Sponge.game().factoryProvider().provide(Factory.class).builder(registryType, defaultHolder);
+    }
+
+    interface Builder<T> extends org.spongepowered.api.util.Builder<RegistryRegistrationSet<T>, Builder<T>> {
+
+        default <V extends T> DefaultedRegistryReference<V> register(ResourceKey key, Supplier<V> value) {
+            return this.register(key, (h) -> value.get());
+        }
+
+        <V extends T> DefaultedRegistryReference<V> register(ResourceKey key, Function<RegistryHolder, V> value);
+    }
+
+    interface Factory {
+
+        <T> Builder<T> builder(RegistryType<T> registryType, Supplier<RegistryHolder> defaultHolder);
+    }
 }

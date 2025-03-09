@@ -22,21 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.datapack;
+package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.ResourceKeyed;
-import org.spongepowered.api.data.persistence.DataSerializable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
-/**
- * A data pack entry. Can be saved using the {@link org.spongepowered.api.world.server.DataPackManager} or when registering it on a {@link org.spongepowered.api.event.lifecycle.RegisterDataPackValueEvent}
- */
-public interface DataPackEntry<T extends DataPackEntry<T>> extends ResourceKeyed, DataSerializable {
-
-    /**
-     * The data pack this entry belongs to.
-     *
-     * @return The data pack
-     */
-    DataPack<T> pack();
-
+@CatalogedBy(AxolotlVariants.class)
+public interface AxolotlVariant extends DefaultedRegistryValue, StringRepresentable {
 }

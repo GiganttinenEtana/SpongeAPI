@@ -22,32 +22,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.datapack;
+package org.spongepowered.api.world.server;
 
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.datapack.DataPackSerializable;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
+import org.spongepowered.api.world.WorldType;
+import org.spongepowered.api.world.generation.ChunkGenerator;
 
-@CatalogedBy(DataPacks.class)
-public interface DataPack<T> {
+@CatalogedBy(WorldArchetypeTypes.class)
+public interface WorldArchetypeType extends DefaultedRegistryValue, DataPackSerializable {
 
-    /**
-     * Returns the name of the data pack
-     *
-     * @return The name
-     */
-    String name();
+    static WorldArchetypeType.Builder builder() {
+        return Sponge.game().builderProvider().provide(WorldArchetypeType.Builder.class);
+    }
 
-    /**
-     * Returns the data pack description
-     *
-     * @return The description
-     */
-    String description();
+    static WorldArchetypeType of(WorldType worldType, ChunkGenerator chunkGenerator) {
+        return WorldArchetypeType.builder()
+            .worldType(worldType)
+            .chunkGenerator(chunkGenerator)
+            .build();
+    }
 
-    /**
-     * Returns the data pack type
-     *
-     * @return The data pack type
-     */
-    DataPackType<T> type();
+    WorldType worldType();
 
+    ChunkGenerator chunkGenerator();
+
+    interface Builder extends org.spongepowered.api.util.Builder<WorldArchetypeType, Builder> {
+
+        Builder worldType(WorldType worldType);
+
+        Builder chunkGenerator(ChunkGenerator chunkGenerator);
+    }
 }

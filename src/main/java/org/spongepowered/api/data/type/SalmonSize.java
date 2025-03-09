@@ -22,18 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.lifecycle;
+package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.datapack.DataPackEntry;
-import org.spongepowered.api.datapack.DataPackType;
-import org.spongepowered.api.event.GenericEvent;
-import org.spongepowered.eventgen.annotations.NoFactoryMethod;
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
-@SuppressWarnings("rawtypes")
-@NoFactoryMethod
-public interface RegisterDataPackValueEvent<T extends DataPackEntry> extends LifecycleEvent, GenericEvent<T> {
-
-    DataPackType<T> type();
-
-    RegisterDataPackValueEvent<T> register(T serializable);
+@CatalogedBy(SalmonSizes.class)
+public interface SalmonSize extends DefaultedRegistryValue, StringRepresentable {
 }
