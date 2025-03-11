@@ -44,7 +44,7 @@ import org.spongepowered.api.world.difficulty.Difficulty;
 import org.spongepowered.api.world.gamerule.GameRuleHolder;
 import org.spongepowered.api.world.generation.config.WorldGenerationConfig;
 import org.spongepowered.api.world.server.ServerWorld;
-import org.spongepowered.api.world.server.WorldArchetypeType;
+import org.spongepowered.api.world.server.WorldArchetype;
 import org.spongepowered.api.world.storage.WorldProperties;
 import org.spongepowered.api.world.weather.Weather;
 import org.spongepowered.api.world.weather.WeatherUniverse;
@@ -493,7 +493,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         /**
          * Load a new {@link ServerWorldProperties} from disk
-         * or create a new one with the provided {@link WorldArchetypeType}.
+         * or create a new one with the provided {@link WorldArchetype}.
          * Do not attempt to use the already loaded instance.
          *
          * <p>This operation fails if properties were already loaded.</p>
@@ -501,7 +501,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          * @param worldArchetype The archetype to use for creation.
          * @return The load options.
          */
-        static LoadOptions loadOrCreate(WorldArchetypeType worldArchetype) {
+        static LoadOptions loadOrCreate(WorldArchetype worldArchetype) {
             return LoadOptions.builder()
                 .load()
                 .create(worldArchetype)
@@ -510,7 +510,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         /**
          * Load a new {@link ServerWorldProperties} from disk
-         * or create a new one with the provided {@link WorldArchetypeType}.
+         * or create a new one with the provided {@link WorldArchetype}.
          * Do not attempt to use the already loaded instance.
          *
          * <p>This operation fails if properties were already loaded.</p>
@@ -520,7 +520,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          *                       creation for additional configuration.
          * @return The load options.
          */
-        static LoadOptions loadOrCreate(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+        static LoadOptions loadOrCreate(WorldArchetype worldArchetype, Consumer<ServerWorldProperties> createCallback) {
             return LoadOptions.builder()
                 .load()
                 .create(worldArchetype)
@@ -530,7 +530,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         /**
          * Load a new {@link ServerWorldProperties} from disk
-         * or create a new one with the provided {@link WorldArchetypeType}.
+         * or create a new one with the provided {@link WorldArchetype}.
          * Do not attempt to use the already loaded instance.
          *
          * <p>This operation fails if properties were already loaded.</p>
@@ -542,7 +542,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          *                       creation for additional configuration.
          * @return The load options.
          */
-        static LoadOptions loadOrCreate(Consumer<ServerWorldProperties> loadCallback, WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+        static LoadOptions loadOrCreate(Consumer<ServerWorldProperties> loadCallback, WorldArchetype worldArchetype, Consumer<ServerWorldProperties> createCallback) {
             return LoadOptions.builder()
                 .load()
                 .loadCallback(loadCallback)
@@ -554,12 +554,12 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
         /**
          * Get the already loaded {@link ServerWorldProperties} or
          * attempt to load it from disk. If not found, create a new one
-         * with the provided {@link WorldArchetypeType}.
+         * with the provided {@link WorldArchetype}.
          *
          * @param worldArchetype The archetype to use for creation.
          * @return The load options.
          */
-        static LoadOptions getLoadOrCreate(WorldArchetypeType worldArchetype) {
+        static LoadOptions getLoadOrCreate(WorldArchetype worldArchetype) {
             return LoadOptions.builder()
                 .get()
                 .load()
@@ -570,14 +570,14 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
         /**
          * Get the already loaded {@link ServerWorldProperties} or
          * attempt to load it from disk. If not found, create a new one
-         * with the provided {@link WorldArchetypeType}.
+         * with the provided {@link WorldArchetype}.
          *
          * @param worldArchetype The archetype to use for creation.
          * @param createCallback The consumer to call after successful
          *                       creation for additional configuration.
          * @return The load options.
          */
-        static LoadOptions getLoadOrCreate(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+        static LoadOptions getLoadOrCreate(WorldArchetype worldArchetype, Consumer<ServerWorldProperties> createCallback) {
             return LoadOptions.builder()
                 .get()
                 .load()
@@ -589,7 +589,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
         /**
          * Get the already loaded {@link ServerWorldProperties} or
          * attempt to load it from disk. If not found, create a new one
-         * with the provided {@link WorldArchetypeType}.
+         * with the provided {@link WorldArchetype}.
          *
          * @param getCallback The consumer to call after successful
          *                    get operation for additional configuration.
@@ -600,7 +600,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          *                       creation for additional configuration.
          * @return The load options.
          */
-        static LoadOptions getLoadOrCreate(Consumer<ServerWorldProperties> getCallback, Consumer<ServerWorldProperties> loadCallback, WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+        static LoadOptions getLoadOrCreate(Consumer<ServerWorldProperties> getCallback, Consumer<ServerWorldProperties> loadCallback, WorldArchetype worldArchetype, Consumer<ServerWorldProperties> createCallback) {
             return LoadOptions.builder()
                 .get()
                 .getCallback(getCallback)
@@ -613,7 +613,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         /**
          * Create a new {@link ServerWorldProperties} with the given
-         * {@link WorldArchetypeType} but do not attempt to load
+         * {@link WorldArchetype} but do not attempt to load
          * it from disk or use the already loaded instance.
          *
          * <p>The operation fails if properties could not be created.</p>
@@ -621,7 +621,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          * @param worldArchetype The archetype to use.
          * @return The load options.
          */
-        static LoadOptions create(WorldArchetypeType worldArchetype) {
+        static LoadOptions create(WorldArchetype worldArchetype) {
             return LoadOptions.builder()
                 .create(worldArchetype)
                 .build();
@@ -629,7 +629,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         /**
          * Create a new {@link ServerWorldProperties} with the given
-         * {@link WorldArchetypeType} but do not attempt to load
+         * {@link WorldArchetype} but do not attempt to load
          * it from disk or use the already loaded instance.
          *
          * <p>The operation fails if properties could not be created.</p>
@@ -639,7 +639,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
          *                       creation for additional configuration.
          * @return The load options.
          */
-        static LoadOptions create(WorldArchetypeType worldArchetype, Consumer<ServerWorldProperties> createCallback) {
+        static LoadOptions create(WorldArchetype worldArchetype, Consumer<ServerWorldProperties> createCallback) {
             return LoadOptions.builder()
                 .create(worldArchetype)
                 .createCallback(createCallback)
@@ -685,7 +685,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
         interface CreateOperation {
 
-            WorldArchetypeType worldArchetype();
+            WorldArchetype worldArchetype();
 
             Optional<Consumer<ServerWorldProperties>> createCallback();
         }
@@ -696,7 +696,7 @@ public interface ServerWorldProperties extends WorldProperties, GameRuleHolder, 
 
             Builder.LoadStep load();
 
-            Builder.CreateStep create(WorldArchetypeType worldArchetype);
+            Builder.CreateStep create(WorldArchetype worldArchetype);
 
             interface GetStep extends Builder {
 
