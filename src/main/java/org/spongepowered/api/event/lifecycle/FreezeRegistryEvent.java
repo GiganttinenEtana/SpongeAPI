@@ -33,7 +33,7 @@ import org.spongepowered.api.registry.RegistryType;
 
 import java.util.function.Consumer;
 
-public interface RegisterFreezeEvent extends LifecycleEvent {
+public interface FreezeRegistryEvent extends LifecycleEvent {
 
     /**
      * Fired after a layer has established its registries
@@ -43,7 +43,7 @@ public interface RegisterFreezeEvent extends LifecycleEvent {
      * When a registry is being reloaded, this event is fired
      * again for the relevant registries.</p>
      */
-    interface Post extends RegisterFreezeEvent {
+    interface Post extends FreezeRegistryEvent {
 
         /**
          * Gets the built {@link RegistryHolder registry holder}.
