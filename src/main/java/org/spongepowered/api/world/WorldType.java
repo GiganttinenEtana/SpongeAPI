@@ -24,6 +24,7 @@
  */
 package org.spongepowered.api.world;
 
+import org.spongepowered.api.Sponge;
 import org.spongepowered.api.data.Key;
 import org.spongepowered.api.data.value.Value;
 import org.spongepowered.api.datapack.DataPackSerializable;
@@ -35,6 +36,10 @@ import org.spongepowered.api.util.annotation.CatalogedBy;
 
 @CatalogedBy(WorldTypes.class)
 public interface WorldType extends DefaultedRegistryValue, ContextSource, WorldTypeDataFetcher, DataPackSerializable {
+
+    static WorldType.Builder builder() {
+        return Sponge.game().builderProvider().provide(WorldType.Builder.class);
+    }
 
     interface Builder extends org.spongepowered.api.util.Builder<WorldType, Builder>, CopyableBuilder<WorldType, Builder> {
 

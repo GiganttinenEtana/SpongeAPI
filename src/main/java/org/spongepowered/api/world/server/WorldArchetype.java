@@ -22,20 +22,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.data.type;
+package org.spongepowered.api.world.server;
 
-import net.kyori.adventure.text.ComponentLike;
-import org.spongepowered.api.entity.living.Living;
-import org.spongepowered.api.registry.DefaultedRegistryValue;
-import org.spongepowered.api.util.annotation.CatalogedBy;
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.world.generation.config.WorldGenerationConfig;
 
-/**
- * Represents the hand preference of a {@link Living} entity. This usually specifies the hand
- * used for interactions, such as tool use or block placing/breaking.
- *
- * <p>For players, this is controlled by the left hand/right hand setting</p>
- */
-@CatalogedBy(HandPreferences.class)
-public interface HandPreference extends DefaultedRegistryValue, ComponentLike, StringRepresentable {
+import java.util.Optional;
 
+public interface WorldArchetype {
+
+    static WorldArchetype.Builder builder() {
+        return Sponge.game().builderProvider().provide(WorldArchetype.Builder.class);
+    }
+
+    static WorldArchetype of(WorldArchetypeType type) {
+        return WorldArchetype.builder().type(type).build();
+    }
+
+    static WorldArchetype of(WorldArchetypeType type, WorldGenerationConfig generationConfig) {
+        return WorldArchetype.builder().type(type).generationConfig(generationConfig).build();
+    }
+
+    WorldArchetypeType type();
+
+    Optional<WorldGenerationConfig> generationConfig();
+
+    interface Builder extends org.spongepowered.api.util.Builder<WorldArchetype, Builder> {
+
+        Builder type(WorldArchetypeType type);
+
+        Builder generationConfig(WorldGenerationConfig generationConfig);
+    }
 }
