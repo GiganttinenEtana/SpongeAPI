@@ -47,6 +47,7 @@ import org.spongepowered.api.entity.living.player.tab.TabList;
 import org.spongepowered.api.event.Cause;
 import org.spongepowered.api.item.inventory.Container;
 import org.spongepowered.api.item.inventory.Inventory;
+import org.spongepowered.api.network.ServerConnectionState;
 import org.spongepowered.api.network.ServerSideConnection;
 import org.spongepowered.api.scoreboard.Scoreboard;
 import org.spongepowered.api.service.permission.Subject;
@@ -184,6 +185,14 @@ public interface ServerPlayer extends Player, Subject {
      * @return The connection
      */
     ServerSideConnection connection();
+
+    /**
+     * Gets the appropriate {@link ServerConnectionState.Game} linking this player to a
+     * connection state.
+     *
+     * @return The connection state
+     */
+    ServerConnectionState.Game connectionState();
 
     /**
      * Gets this player's {@link TabList}.
