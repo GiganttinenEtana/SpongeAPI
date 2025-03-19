@@ -37,7 +37,7 @@ import org.spongepowered.api.registry.RegistryTypes;
  * The known {@link CommandTreeNodeType types} available on the vanilla client.
  */
 @SuppressWarnings("unused")
-@RegistryScopes(scopes = RegistryScope.GAME)
+@RegistryScopes(scopes = RegistryScope.ENGINE)
 public final class CommandTreeNodeTypes {
 
     // @formatter:off
@@ -134,10 +134,10 @@ public final class CommandTreeNodeTypes {
     }
 
     public static Registry<CommandTreeNodeType<?>> registry() {
-        return Sponge.game().registry(RegistryTypes.COMMAND_TREE_NODE_TYPE);
+        return Sponge.server().registry(RegistryTypes.COMMAND_TREE_NODE_TYPE);
     }
 
     private static <T extends CommandTreeNode<T>> DefaultedRegistryReference<CommandTreeNodeType<T>> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.COMMAND_TREE_NODE_TYPE, location).asDefaultedReference(Sponge::game);
+        return RegistryKey.of(RegistryTypes.COMMAND_TREE_NODE_TYPE, location).asDefaultedReference(Sponge::server);
     }
 }
