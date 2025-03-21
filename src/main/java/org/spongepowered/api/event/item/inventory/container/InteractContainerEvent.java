@@ -56,7 +56,27 @@ public interface InteractContainerEvent extends Event, Cancellable {
     interface Open extends InteractContainerEvent {}
 
     /**
-     * The target container was closed.
+     * Base event when a {@link Container} is closed.
      */
-    interface Close extends ChangeInventoryEvent, InteractContainerEvent {}
+    interface Close extends InteractContainerEvent {
+
+        /**
+         * Fired before the {@link Container} is closed.
+         *
+         * <p>Cancelling this event will prevent the {@link Container}
+         * from being closed.</p>
+         */
+        interface Pre extends Close {
+        }
+
+        /**
+         * Fired after the {@link Container} was closed.
+         *
+         * <p>Cancelling this event will rollback the content
+         * of the {@link Container} that was mutated during
+         * the close.</p>
+         */
+        interface Post extends Close, ChangeInventoryEvent {
+        }
+    }
 }
