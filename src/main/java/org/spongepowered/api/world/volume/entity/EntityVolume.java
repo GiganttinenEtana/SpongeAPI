@@ -397,6 +397,74 @@ public interface EntityVolume extends Volume {
          */
         Collection<Entity> spawnEntities(Iterable<? extends Entity> entities);
 
+        /**
+         * Applies the provided {@link Predicate} to the
+         * {@link Entity entities} such that any time that
+         * {@link Predicate#test(Object)} returns {@code false} on the
+         * {@link Entity}, the storage performs implementation dependant
+         * removal of it.
+         *
+         * @param predicate The predicate to use for filtering
+         */
+        default void filterEntities(Predicate<? super Entity> predicate) {
+            this.entities().forEach(e -> {
+                if (!predicate.test(e)) {
+                    e.remove();
+                }
+            });
+        }
+
+        /**
+         * Performs implementation dependant removal of all
+         * the {@link Entity entities} that intersect the
+         * bounding box.
+         *
+         * @param box The intersection box
+         */
+        default void filterEntities(AABB box) {
+            this.filterEntities(box, e -> false);
+        }
+
+        /**
+         * Applies the provided {@link Predicate} to the {@link Entity entities}
+         * that intersect the bounding box such that any time that
+         * {@link Predicate#test(Object)} returns {@code false} on the
+         * {@link Entity}, the storage performs implementation dependant
+         * removal of it.
+         *
+         * @param box The intersection box
+         * @param predicate The predicate to use for filtering
+         */
+        default void filterEntities(AABB box, Predicate<? super Entity> predicate) {
+            this.entities(box, predicate.negate()).forEach(Entity::remove);
+        }
+
+        /**
+         * Performs implementation dependant removal of all
+         * the {@link Entity entities} that match the given type
+         * and intersect the bounding box.
+         *
+         * @param entityClass The entity type
+         * @param box The intersection box
+         */
+        default <T extends Entity> void filterEntities(Class<? extends T> entityClass, AABB box) {
+            this.filterEntities(entityClass, box, null);
+        }
+
+        /**
+         * Applies the provided {@link Predicate} to the {@link Entity entities}
+         * that match the given type and intersect the bounding box such that
+         * any time that {@link Predicate#test(Object)} returns {@code false}
+         * on the {@link Entity}, the storage performs implementation dependant
+         * removal of it.
+         *
+         * @param entityClass The entity type
+         * @param box The intersection box
+         * @param predicate The predicate to use for filtering
+         */
+        default <T extends Entity> void filterEntities(Class<? extends T> entityClass, AABB box, @Nullable Predicate<? super T> predicate) {
+            this.entities(entityClass, box, predicate != null ? predicate.negate() : null).forEach(Entity::remove);
+        }
     }
 
     interface Mutable extends Modifiable<Mutable> {
