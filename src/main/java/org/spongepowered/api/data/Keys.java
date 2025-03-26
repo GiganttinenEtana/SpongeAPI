@@ -558,7 +558,7 @@ public final class Keys {
     public static final Key<Value<Integer>> BLOCK_LIGHT = Keys.key(ResourceKey.sponge("block_light"), Integer.class);
 
     /**
-     * The {@link BlockState} of a {@link BlockOccupiedMinecart} or {@link FallingBlock}.
+     * The {@link BlockState} of a {@link BlockOccupiedMinecart}, {@link FallingBlock} or {@link Piston moving Piston}.
      */
     public static final Key<Value<BlockState>> BLOCK_STATE = Keys.key(ResourceKey.sponge("block_state"), BlockState.class);
 
@@ -1770,8 +1770,8 @@ public final class Keys {
     public static final Key<Value<Boolean>> IS_ELYTRA_FLYING = Keys.key(ResourceKey.sponge("is_elytra_flying"), Boolean.class);
 
     /**
-     * Whether a piston {@link BlockState} is currently extended.
-     * TODO {@link Piston}?
+     * Whether a piston {@link BlockState} is currently extended or
+     * {@link Piston moving Piston} is extending.
      */
     public static final Key<Value<Boolean>> IS_EXTENDED = Keys.key(ResourceKey.sponge("is_extended"), Boolean.class);
 

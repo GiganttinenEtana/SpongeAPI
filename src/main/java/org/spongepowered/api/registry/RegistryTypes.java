@@ -208,7 +208,7 @@ public final class RegistryTypes {
 
     // @formatter:off
 
-    public static final DefaultedRegistryType<Advancement> ADVANCEMENT = RegistryTypes.spongeKeyInGame("advancement");
+    public static final DefaultedRegistryType<Advancement> ADVANCEMENT = RegistryTypes.spongeKeyInServer("advancement");
 
     public static final DefaultedRegistryType<ArtType> ART_TYPE = RegistryTypes.minecraftKeyInServer("painting_variant");
 
@@ -487,7 +487,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<RailDirection> RAIL_DIRECTION = RegistryTypes.spongeKeyInGame("rail_direction");
 
-    public static final DefaultedRegistryType<Recipe<?>> RECIPE = RegistryTypes.spongeKeyInGame("recipe");
+    public static final DefaultedRegistryType<Recipe<?>> RECIPE = RegistryTypes.spongeKeyInServer("recipe");
 
     public static final DefaultedRegistryType<ValueParameter<?>> REGISTRY_KEYED_VALUE_PARAMETER = RegistryTypes.spongeKeyInGame("value_parameter");
 
