@@ -525,7 +525,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<WeatherType> WEATHER_TYPE = RegistryTypes.spongeKeyInGame("weather_type");
 
-    public static final DefaultedRegistryType<WolfVariant> WOLF_VAIRANT = RegistryTypes.minecraftKeyInServer("wolf_vairant");
+    public static final DefaultedRegistryType<WolfVariant> WOLF_VARIANT = RegistryTypes.minecraftKeyInServer("wolf_variant");
 
     public static final DefaultedRegistryType<WorldArchetypeType> WORLD_ARCHETYPE_TYPE = RegistryTypes.minecraftKeyInServer("dimension");
 
