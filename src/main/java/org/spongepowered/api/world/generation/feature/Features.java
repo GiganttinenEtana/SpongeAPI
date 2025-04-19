@@ -60,9 +60,13 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> BIRCH_BEES_0002 = Features.key(ResourceKey.minecraft("birch_bees_0002"));
 
+    public static final DefaultedRegistryReference<Feature> BIRCH_BEES_0002_LEAF_LITTER = Features.key(ResourceKey.minecraft("birch_bees_0002_leaf_litter"));
+
     public static final DefaultedRegistryReference<Feature> BIRCH_BEES_002 = Features.key(ResourceKey.minecraft("birch_bees_002"));
 
     public static final DefaultedRegistryReference<Feature> BIRCH_BEES_005 = Features.key(ResourceKey.minecraft("birch_bees_005"));
+
+    public static final DefaultedRegistryReference<Feature> BIRCH_LEAF_LITTER = Features.key(ResourceKey.minecraft("birch_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> BIRCH_TALL = Features.key(ResourceKey.minecraft("birch_tall"));
 
@@ -98,6 +102,8 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> DARK_OAK = Features.key(ResourceKey.minecraft("dark_oak"));
 
+    public static final DefaultedRegistryReference<Feature> DARK_OAK_LEAF_LITTER = Features.key(ResourceKey.minecraft("dark_oak_leaf_litter"));
+
     public static final DefaultedRegistryReference<Feature> DELTA = Features.key(ResourceKey.minecraft("delta"));
 
     public static final DefaultedRegistryReference<Feature> DESERT_WELL = Features.key(ResourceKey.minecraft("desert_well"));
@@ -124,15 +130,27 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> END_SPIKE = Features.key(ResourceKey.minecraft("end_spike"));
 
+    public static final DefaultedRegistryReference<Feature> FALLEN_BIRCH_TREE = Features.key(ResourceKey.minecraft("fallen_birch_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_JUNGLE_TREE = Features.key(ResourceKey.minecraft("fallen_jungle_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_OAK_TREE = Features.key(ResourceKey.minecraft("fallen_oak_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_SPRUCE_TREE = Features.key(ResourceKey.minecraft("fallen_spruce_tree"));
+
+    public static final DefaultedRegistryReference<Feature> FALLEN_SUPER_BIRCH_TREE = Features.key(ResourceKey.minecraft("fallen_super_birch_tree"));
+
     public static final DefaultedRegistryReference<Feature> FANCY_OAK = Features.key(ResourceKey.minecraft("fancy_oak"));
 
     public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES = Features.key(ResourceKey.minecraft("fancy_oak_bees"));
 
-    public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES_0002 = Features.key(ResourceKey.minecraft("fancy_oak_bees_0002"));
+    public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES_0002_LEAF_LITTER = Features.key(ResourceKey.minecraft("fancy_oak_bees_0002_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES_002 = Features.key(ResourceKey.minecraft("fancy_oak_bees_002"));
 
     public static final DefaultedRegistryReference<Feature> FANCY_OAK_BEES_005 = Features.key(ResourceKey.minecraft("fancy_oak_bees_005"));
+
+    public static final DefaultedRegistryReference<Feature> FANCY_OAK_LEAF_LITTER = Features.key(ResourceKey.minecraft("fancy_oak_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> FLOWER_CHERRY = Features.key(ResourceKey.minecraft("flower_cherry"));
 
@@ -220,11 +238,13 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> OAK = Features.key(ResourceKey.minecraft("oak"));
 
-    public static final DefaultedRegistryReference<Feature> OAK_BEES_0002 = Features.key(ResourceKey.minecraft("oak_bees_0002"));
+    public static final DefaultedRegistryReference<Feature> OAK_BEES_0002_LEAF_LITTER = Features.key(ResourceKey.minecraft("oak_bees_0002_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> OAK_BEES_002 = Features.key(ResourceKey.minecraft("oak_bees_002"));
 
     public static final DefaultedRegistryReference<Feature> OAK_BEES_005 = Features.key(ResourceKey.minecraft("oak_bees_005"));
+
+    public static final DefaultedRegistryReference<Feature> OAK_LEAF_LITTER = Features.key(ResourceKey.minecraft("oak_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> ORE_ANCIENT_DEBRIS_LARGE = Features.key(ResourceKey.minecraft("ore_ancient_debris_large"));
 
@@ -310,19 +330,29 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> PATCH_BROWN_MUSHROOM = Features.key(ResourceKey.minecraft("patch_brown_mushroom"));
 
+    public static final DefaultedRegistryReference<Feature> PATCH_BUSH = Features.key(ResourceKey.minecraft("patch_bush"));
+
     public static final DefaultedRegistryReference<Feature> PATCH_CACTUS = Features.key(ResourceKey.minecraft("patch_cactus"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_CRIMSON_ROOTS = Features.key(ResourceKey.minecraft("patch_crimson_roots"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_DEAD_BUSH = Features.key(ResourceKey.minecraft("patch_dead_bush"));
 
+    public static final DefaultedRegistryReference<Feature> PATCH_DRY_GRASS = Features.key(ResourceKey.minecraft("patch_dry_grass"));
+
     public static final DefaultedRegistryReference<Feature> PATCH_FIRE = Features.key(ResourceKey.minecraft("patch_fire"));
+
+    public static final DefaultedRegistryReference<Feature> PATCH_FIREFLY_BUSH = Features.key(ResourceKey.minecraft("patch_firefly_bush"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_GRASS = Features.key(ResourceKey.minecraft("patch_grass"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_GRASS_JUNGLE = Features.key(ResourceKey.minecraft("patch_grass_jungle"));
 
+    public static final DefaultedRegistryReference<Feature> PATCH_GRASS_MEADOW = Features.key(ResourceKey.minecraft("patch_grass_meadow"));
+
     public static final DefaultedRegistryReference<Feature> PATCH_LARGE_FERN = Features.key(ResourceKey.minecraft("patch_large_fern"));
+
+    public static final DefaultedRegistryReference<Feature> PATCH_LEAF_LITTER = Features.key(ResourceKey.minecraft("patch_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> PATCH_MELON = Features.key(ResourceKey.minecraft("patch_melon"));
 
@@ -402,7 +432,11 @@ public final class Features {
 
     public static final DefaultedRegistryReference<Feature> TALL_MANGROVE = Features.key(ResourceKey.minecraft("tall_mangrove"));
 
-    public static final DefaultedRegistryReference<Feature> TREES_BIRCH_AND_OAK = Features.key(ResourceKey.minecraft("trees_birch_and_oak"));
+    public static final DefaultedRegistryReference<Feature> TREES_BADLANDS = Features.key(ResourceKey.minecraft("trees_badlands"));
+
+    public static final DefaultedRegistryReference<Feature> TREES_BIRCH = Features.key(ResourceKey.minecraft("trees_birch"));
+
+    public static final DefaultedRegistryReference<Feature> TREES_BIRCH_AND_OAK_LEAF_LITTER = Features.key(ResourceKey.minecraft("trees_birch_and_oak_leaf_litter"));
 
     public static final DefaultedRegistryReference<Feature> TREES_FLOWER_FOREST = Features.key(ResourceKey.minecraft("trees_flower_forest"));
 
@@ -417,6 +451,8 @@ public final class Features {
     public static final DefaultedRegistryReference<Feature> TREES_PLAINS = Features.key(ResourceKey.minecraft("trees_plains"));
 
     public static final DefaultedRegistryReference<Feature> TREES_SAVANNA = Features.key(ResourceKey.minecraft("trees_savanna"));
+
+    public static final DefaultedRegistryReference<Feature> TREES_SNOWY = Features.key(ResourceKey.minecraft("trees_snowy"));
 
     public static final DefaultedRegistryReference<Feature> TREES_SPARSE_JUNGLE = Features.key(ResourceKey.minecraft("trees_sparse_jungle"));
 
@@ -447,6 +483,10 @@ public final class Features {
     public static final DefaultedRegistryReference<Feature> WARPED_FUNGUS_PLANTED = Features.key(ResourceKey.minecraft("warped_fungus_planted"));
 
     public static final DefaultedRegistryReference<Feature> WEEPING_VINES = Features.key(ResourceKey.minecraft("weeping_vines"));
+
+    public static final DefaultedRegistryReference<Feature> WILDFLOWERS_BIRCH_FOREST = Features.key(ResourceKey.minecraft("wildflowers_birch_forest"));
+
+    public static final DefaultedRegistryReference<Feature> WILDFLOWERS_MEADOW = Features.key(ResourceKey.minecraft("wildflowers_meadow"));
 
     private Features() {
     }

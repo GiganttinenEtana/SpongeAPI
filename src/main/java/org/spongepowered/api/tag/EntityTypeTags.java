@@ -53,7 +53,11 @@ public final class EntityTypeTags {
 
     public static final Tag<EntityType<?>> CAN_BREATHE_UNDER_WATER = EntityTypeTags.key(ResourceKey.minecraft("can_breathe_under_water"));
 
+    public static final Tag<EntityType<?>> CAN_EQUIP_SADDLE = EntityTypeTags.key(ResourceKey.minecraft("can_equip_saddle"));
+
     public static final Tag<EntityType<?>> CAN_TURN_IN_BOATS = EntityTypeTags.key(ResourceKey.minecraft("can_turn_in_boats"));
+
+    public static final Tag<EntityType<?>> CAN_WEAR_HORSE_ARMOR = EntityTypeTags.key(ResourceKey.minecraft("can_wear_horse_armor"));
 
     public static final Tag<EntityType<?>> DEFLECTS_PROJECTILES = EntityTypeTags.key(ResourceKey.minecraft("deflects_projectiles"));
 

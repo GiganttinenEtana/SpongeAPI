@@ -55,7 +55,10 @@ import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
+import org.spongepowered.api.data.type.ChickenVariant;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CowVariant;
+import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.DyeColor;
@@ -76,6 +79,7 @@ import org.spongepowered.api.data.type.PandaGene;
 import org.spongepowered.api.data.type.ParrotType;
 import org.spongepowered.api.data.type.PhantomPhase;
 import org.spongepowered.api.data.type.PickupRule;
+import org.spongepowered.api.data.type.PigType;
 import org.spongepowered.api.data.type.PistonType;
 import org.spongepowered.api.data.type.PortionType;
 import org.spongepowered.api.data.type.ProfessionType;
@@ -90,6 +94,7 @@ import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.SpellType;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
+import org.spongepowered.api.data.type.TestBlockMode;
 import org.spongepowered.api.data.type.Tilt;
 import org.spongepowered.api.data.type.TrialSpawnerState;
 import org.spongepowered.api.data.type.TropicalFishShape;
@@ -97,6 +102,7 @@ import org.spongepowered.api.data.type.VaultState;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfSoundVariant;
 import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.effect.particle.ParticleOption;
 import org.spongepowered.api.effect.particle.ParticleType;
@@ -325,6 +331,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<ChestAttachmentType> CHEST_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("chest_attachment_type");
 
+    public static final DefaultedRegistryType<ChickenVariant> CHICKEN_VARIANT = RegistryTypes.minecraftKeyInGame("chicken_variant");
+
     public static final DefaultedRegistryType<ChunkRegenerateFlag> CHUNK_REGENERATE_FLAG = RegistryTypes.spongeKeyInGame("chunk_regenerate_flag");
 
     public static final DefaultedRegistryType<ClickType<?>> CLICK_TYPE = RegistryTypes.spongeKeyInGame("click_type");
@@ -340,6 +348,10 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<CommandTreeNodeType<? extends @NonNull Object>> COMMAND_TREE_NODE_TYPE = RegistryTypes.spongeKeyInServer("command_tree_node_type");
 
     public static final DefaultedRegistryType<ComparatorMode> COMPARATOR_MODE = RegistryTypes.spongeKeyInGame("comparator_mode");
+
+    public static final DefaultedRegistryType<CowVariant> COW_VARIANT = RegistryTypes.minecraftKeyInServer("cow_variant");
+
+    public static final DefaultedRegistryType<CreakingHeartState> CREAKING_HEART_STATES = RegistryTypes.spongeKeyInGame("creaking_heart_state");
 
     public static final DefaultedRegistryType<Criterion> CRITERION = RegistryTypes.spongeKeyInGame("criterion");
 
@@ -457,6 +469,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<PickupRule> PICKUP_RULE = RegistryTypes.spongeKeyInGame("pickup_rule");
 
+    public static final DefaultedRegistryType<PigType> PIG_TYPE = RegistryTypes.minecraftKeyInGame("pig_variant");
+
     public static final DefaultedRegistryType<PistonType> PISTON_TYPE = RegistryTypes.spongeKeyInGame("piston_type");
 
     public static final DefaultedRegistryType<PlaceholderParser> PLACEHOLDER_PARSER = RegistryTypes.spongeKeyInGame("placeholder_parser");
@@ -507,6 +521,8 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<TeleportHelperFilter> TELEPORT_HELPER_FILTER = RegistryTypes.spongeKeyInGame("teleport_helper_filter");
 
+    public static final DefaultedRegistryType<TestBlockMode> TEST_BLOCK_MODE = RegistryTypes.spongeKeyInGame("test_block_mode");
+
     public static final DefaultedRegistryType<TextAlignment> TEXT_ALIGNMENT = RegistryTypes.spongeKeyInGame("text_alignment");
 
     public static final DefaultedRegistryType<TransactionType> TRANSACTION_TYPE = RegistryTypes.spongeKeyInGame("transaction_type");
@@ -526,6 +542,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<WeatherType> WEATHER_TYPE = RegistryTypes.spongeKeyInGame("weather_type");
 
     public static final DefaultedRegistryType<WolfVariant> WOLF_VAIRANT = RegistryTypes.minecraftKeyInServer("wolf_vairant");
+
+    public static final DefaultedRegistryType<WolfSoundVariant> WOLF_SOUND_VARIANT = RegistryTypes.spongeKeyInGame("wolf_sound_variant");
 
     public static final DefaultedRegistryType<WorldArchetypeType> WORLD_ARCHETYPE_TYPE = RegistryTypes.minecraftKeyInServer("dimension");
 

@@ -26,6 +26,7 @@ package org.spongepowered.api.entity.living.animal;
 
 import org.spongepowered.api.data.Keys;
 import org.spongepowered.api.data.type.DyeColor;
+import org.spongepowered.api.data.type.WolfSoundVariant;
 import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.data.value.Value;
 import org.spongepowered.api.entity.Angerable;
@@ -41,6 +42,14 @@ public interface Wolf extends TameableAnimal, Angerable {
      */
     default Value.Mutable<WolfVariant> variant() {
         return this.requireValue(Keys.WOLF_VARIANT).asMutable();
+    }
+
+    /**
+     * {@link Keys#WOLF_SOUND_VARIANT}
+     * @return The wolf's sound variant
+     */
+    default Value.Mutable<WolfSoundVariant> soundVariant() {
+        return this.requireValue(Keys.WOLF_SOUND_VARIANT).asMutable();
     }
 
     /**

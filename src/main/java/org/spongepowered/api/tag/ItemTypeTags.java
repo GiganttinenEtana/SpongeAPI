@@ -63,6 +63,8 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> BOATS = ItemTypeTags.key(ResourceKey.minecraft("boats"));
 
+    public static final Tag<ItemType> BOOK_CLONING_TARGET = ItemTypeTags.key(ResourceKey.minecraft("book_cloning_target"));
+
     public static final Tag<ItemType> BOOKSHELF_BOOKS = ItemTypeTags.key(ResourceKey.minecraft("bookshelf_books"));
 
     public static final Tag<ItemType> BREAKS_DECORATED_POTS = ItemTypeTags.key(ResourceKey.minecraft("breaks_decorated_pots"));
@@ -129,6 +131,8 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> DYEABLE = ItemTypeTags.key(ResourceKey.minecraft("dyeable"));
 
+    public static final Tag<ItemType> EGGS = ItemTypeTags.key(ResourceKey.minecraft("eggs"));
+
     public static final Tag<ItemType> EMERALD_ORES = ItemTypeTags.key(ResourceKey.minecraft("emerald_ores"));
 
     public static final Tag<ItemType> ENCHANTABLE_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("enchantable/armor"));
@@ -174,6 +178,8 @@ public final class ItemTypeTags {
     public static final Tag<ItemType> FENCES = ItemTypeTags.key(ResourceKey.minecraft("fences"));
 
     public static final Tag<ItemType> FISHES = ItemTypeTags.key(ResourceKey.minecraft("fishes"));
+
+    public static final Tag<ItemType> FLOWERS = ItemTypeTags.key(ResourceKey.minecraft("flowers"));
 
     public static final Tag<ItemType> FOOT_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("foot_armor"));
 

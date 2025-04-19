@@ -26,6 +26,7 @@ package org.spongepowered.api.world;
 
 import org.spongepowered.api.block.BlockTypes;
 import org.spongepowered.api.block.entity.BlockEntity;
+import org.spongepowered.api.block.entity.carrier.chest.Chest;
 
 /**
  * A flag of sorts that determines whether a block change will perform various
@@ -104,9 +105,8 @@ public interface BlockChangeFlag {
     /**
      * Gets whether this flag is considering that blocks are being moved
      * in the world, much like how pistons will move blocks. This has some
-     * effect on {@link org.spongepowered.api.block.entity.BlockEntity} creation
-     * reaction or drop delays. The behaviors are dependent on the block in
-     * particular.
+     * effect on {@link BlockEntity} creation reaction or drop delays. The
+     * behaviors are dependent on the block in particular.
      *
      * @return True if the flag is considering blocks are moving
      */
@@ -137,7 +137,8 @@ public interface BlockChangeFlag {
     /**
      * Gets whatever this block change is going to perform natural
      * block destruction logic, which can potentially cause other
-     * side effects like block drops from a {@link BlockEntity}.
+     * side effects like block drops from a {@link BlockEntity},
+     * like a {@link Chest chest} dropping its contents.
      * The behaviors are dependent on the block in particular.
      *
      * @return True if the block change should perform

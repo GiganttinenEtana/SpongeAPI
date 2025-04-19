@@ -80,6 +80,7 @@ import org.spongepowered.api.data.type.PandaGenes;
 import org.spongepowered.api.data.type.ParrotType;
 import org.spongepowered.api.data.type.PhantomPhase;
 import org.spongepowered.api.data.type.PickupRule;
+import org.spongepowered.api.data.type.PigType;
 import org.spongepowered.api.data.type.PistonType;
 import org.spongepowered.api.data.type.PortionType;
 import org.spongepowered.api.data.type.ProfessionType;
@@ -100,6 +101,7 @@ import org.spongepowered.api.data.type.TropicalFishShape;
 import org.spongepowered.api.data.type.VillagerType;
 import org.spongepowered.api.data.type.WallConnectionState;
 import org.spongepowered.api.data.type.WireAttachmentType;
+import org.spongepowered.api.data.type.WolfSoundVariant;
 import org.spongepowered.api.data.type.WolfVariant;
 import org.spongepowered.api.data.value.ListValue;
 import org.spongepowered.api.data.value.MapValue;
@@ -2656,6 +2658,14 @@ public final class Keys {
     public static final Key<Value<PickupRule>> PICKUP_RULE = Keys.key(ResourceKey.sponge("pickup_rule"), PickupRule.class);
 
     /**
+     * The {@link PigType} for a {@link Pig}, which can vary based on
+     * {@link Biome}.
+     *
+     * @see <a href="https://minecraft.wiki/w/Java_Edition_25w02a#Mobs">Pig Variant Changes</a>
+     */
+    public static final Key<Value<PigType>> PIG_TYPE = Keys.key(ResourceKey.sponge("pig_variant"), PigType.class);
+
+    /**
      * Whether a {@link WorldType} is safe for {@link Piglin} to not transform
      * into {@link ZombifiedPiglin} over time in a {@link ServerWorld world} of that type
      * Readonly
@@ -3543,6 +3553,13 @@ public final class Keys {
      * The {@link WolfVariant} of a {@link Wolf}.
      */
     public static final Key<Value<WolfVariant>> WOLF_VARIANT = Keys.key(ResourceKey.sponge("wolf_variant"), WolfVariant.class);
+
+    /**
+     * The {@link WolfSoundVariant} of a {@link Wolf}.
+     *
+     * @see <a href="https://minecraft.wiki/w/Wolf#Sound_variants_2">Wolves wiki</a>
+     */
+    public static final Key<Value<WolfSoundVariant>> WOLF_SOUND_VARIANT = Keys.key(ResourceKey.sponge("wolf_sound_variant"), WolfSoundVariant.class);
 
     /**
      * The {@link Sheep} who is being targeted by the {@link SpellTypes#WOLOLO}

@@ -136,6 +136,8 @@ public final class ParticleTypes {
 
     public static final DefaultedRegistryReference<ParticleType> FALLING_WATER = ParticleTypes.key(ResourceKey.minecraft("falling_water"));
 
+    public static final DefaultedRegistryReference<ParticleType> FIREFLY = ParticleTypes.key(ResourceKey.minecraft("firefly"));
+
     public static final DefaultedRegistryReference<ParticleType> FIREWORK = ParticleTypes.key(ResourceKey.minecraft("firework"));
 
     public static final DefaultedRegistryReference<ParticleType> FISHING = ParticleTypes.key(ResourceKey.minecraft("fishing"));
@@ -235,6 +237,8 @@ public final class ParticleTypes {
     public static final DefaultedRegistryReference<ParticleType> SQUID_INK = ParticleTypes.key(ResourceKey.minecraft("squid_ink"));
 
     public static final DefaultedRegistryReference<ParticleType> SWEEP_ATTACK = ParticleTypes.key(ResourceKey.minecraft("sweep_attack"));
+
+    public static final DefaultedRegistryReference<ParticleType> TINTED_LEAVES = ParticleTypes.key(ResourceKey.minecraft("tinted_leaves"));
 
     public static final DefaultedRegistryReference<ParticleType> TOTEM_OF_UNDYING = ParticleTypes.key(ResourceKey.minecraft("totem_of_undying"));
 

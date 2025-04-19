@@ -93,6 +93,8 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> CAMEL_SAND_STEP_SOUND_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("camel_sand_step_sound_blocks"));
 
+    public static final Tag<BlockType> CAMELS_SPAWNABLE_ON = BlockTypeTags.key(ResourceKey.minecraft("camels_spawnable_on"));
+
     public static final Tag<BlockType> CAMPFIRES = BlockTypeTags.key(ResourceKey.minecraft("campfires"));
 
     public static final Tag<BlockType> CANDLE_CAKES = BlockTypeTags.key(ResourceKey.minecraft("candle_cakes"));
@@ -137,8 +139,6 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> DARK_OAK_LOGS = BlockTypeTags.key(ResourceKey.minecraft("dark_oak_logs"));
 
-    public static final Tag<BlockType> DEAD_BUSH_MAY_PLACE_ON = BlockTypeTags.key(ResourceKey.minecraft("dead_bush_may_place_on"));
-
     public static final Tag<BlockType> DEEPSLATE_ORE_REPLACEABLES = BlockTypeTags.key(ResourceKey.minecraft("deepslate_ore_replaceables"));
 
     public static final Tag<BlockType> DIAMOND_ORES = BlockTypeTags.key(ResourceKey.minecraft("diamond_ores"));
@@ -154,6 +154,10 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> DRAGON_TRANSPARENT = BlockTypeTags.key(ResourceKey.minecraft("dragon_transparent"));
 
     public static final Tag<BlockType> DRIPSTONE_REPLACEABLE_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("dripstone_replaceable_blocks"));
+
+    public static final Tag<BlockType> DRY_VEGETATION_MAY_PLACE_ON = BlockTypeTags.key(ResourceKey.minecraft("dry_vegetation_may_place_on"));
+
+    public static final Tag<BlockType> EDIBLE_FOR_SHEEP = BlockTypeTags.key(ResourceKey.minecraft("edible_for_sheep"));
 
     public static final Tag<BlockType> EMERALD_ORES = BlockTypeTags.key(ResourceKey.minecraft("emerald_ores"));
 
@@ -285,6 +289,8 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> PLANKS = BlockTypeTags.key(ResourceKey.minecraft("planks"));
 
+    public static final Tag<BlockType> PLAYS_AMBIENT_DESERT_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("plays_ambient_desert_block_sounds"));
+
     public static final Tag<BlockType> POLAR_BEARS_SPAWNABLE_ON_ALTERNATE = BlockTypeTags.key(ResourceKey.minecraft("polar_bears_spawnable_on_alternate"));
 
     public static final Tag<BlockType> PORTALS = BlockTypeTags.key(ResourceKey.minecraft("portals"));
@@ -300,6 +306,8 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> REDSTONE_ORES = BlockTypeTags.key(ResourceKey.minecraft("redstone_ores"));
 
     public static final Tag<BlockType> REPLACEABLE = BlockTypeTags.key(ResourceKey.minecraft("replaceable"));
+
+    public static final Tag<BlockType> REPLACEABLE_BY_MUSHROOMS = BlockTypeTags.key(ResourceKey.minecraft("replaceable_by_mushrooms"));
 
     public static final Tag<BlockType> REPLACEABLE_BY_TREES = BlockTypeTags.key(ResourceKey.minecraft("replaceable_by_trees"));
 
@@ -356,6 +364,8 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> STRIDER_WARM_BLOCKS = BlockTypeTags.key(ResourceKey.minecraft("strider_warm_blocks"));
 
     public static final Tag<BlockType> SWORD_EFFICIENT = BlockTypeTags.key(ResourceKey.minecraft("sword_efficient"));
+
+    public static final Tag<BlockType> SWORD_INSTANTLY_MINES = BlockTypeTags.key(ResourceKey.minecraft("sword_instantly_mines"));
 
     public static final Tag<BlockType> TERRACOTTA = BlockTypeTags.key(ResourceKey.minecraft("terracotta"));
 

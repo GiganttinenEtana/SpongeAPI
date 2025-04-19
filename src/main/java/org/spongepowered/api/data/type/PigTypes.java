@@ -38,34 +38,22 @@ import org.spongepowered.api.registry.RegistryTypes;
  */
 @SuppressWarnings("unused")
 @RegistryScopes(scopes = RegistryScope.ENGINE)
-public final class WolfVariants {
+public final class PigTypes {
 
-    public static final DefaultedRegistryReference<WolfVariant> ASHEN = WolfVariants.key(ResourceKey.minecraft("ashen"));
+    public static final DefaultedRegistryReference<PigType> COLD = PigTypes.key(ResourceKey.minecraft("cold"));
 
-    public static final DefaultedRegistryReference<WolfVariant> BLACK = WolfVariants.key(ResourceKey.minecraft("black"));
+    public static final DefaultedRegistryReference<PigType> TEMPERATE = PigTypes.key(ResourceKey.minecraft("temperate"));
 
-    public static final DefaultedRegistryReference<WolfVariant> CHESTNUT = WolfVariants.key(ResourceKey.minecraft("chestnut"));
+    public static final DefaultedRegistryReference<PigType> WARM = PigTypes.key(ResourceKey.minecraft("warm"));
 
-    public static final DefaultedRegistryReference<WolfVariant> PALE = WolfVariants.key(ResourceKey.minecraft("pale"));
-
-    public static final DefaultedRegistryReference<WolfVariant> RUSTY = WolfVariants.key(ResourceKey.minecraft("rusty"));
-
-    public static final DefaultedRegistryReference<WolfVariant> SNOWY = WolfVariants.key(ResourceKey.minecraft("snowy"));
-
-    public static final DefaultedRegistryReference<WolfVariant> SPOTTED = WolfVariants.key(ResourceKey.minecraft("spotted"));
-
-    public static final DefaultedRegistryReference<WolfVariant> STRIPED = WolfVariants.key(ResourceKey.minecraft("striped"));
-
-    public static final DefaultedRegistryReference<WolfVariant> WOODS = WolfVariants.key(ResourceKey.minecraft("woods"));
-
-    private WolfVariants() {
+    private PigTypes() {
     }
 
-    public static Registry<WolfVariant> registry() {
-        return Sponge.server().registry(RegistryTypes.WOLF_VAIRANT);
+    public static Registry<PigType> registry() {
+        return Sponge.server().registry(RegistryTypes.PIG_TYPE);
     }
 
-    private static DefaultedRegistryReference<WolfVariant> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.WOLF_VAIRANT, location).asDefaultedReference(Sponge::server);
+    private static DefaultedRegistryReference<PigType> key(final ResourceKey location) {
+        return RegistryKey.of(RegistryTypes.PIG_TYPE, location).asDefaultedReference(Sponge::server);
     }
 }

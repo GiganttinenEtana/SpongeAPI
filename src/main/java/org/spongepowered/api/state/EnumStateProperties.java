@@ -29,6 +29,7 @@ import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BellAttachmentType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.InstrumentType;
@@ -40,6 +41,7 @@ import org.spongepowered.api.data.type.SculkSensorState;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
+import org.spongepowered.api.data.type.TestBlockMode;
 import org.spongepowered.api.data.type.Tilt;
 import org.spongepowered.api.data.type.TrialSpawnerState;
 import org.spongepowered.api.data.type.VaultState;
@@ -79,6 +81,10 @@ public final class EnumStateProperties {
 
     public static EnumStateProperty<ChestAttachmentType> property_CHEST_TYPE() {
         return EnumStateProperty.of("CHEST_TYPE");
+    }
+
+    public static EnumStateProperty<CreakingHeartState> property_CREAKING_HEART_STATE() {
+        return EnumStateProperty.of("CREAKING_HEART_STATE");
     }
 
     public static EnumStateProperty<DoorHinge> property_DOOR_HINGE() {
@@ -175,6 +181,10 @@ public final class EnumStateProperties {
 
     public static EnumStateProperty<StructureMode> property_STRUCTUREBLOCK_MODE() {
         return EnumStateProperty.of("STRUCTUREBLOCK_MODE");
+    }
+
+    public static EnumStateProperty<TestBlockMode> property_TEST_BLOCK_MODE() {
+        return EnumStateProperty.of("TEST_BLOCK_MODE");
     }
 
     public static EnumStateProperty<Tilt> property_TILT() {

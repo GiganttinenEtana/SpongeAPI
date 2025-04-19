@@ -78,6 +78,8 @@ public final class FeatureTypes {
 
     public static final DefaultedRegistryReference<FeatureType> END_SPIKE = FeatureTypes.key(ResourceKey.minecraft("end_spike"));
 
+    public static final DefaultedRegistryReference<FeatureType> FALLEN_TREE = FeatureTypes.key(ResourceKey.minecraft("fallen_tree"));
+
     public static final DefaultedRegistryReference<FeatureType> FILL_LAYER = FeatureTypes.key(ResourceKey.minecraft("fill_layer"));
 
     public static final DefaultedRegistryReference<FeatureType> FLOWER = FeatureTypes.key(ResourceKey.minecraft("flower"));

@@ -46,6 +46,8 @@ public final class EquipmentGroups {
 
     public static final DefaultedRegistryReference<EquipmentGroup> HUMANOID_ARMOR = EquipmentGroups.key(ResourceKey.sponge("humanoid_armor"));
 
+    public static final DefaultedRegistryReference<EquipmentGroup> SADDLE = EquipmentGroups.key(ResourceKey.sponge("saddle"));
+
     private EquipmentGroups() {
     }
 

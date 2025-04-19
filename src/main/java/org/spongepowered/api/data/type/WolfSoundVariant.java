@@ -22,12 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.animal;
+package org.spongepowered.api.data.type;
 
-/**
- * Represents a Strider.
- */
-@SuppressWarnings("removal")
-public interface Strider extends Animal, org.spongepowered.api.entity.Saddleable {
+import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.util.annotation.CatalogedBy;
 
+@CatalogedBy(WolfSoundVariants.class)
+public interface WolfSoundVariant extends DefaultedRegistryValue {
 }
