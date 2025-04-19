@@ -62,10 +62,10 @@ public final class WolfVariants {
     }
 
     public static Registry<WolfVariant> registry() {
-        return Sponge.server().registry(RegistryTypes.WOLF_VAIRANT);
+        return Sponge.server().registry(RegistryTypes.WOLF_VARIANT);
     }
 
     private static DefaultedRegistryReference<WolfVariant> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.WOLF_VAIRANT, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.WOLF_VARIANT, location).asScopedReference();
     }
 }

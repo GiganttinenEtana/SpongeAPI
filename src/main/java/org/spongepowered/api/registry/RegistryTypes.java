@@ -126,8 +126,8 @@ import org.spongepowered.api.event.cause.entity.DismountType;
 import org.spongepowered.api.event.cause.entity.MovementType;
 import org.spongepowered.api.event.cause.entity.SpawnType;
 import org.spongepowered.api.event.cause.entity.damage.DamageEffect;
-import org.spongepowered.api.event.cause.entity.damage.DamageModifierType;
 import org.spongepowered.api.event.cause.entity.damage.DamageScaling;
+import org.spongepowered.api.event.cause.entity.damage.DamageStepType;
 import org.spongepowered.api.event.cause.entity.damage.DamageType;
 import org.spongepowered.api.fluid.FluidType;
 import org.spongepowered.api.item.FireworkShape;
@@ -357,7 +357,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<Currency> CURRENCY = RegistryTypes.spongeKeyInGame("currency");
 
-    public static final DefaultedRegistryType<DamageModifierType> DAMAGE_MODIFIER_TYPE = RegistryTypes.spongeKeyInGame("damage_modifier_type");
+    public static final DefaultedRegistryType<DamageStepType> DAMAGE_STEP_TYPE = RegistryTypes.spongeKeyInGame("damage_step_type");
 
     public static final DefaultedRegistryType<DamageType> DAMAGE_TYPE = RegistryTypes.minecraftKeyInServer("damage_type");
     public static final DefaultedRegistryType<DamageScaling> DAMAGE_SCALING = RegistryTypes.spongeKeyInGame("damage_scaling");
@@ -541,7 +541,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<WeatherType> WEATHER_TYPE = RegistryTypes.spongeKeyInGame("weather_type");
 
-    public static final DefaultedRegistryType<WolfVariant> WOLF_VAIRANT = RegistryTypes.minecraftKeyInServer("wolf_vairant");
+    public static final DefaultedRegistryType<WolfVariant> WOLF_VARIANT = RegistryTypes.minecraftKeyInServer("wolf_variant");
 
     public static final DefaultedRegistryType<WolfSoundVariant> WOLF_SOUND_VARIANT = RegistryTypes.spongeKeyInGame("wolf_sound_variant");
 
@@ -556,7 +556,7 @@ public final class RegistryTypes {
     }
 
     private static <V> DefaultedRegistryType<V> minecraftKeyInServer(final String key) {
-        return RegistryType.of(RegistryRoots.MINECRAFT, ResourceKey.minecraft(Objects.requireNonNull(key, "key"))).asDefaultedType(Sponge::server);
+        return RegistryType.of(RegistryRoots.MINECRAFT, ResourceKey.minecraft(Objects.requireNonNull(key, "key"))).asScopedType();
     }
 
     private static <V> DefaultedRegistryType<V> spongeKeyInGame(final String key) {
@@ -564,6 +564,6 @@ public final class RegistryTypes {
     }
 
     private static <V> DefaultedRegistryType<V> spongeKeyInServer(final String key) {
-        return RegistryType.of(RegistryRoots.SPONGE, ResourceKey.sponge(Objects.requireNonNull(key, "key"))).asDefaultedType(Sponge::server);
+        return RegistryType.of(RegistryRoots.SPONGE, ResourceKey.sponge(Objects.requireNonNull(key, "key"))).asScopedType();
     }
 }
