@@ -53,6 +53,8 @@ public final class EntityTypeTags {
 
     public static final Tag<EntityType<?>> CAN_BREATHE_UNDER_WATER = EntityTypeTags.key(ResourceKey.minecraft("can_breathe_under_water"));
 
+    public static final Tag<EntityType<?>> CAN_EQUIP_HARNESS = EntityTypeTags.key(ResourceKey.minecraft("can_equip_harness"));
+
     public static final Tag<EntityType<?>> CAN_EQUIP_SADDLE = EntityTypeTags.key(ResourceKey.minecraft("can_equip_saddle"));
 
     public static final Tag<EntityType<?>> CAN_TURN_IN_BOATS = EntityTypeTags.key(ResourceKey.minecraft("can_turn_in_boats"));
@@ -64,6 +66,8 @@ public final class EntityTypeTags {
     public static final Tag<EntityType<?>> DISMOUNTS_UNDERWATER = EntityTypeTags.key(ResourceKey.minecraft("dismounts_underwater"));
 
     public static final Tag<EntityType<?>> FALL_DAMAGE_IMMUNE = EntityTypeTags.key(ResourceKey.minecraft("fall_damage_immune"));
+
+    public static final Tag<EntityType<?>> FOLLOWABLE_FRIENDLY_MOBS = EntityTypeTags.key(ResourceKey.minecraft("followable_friendly_mobs"));
 
     public static final Tag<EntityType<?>> FREEZE_HURTS_EXTRA_TYPES = EntityTypeTags.key(ResourceKey.minecraft("freeze_hurts_extra_types"));
 

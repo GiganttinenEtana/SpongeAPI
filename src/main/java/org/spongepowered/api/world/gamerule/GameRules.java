@@ -148,6 +148,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> UNIVERSAL_ANGER = GameRules.key(ResourceKey.sponge("universal_anger"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> USE_LOCATOR_BAR = GameRules.key(ResourceKey.sponge("use_locator_bar"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> WATER_SOURCE_CONVERSION = GameRules.key(ResourceKey.sponge("water_source_conversion"));
 
     private GameRules() {

@@ -81,6 +81,10 @@ public final class IntegerStateProperties {
         return IntegerStateProperty.of("DISTANCE");
     }
 
+    public static IntegerStateProperty property_DRIED_GHAST_HYDRATION_LEVELS() {
+        return IntegerStateProperty.of("DRIED_GHAST_HYDRATION_LEVELS");
+    }
+
     public static IntegerStateProperty property_DUSTED() {
         return IntegerStateProperty.of("DUSTED");
     }

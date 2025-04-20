@@ -88,6 +88,8 @@ public final class Statistics {
 
     public static final DefaultedRegistryReference<Statistic> FLY_ONE_CM = Statistics.key(ResourceKey.minecraft("fly_one_cm"));
 
+    public static final DefaultedRegistryReference<Statistic> HAPPY_GHAST_ONE_CM = Statistics.key(ResourceKey.minecraft("happy_ghast_one_cm"));
+
     public static final DefaultedRegistryReference<Statistic> HORSE_ONE_CM = Statistics.key(ResourceKey.minecraft("horse_one_cm"));
 
     public static final DefaultedRegistryReference<Statistic> INSPECT_DISPENSER = Statistics.key(ResourceKey.minecraft("inspect_dispenser"));

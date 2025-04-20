@@ -46,6 +46,7 @@ import org.spongepowered.api.entity.living.animal.Cat;
 import org.spongepowered.api.entity.living.animal.Chicken;
 import org.spongepowered.api.entity.living.animal.Fox;
 import org.spongepowered.api.entity.living.animal.Goat;
+import org.spongepowered.api.entity.living.animal.HappyGhast;
 import org.spongepowered.api.entity.living.animal.Hoglin;
 import org.spongepowered.api.entity.living.animal.Ocelot;
 import org.spongepowered.api.entity.living.animal.Panda;
@@ -289,6 +290,8 @@ public final class EntityTypes {
     public static final DefaultedRegistryReference<EntityType<Goat>> GOAT = EntityTypes.key(ResourceKey.minecraft("goat"));
 
     public static final DefaultedRegistryReference<EntityType<Guardian>> GUARDIAN = EntityTypes.key(ResourceKey.minecraft("guardian"));
+
+    public static final DefaultedRegistryReference<EntityType<HappyGhast>> HAPPY_GHAST = EntityTypes.key(ResourceKey.minecraft("happy_ghast"));
 
     public static final DefaultedRegistryReference<EntityType<Hoglin>> HOGLIN = EntityTypes.key(ResourceKey.minecraft("hoglin"));
 

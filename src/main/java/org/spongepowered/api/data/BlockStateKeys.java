@@ -134,6 +134,8 @@ public final class BlockStateKeys {
 
     public static final Key<Value<Boolean>> DRAG = BlockStateKeys.key(ResourceKey.minecraft("property/drag"), Boolean.class);
 
+    public static final Key<Value<Integer>> DRIED_GHAST_HYDRATION_LEVELS = BlockStateKeys.key(ResourceKey.minecraft("property/hydration"), Integer.class);
+
     public static final Key<Value<DripstoneSegment>> DRIPSTONE_THICKNESS = BlockStateKeys.key(ResourceKey.minecraft("property/thickness"), DripstoneSegment.class);
 
     public static final Key<Value<Integer>> DUSTED = BlockStateKeys.key(ResourceKey.minecraft("property/dusted"), Integer.class);

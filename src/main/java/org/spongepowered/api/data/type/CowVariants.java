@@ -54,6 +54,6 @@ public final class CowVariants {
     }
 
     private static DefaultedRegistryReference<CowVariant> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.COW_VARIANT, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.COW_VARIANT, location).asScopedReference();
     }
 }

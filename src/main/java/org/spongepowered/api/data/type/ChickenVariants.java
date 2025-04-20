@@ -51,6 +51,6 @@ public final class ChickenVariants {
     }
 
     private static DefaultedRegistryReference<ChickenVariant> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.CHICKEN_VARIANT, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.CHICKEN_VARIANT, location).asScopedReference();
     }
 }

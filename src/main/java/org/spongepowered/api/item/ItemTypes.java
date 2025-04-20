@@ -254,6 +254,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> BLACK_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("black_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> BLACK_HARNESS = ItemTypes.key(ResourceKey.minecraft("black_harness"));
+
     public static final DefaultedRegistryReference<ItemType> BLACK_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("black_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> BLACK_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("black_stained_glass"));
@@ -293,6 +295,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> BLUE_EGG = ItemTypes.key(ResourceKey.minecraft("blue_egg"));
 
     public static final DefaultedRegistryReference<ItemType> BLUE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("blue_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> BLUE_HARNESS = ItemTypes.key(ResourceKey.minecraft("blue_harness"));
 
     public static final DefaultedRegistryReference<ItemType> BLUE_ICE = ItemTypes.key(ResourceKey.minecraft("blue_ice"));
 
@@ -373,6 +377,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> BROWN_EGG = ItemTypes.key(ResourceKey.minecraft("brown_egg"));
 
     public static final DefaultedRegistryReference<ItemType> BROWN_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("brown_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> BROWN_HARNESS = ItemTypes.key(ResourceKey.minecraft("brown_harness"));
 
     public static final DefaultedRegistryReference<ItemType> BROWN_MUSHROOM = ItemTypes.key(ResourceKey.minecraft("brown_mushroom"));
 
@@ -706,6 +712,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> CYAN_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("cyan_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> CYAN_HARNESS = ItemTypes.key(ResourceKey.minecraft("cyan_harness"));
+
     public static final DefaultedRegistryReference<ItemType> CYAN_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("cyan_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> CYAN_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("cyan_stained_glass"));
@@ -887,6 +895,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> DRAGON_EGG = ItemTypes.key(ResourceKey.minecraft("dragon_egg"));
 
     public static final DefaultedRegistryReference<ItemType> DRAGON_HEAD = ItemTypes.key(ResourceKey.minecraft("dragon_head"));
+
+    public static final DefaultedRegistryReference<ItemType> DRIED_GHAST = ItemTypes.key(ResourceKey.minecraft("dried_ghast"));
 
     public static final DefaultedRegistryReference<ItemType> DRIED_KELP = ItemTypes.key(ResourceKey.minecraft("dried_kelp"));
 
@@ -1130,6 +1140,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> GRAY_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("gray_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> GRAY_HARNESS = ItemTypes.key(ResourceKey.minecraft("gray_harness"));
+
     public static final DefaultedRegistryReference<ItemType> GRAY_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("gray_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> GRAY_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("gray_stained_glass"));
@@ -1158,6 +1170,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> GREEN_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("green_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> GREEN_HARNESS = ItemTypes.key(ResourceKey.minecraft("green_harness"));
+
     public static final DefaultedRegistryReference<ItemType> GREEN_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("green_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> GREEN_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("green_stained_glass"));
@@ -1179,6 +1193,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> GUSTER_POTTERY_SHERD = ItemTypes.key(ResourceKey.minecraft("guster_pottery_sherd"));
 
     public static final DefaultedRegistryReference<ItemType> HANGING_ROOTS = ItemTypes.key(ResourceKey.minecraft("hanging_roots"));
+
+    public static final DefaultedRegistryReference<ItemType> HAPPY_GHAST_SPAWN_EGG = ItemTypes.key(ResourceKey.minecraft("happy_ghast_spawn_egg"));
 
     public static final DefaultedRegistryReference<ItemType> HAY_BLOCK = ItemTypes.key(ResourceKey.minecraft("hay_block"));
 
@@ -1378,6 +1394,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> LIGHT_BLUE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("light_blue_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> LIGHT_BLUE_HARNESS = ItemTypes.key(ResourceKey.minecraft("light_blue_harness"));
+
     public static final DefaultedRegistryReference<ItemType> LIGHT_BLUE_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("light_blue_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> LIGHT_BLUE_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("light_blue_stained_glass"));
@@ -1405,6 +1423,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> LIGHT_GRAY_DYE = ItemTypes.key(ResourceKey.minecraft("light_gray_dye"));
 
     public static final DefaultedRegistryReference<ItemType> LIGHT_GRAY_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("light_gray_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> LIGHT_GRAY_HARNESS = ItemTypes.key(ResourceKey.minecraft("light_gray_harness"));
 
     public static final DefaultedRegistryReference<ItemType> LIGHT_GRAY_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("light_gray_shulker_box"));
 
@@ -1441,6 +1461,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> LIME_DYE = ItemTypes.key(ResourceKey.minecraft("lime_dye"));
 
     public static final DefaultedRegistryReference<ItemType> LIME_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("lime_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> LIME_HARNESS = ItemTypes.key(ResourceKey.minecraft("lime_harness"));
 
     public static final DefaultedRegistryReference<ItemType> LIME_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("lime_shulker_box"));
 
@@ -1479,6 +1501,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> MAGENTA_DYE = ItemTypes.key(ResourceKey.minecraft("magenta_dye"));
 
     public static final DefaultedRegistryReference<ItemType> MAGENTA_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("magenta_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> MAGENTA_HARNESS = ItemTypes.key(ResourceKey.minecraft("magenta_harness"));
 
     public static final DefaultedRegistryReference<ItemType> MAGENTA_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("magenta_shulker_box"));
 
@@ -1758,6 +1782,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> ORANGE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("orange_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> ORANGE_HARNESS = ItemTypes.key(ResourceKey.minecraft("orange_harness"));
+
     public static final DefaultedRegistryReference<ItemType> ORANGE_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("orange_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> ORANGE_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("orange_stained_glass"));
@@ -1881,6 +1907,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> PINK_DYE = ItemTypes.key(ResourceKey.minecraft("pink_dye"));
 
     public static final DefaultedRegistryReference<ItemType> PINK_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("pink_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> PINK_HARNESS = ItemTypes.key(ResourceKey.minecraft("pink_harness"));
 
     public static final DefaultedRegistryReference<ItemType> PINK_PETALS = ItemTypes.key(ResourceKey.minecraft("pink_petals"));
 
@@ -2034,6 +2062,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> PURPLE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("purple_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> PURPLE_HARNESS = ItemTypes.key(ResourceKey.minecraft("purple_harness"));
+
     public static final DefaultedRegistryReference<ItemType> PURPLE_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("purple_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> PURPLE_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("purple_stained_glass"));
@@ -2121,6 +2151,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> RED_DYE = ItemTypes.key(ResourceKey.minecraft("red_dye"));
 
     public static final DefaultedRegistryReference<ItemType> RED_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("red_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> RED_HARNESS = ItemTypes.key(ResourceKey.minecraft("red_harness"));
 
     public static final DefaultedRegistryReference<ItemType> RED_MUSHROOM = ItemTypes.key(ResourceKey.minecraft("red_mushroom"));
 
@@ -2746,6 +2778,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> WHITE_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("white_glazed_terracotta"));
 
+    public static final DefaultedRegistryReference<ItemType> WHITE_HARNESS = ItemTypes.key(ResourceKey.minecraft("white_harness"));
+
     public static final DefaultedRegistryReference<ItemType> WHITE_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("white_shulker_box"));
 
     public static final DefaultedRegistryReference<ItemType> WHITE_STAINED_GLASS = ItemTypes.key(ResourceKey.minecraft("white_stained_glass"));
@@ -2809,6 +2843,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> YELLOW_DYE = ItemTypes.key(ResourceKey.minecraft("yellow_dye"));
 
     public static final DefaultedRegistryReference<ItemType> YELLOW_GLAZED_TERRACOTTA = ItemTypes.key(ResourceKey.minecraft("yellow_glazed_terracotta"));
+
+    public static final DefaultedRegistryReference<ItemType> YELLOW_HARNESS = ItemTypes.key(ResourceKey.minecraft("yellow_harness"));
 
     public static final DefaultedRegistryReference<ItemType> YELLOW_SHULKER_BOX = ItemTypes.key(ResourceKey.minecraft("yellow_shulker_box"));
 

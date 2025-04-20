@@ -56,6 +56,8 @@ public final class AttributeTypes {
 
     public static final DefaultedRegistryReference<RangedAttributeType> BURNING_TIME = AttributeTypes.key(ResourceKey.minecraft("burning_time"));
 
+    public static final DefaultedRegistryReference<RangedAttributeType> CAMERA_DISTANCE = AttributeTypes.key(ResourceKey.minecraft("camera_distance"));
+
     public static final DefaultedRegistryReference<RangedAttributeType> ENTITY_INTERACTION_RANGE = AttributeTypes.key(ResourceKey.minecraft("entity_interaction_range"));
 
     public static final DefaultedRegistryReference<RangedAttributeType> EXPLOSION_KNOCKBACK_RESISTANCE = AttributeTypes.key(ResourceKey.minecraft("explosion_knockback_resistance"));
@@ -103,6 +105,10 @@ public final class AttributeTypes {
     public static final DefaultedRegistryReference<RangedAttributeType> TEMPT_RANGE = AttributeTypes.key(ResourceKey.minecraft("tempt_range"));
 
     public static final DefaultedRegistryReference<RangedAttributeType> WATER_MOVEMENT_EFFICIENCY = AttributeTypes.key(ResourceKey.minecraft("water_movement_efficiency"));
+
+    public static final DefaultedRegistryReference<RangedAttributeType> WAYPOINT_RECEIVE_RANGE = AttributeTypes.key(ResourceKey.minecraft("waypoint_receive_range"));
+
+    public static final DefaultedRegistryReference<RangedAttributeType> WAYPOINT_TRANSMIT_RANGE = AttributeTypes.key(ResourceKey.minecraft("waypoint_transmit_range"));
 
     private AttributeTypes() {
     }

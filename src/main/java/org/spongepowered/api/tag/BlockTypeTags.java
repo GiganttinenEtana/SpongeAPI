@@ -289,8 +289,6 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> PLANKS = BlockTypeTags.key(ResourceKey.minecraft("planks"));
 
-    public static final Tag<BlockType> PLAYS_AMBIENT_DESERT_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("plays_ambient_desert_block_sounds"));
-
     public static final Tag<BlockType> POLAR_BEARS_SPAWNABLE_ON_ALTERNATE = BlockTypeTags.key(ResourceKey.minecraft("polar_bears_spawnable_on_alternate"));
 
     public static final Tag<BlockType> PORTALS = BlockTypeTags.key(ResourceKey.minecraft("portals"));
@@ -372,6 +370,10 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> TRAIL_RUINS_REPLACEABLE = BlockTypeTags.key(ResourceKey.minecraft("trail_ruins_replaceable"));
 
     public static final Tag<BlockType> TRAPDOORS = BlockTypeTags.key(ResourceKey.minecraft("trapdoors"));
+
+    public static final Tag<BlockType> TRIGGERS_AMBIENT_DESERT_DRY_VEGETATION_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("triggers_ambient_desert_dry_vegetation_block_sounds"));
+
+    public static final Tag<BlockType> TRIGGERS_AMBIENT_DESERT_SAND_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("triggers_ambient_desert_sand_block_sounds"));
 
     public static final Tag<BlockType> UNDERWATER_BONEMEALS = BlockTypeTags.key(ResourceKey.minecraft("underwater_bonemeals"));
 

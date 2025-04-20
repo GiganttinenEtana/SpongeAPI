@@ -201,6 +201,12 @@ public final class ItemTypeTags {
 
     public static final Tag<ItemType> HANGING_SIGNS = ItemTypeTags.key(ResourceKey.minecraft("hanging_signs"));
 
+    public static final Tag<ItemType> HAPPY_GHAST_FOOD = ItemTypeTags.key(ResourceKey.minecraft("happy_ghast_food"));
+
+    public static final Tag<ItemType> HAPPY_GHAST_TEMPT_ITEMS = ItemTypeTags.key(ResourceKey.minecraft("happy_ghast_tempt_items"));
+
+    public static final Tag<ItemType> HARNESSES = ItemTypeTags.key(ResourceKey.minecraft("harnesses"));
+
     public static final Tag<ItemType> HEAD_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("head_armor"));
 
     public static final Tag<ItemType> HOES = ItemTypeTags.key(ResourceKey.minecraft("hoes"));

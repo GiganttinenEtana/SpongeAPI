@@ -59,6 +59,6 @@ public final class WolfSoundVariants {
     }
 
     private static DefaultedRegistryReference<WolfSoundVariant> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.WOLF_SOUND_VARIANT, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.WOLF_SOUND_VARIANT, location).asScopedReference();
     }
 }

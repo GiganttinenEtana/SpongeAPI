@@ -740,6 +740,8 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> DRAGON_WALL_HEAD = BlockTypes.key(ResourceKey.minecraft("dragon_wall_head"));
 
+    public static final DefaultedRegistryReference<BlockType> DRIED_GHAST = BlockTypes.key(ResourceKey.minecraft("dried_ghast"));
+
     public static final DefaultedRegistryReference<BlockType> DRIED_KELP_BLOCK = BlockTypes.key(ResourceKey.minecraft("dried_kelp_block"));
 
     public static final DefaultedRegistryReference<BlockType> DRIPSTONE_BLOCK = BlockTypes.key(ResourceKey.minecraft("dripstone_block"));
