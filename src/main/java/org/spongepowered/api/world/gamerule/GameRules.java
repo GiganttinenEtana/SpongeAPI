@@ -102,6 +102,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> LAVA_SOURCE_CONVERSION = GameRules.key(ResourceKey.sponge("lava_source_conversion"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> LOCATOR_BAR = GameRules.key(ResourceKey.sponge("locator_bar"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> LOG_ADMIN_COMMANDS = GameRules.key(ResourceKey.sponge("log_admin_commands"));
 
     public static final DefaultedRegistryReference<GameRule<Integer>> MAX_COMMAND_CHAIN_LENGTH = GameRules.key(ResourceKey.sponge("max_command_chain_length"));
@@ -147,8 +149,6 @@ public final class GameRules {
     public static final DefaultedRegistryReference<GameRule<Boolean>> TNT_EXPLOSION_DROP_DECAY = GameRules.key(ResourceKey.sponge("tnt_explosion_drop_decay"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> UNIVERSAL_ANGER = GameRules.key(ResourceKey.sponge("universal_anger"));
-
-    public static final DefaultedRegistryReference<GameRule<Boolean>> USE_LOCATOR_BAR = GameRules.key(ResourceKey.sponge("use_locator_bar"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> WATER_SOURCE_CONVERSION = GameRules.key(ResourceKey.sponge("water_source_conversion"));
 

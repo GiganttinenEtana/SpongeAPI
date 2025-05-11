@@ -195,6 +195,8 @@ public final class BlockTypeTags {
 
     public static final Tag<BlockType> GUARDED_BY_PIGLINS = BlockTypeTags.key(ResourceKey.minecraft("guarded_by_piglins"));
 
+    public static final Tag<BlockType> HAPPY_GHAST_AVOIDS = BlockTypeTags.key(ResourceKey.minecraft("happy_ghast_avoids"));
+
     public static final Tag<BlockType> HOGLIN_REPELLENTS = BlockTypeTags.key(ResourceKey.minecraft("hoglin_repellents"));
 
     public static final Tag<BlockType> ICE = BlockTypeTags.key(ResourceKey.minecraft("ice"));
@@ -374,6 +376,8 @@ public final class BlockTypeTags {
     public static final Tag<BlockType> TRIGGERS_AMBIENT_DESERT_DRY_VEGETATION_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("triggers_ambient_desert_dry_vegetation_block_sounds"));
 
     public static final Tag<BlockType> TRIGGERS_AMBIENT_DESERT_SAND_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("triggers_ambient_desert_sand_block_sounds"));
+
+    public static final Tag<BlockType> TRIGGERS_AMBIENT_DRIED_GHAST_BLOCK_SOUNDS = BlockTypeTags.key(ResourceKey.minecraft("triggers_ambient_dried_ghast_block_sounds"));
 
     public static final Tag<BlockType> UNDERWATER_BONEMEALS = BlockTypeTags.key(ResourceKey.minecraft("underwater_bonemeals"));
 
