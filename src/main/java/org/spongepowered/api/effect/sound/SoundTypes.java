@@ -592,8 +592,6 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_DRIED_GHAST_FALL = SoundTypes.key(ResourceKey.minecraft("block.dried_ghast.fall"));
 
-    public static final DefaultedRegistryReference<SoundType> BLOCK_DRIED_GHAST_HIT = SoundTypes.key(ResourceKey.minecraft("block.dried_ghast.hit"));
-
     public static final DefaultedRegistryReference<SoundType> BLOCK_DRIED_GHAST_PLACE = SoundTypes.key(ResourceKey.minecraft("block.dried_ghast.place"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_DRIED_GHAST_PLACE_IN_WATER = SoundTypes.key(ResourceKey.minecraft("block.dried_ghast.place_in_water"));
