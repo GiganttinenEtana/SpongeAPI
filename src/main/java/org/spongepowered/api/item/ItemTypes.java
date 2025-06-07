@@ -1650,6 +1650,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_STRAD = ItemTypes.key(ResourceKey.minecraft("music_disc_strad"));
 
+    public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_TEARS = ItemTypes.key(ResourceKey.minecraft("music_disc_tears"));
+
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_WAIT = ItemTypes.key(ResourceKey.minecraft("music_disc_wait"));
 
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_WARD = ItemTypes.key(ResourceKey.minecraft("music_disc_ward"));

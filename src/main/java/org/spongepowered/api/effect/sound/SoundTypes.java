@@ -3396,6 +3396,8 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_STRAD = SoundTypes.key(ResourceKey.minecraft("music_disc.strad"));
 
+    public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_TEARS = SoundTypes.key(ResourceKey.minecraft("music_disc.tears"));
+
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_WAIT = SoundTypes.key(ResourceKey.minecraft("music_disc.wait"));
 
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_WARD = SoundTypes.key(ResourceKey.minecraft("music_disc.ward"));

@@ -72,6 +72,8 @@ public final class MusicDiscs {
 
     public static final DefaultedRegistryReference<MusicDisc> STRAD = MusicDiscs.key(ResourceKey.minecraft("strad"));
 
+    public static final DefaultedRegistryReference<MusicDisc> TEARS = MusicDiscs.key(ResourceKey.minecraft("tears"));
+
     public static final DefaultedRegistryReference<MusicDisc> THIRTEEN = MusicDiscs.key(ResourceKey.minecraft("13"));
 
     public static final DefaultedRegistryReference<MusicDisc> WAIT = MusicDiscs.key(ResourceKey.minecraft("wait"));
