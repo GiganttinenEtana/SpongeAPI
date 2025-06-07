@@ -2306,10 +2306,6 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_ITEM_PICKUP = SoundTypes.key(ResourceKey.minecraft("entity.item.pickup"));
 
-    public static final DefaultedRegistryReference<SoundType> ENTITY_LEASH_KNOT_BREAK = SoundTypes.key(ResourceKey.minecraft("entity.leash_knot.break"));
-
-    public static final DefaultedRegistryReference<SoundType> ENTITY_LEASH_KNOT_PLACE = SoundTypes.key(ResourceKey.minecraft("entity.leash_knot.place"));
-
     public static final DefaultedRegistryReference<SoundType> ENTITY_LIGHTNING_BOLT_IMPACT = SoundTypes.key(ResourceKey.minecraft("entity.lightning_bolt.impact"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_LIGHTNING_BOLT_THUNDER = SoundTypes.key(ResourceKey.minecraft("entity.lightning_bolt.thunder"));
@@ -3306,7 +3302,17 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> ITEM_HONEY_BOTTLE_DRINK = SoundTypes.key(ResourceKey.minecraft("item.honey_bottle.drink"));
 
+    public static final DefaultedRegistryReference<SoundType> ITEM_HORSE_ARMOR_UNEQUIP = SoundTypes.key(ResourceKey.minecraft("item.horse_armor.unequip"));
+
     public static final DefaultedRegistryReference<SoundType> ITEM_INK_SAC_USE = SoundTypes.key(ResourceKey.minecraft("item.ink_sac.use"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_LEAD_BREAK = SoundTypes.key(ResourceKey.minecraft("item.lead.break"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_LEAD_TIED = SoundTypes.key(ResourceKey.minecraft("item.lead.tied"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_LEAD_UNTIED = SoundTypes.key(ResourceKey.minecraft("item.lead.untied"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_LLAMA_CARPET_UNEQUIP = SoundTypes.key(ResourceKey.minecraft("item.llama_carpet.unequip"));
 
     public static final DefaultedRegistryReference<SoundType> ITEM_LODESTONE_COMPASS_LOCK = SoundTypes.key(ResourceKey.minecraft("item.lodestone_compass.lock"));
 
@@ -3319,6 +3325,8 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> ITEM_NETHER_WART_PLANT = SoundTypes.key(ResourceKey.minecraft("item.nether_wart.plant"));
 
     public static final DefaultedRegistryReference<SoundType> ITEM_OMINOUS_BOTTLE_DISPOSE = SoundTypes.key(ResourceKey.minecraft("item.ominous_bottle.dispose"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_SADDLE_UNEQUIP = SoundTypes.key(ResourceKey.minecraft("item.saddle.unequip"));
 
     public static final DefaultedRegistryReference<SoundType> ITEM_SHEARS_SNIP = SoundTypes.key(ResourceKey.minecraft("item.shears.snip"));
 
