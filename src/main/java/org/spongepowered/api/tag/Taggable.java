@@ -32,7 +32,7 @@ import java.util.stream.Stream;
 /**
  * A type that may be included in one or more {@link Tag} collections.
  */
-public interface Taggable<T extends Taggable<T>> extends DefaultedRegistryValue {
+public interface Taggable<T extends Taggable<T>> extends DefaultedRegistryValue<T> {
 
     /**
      * Gets all {@link Tag}s that have been associated with this object in the given registry.

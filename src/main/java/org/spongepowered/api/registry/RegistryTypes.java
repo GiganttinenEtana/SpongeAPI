@@ -346,7 +346,9 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<DamageStepType> DAMAGE_STEP_TYPE = RegistryTypes.spongeKeyInGame("damage_step_type");
 
     public static final DefaultedRegistryType<DamageType> DAMAGE_TYPE = RegistryTypes.minecraftKeyInServer("damage_type");
+
     public static final DefaultedRegistryType<DamageScaling> DAMAGE_SCALING = RegistryTypes.spongeKeyInGame("damage_scaling");
+
     public static final DefaultedRegistryType<DamageEffect> DAMAGE_EFFECT = RegistryTypes.spongeKeyInGame("damage_effect");
 
     public static final DefaultedRegistryType<DataFormat> DATA_FORMAT = RegistryTypes.spongeKeyInGame("data_format");
@@ -371,7 +373,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<EquipmentType> EQUIPMENT_TYPE = RegistryTypes.spongeKeyInGame("equipment_type");
 
-    public static final RegistryType<ExplosionBlockInteraction> EXPLOSION_BLOCK_INTERACTION = RegistryTypes.spongeKeyInGame("explosion_block_interaction");
+    public static final DefaultedRegistryType<ExplosionBlockInteraction> EXPLOSION_BLOCK_INTERACTION = RegistryTypes.spongeKeyInGame("explosion_block_interaction");
 
     public static final DefaultedRegistryType<FireworkShape> FIREWORK_SHAPE = RegistryTypes.spongeKeyInGame("firework_shape");
 
@@ -515,7 +517,7 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<Tilt> TILT = RegistryTypes.spongeKeyInGame("tilt");
 
-    public static final RegistryType<VaultState> VAULT_STATE = RegistryTypes.spongeKeyInGame("vault_state");
+    public static final DefaultedRegistryType<VaultState> VAULT_STATE = RegistryTypes.spongeKeyInGame("vault_state");
 
     public static final DefaultedRegistryType<Visibility> VISIBILITY = RegistryTypes.spongeKeyInGame("visibility");
 
