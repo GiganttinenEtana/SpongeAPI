@@ -116,6 +116,8 @@ public final class Triggers {
 
     public static final DefaultedRegistryReference<Trigger<?>> PLAYER_KILLED_ENTITY = Triggers.key(ResourceKey.minecraft("player_killed_entity"));
 
+    public static final DefaultedRegistryReference<Trigger<?>> PLAYER_SHEARED_EQUIPMENT = Triggers.key(ResourceKey.minecraft("player_sheared_equipment"));
+
     public static final DefaultedRegistryReference<Trigger<?>> RECIPE_CRAFTED = Triggers.key(ResourceKey.minecraft("recipe_crafted"));
 
     public static final DefaultedRegistryReference<Trigger<?>> RECIPE_UNLOCKED = Triggers.key(ResourceKey.minecraft("recipe_unlocked"));
