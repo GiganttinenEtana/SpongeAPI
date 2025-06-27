@@ -210,7 +210,10 @@ public interface Command {
          * @return The tree.
          */
         default CommandTreeNode.Root commandTree() {
-            return CommandTreeNode.root().executable().child("arguments",
+            return CommandTreeNode.root()
+                .executable()
+                .requires(this::canExecute)
+                .child("arguments",
                     CommandTreeNodeTypes.STRING.get().createNode().greedy().executable().customCompletions());
         }
 
