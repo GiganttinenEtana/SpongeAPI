@@ -54,6 +54,6 @@ public final class FrogTypes {
     }
 
     private static DefaultedRegistryReference<FrogType> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.FROG_TYPE, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.FROG_TYPE, location).asScopedReference();
     }
 }

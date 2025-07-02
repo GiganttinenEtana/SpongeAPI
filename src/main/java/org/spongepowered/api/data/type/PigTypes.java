@@ -54,6 +54,6 @@ public final class PigTypes {
     }
 
     private static DefaultedRegistryReference<PigType> key(final ResourceKey location) {
-        return RegistryKey.of(RegistryTypes.PIG_TYPE, location).asDefaultedReference(Sponge::server);
+        return RegistryKey.of(RegistryTypes.PIG_TYPE, location).asScopedReference();
     }
 }
