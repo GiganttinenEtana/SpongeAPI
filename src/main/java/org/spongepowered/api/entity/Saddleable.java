@@ -26,13 +26,13 @@ package org.spongepowered.api.entity;
 
 import org.spongepowered.api.data.Keys;
 import org.spongepowered.api.data.value.Value;
+import org.spongepowered.api.tag.DefaultedTag;
 import org.spongepowered.api.tag.EntityTypeTags;
-import org.spongepowered.api.tag.Tag;
 
 /**
  * Represents an {@link Entity} which can be saddled.
  *
- * @deprecated Use {@link EntityType#is(Tag) EntityType.is} {@link EntityTypeTags#CAN_EQUIP_SADDLE} as
+ * @deprecated Use {@link EntityType#is(DefaultedTag) EntityType.is} {@link EntityTypeTags#CAN_EQUIP_SADDLE} as
  *      other {@link Entity entities} may be now saddled based on the tag definition
  */
 @Deprecated(forRemoval = true, since = "15")
