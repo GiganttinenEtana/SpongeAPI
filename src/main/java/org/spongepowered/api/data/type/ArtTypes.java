@@ -68,6 +68,8 @@ public final class ArtTypes {
 
     public static final DefaultedRegistryReference<ArtType> CREEBET = ArtTypes.key(ResourceKey.minecraft("creebet"));
 
+    public static final DefaultedRegistryReference<ArtType> DENNIS = ArtTypes.key(ResourceKey.minecraft("dennis"));
+
     public static final DefaultedRegistryReference<ArtType> DONKEY_KONG = ArtTypes.key(ResourceKey.minecraft("donkey_kong"));
 
     public static final DefaultedRegistryReference<ArtType> EARTH = ArtTypes.key(ResourceKey.minecraft("earth"));

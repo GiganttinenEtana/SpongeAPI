@@ -3388,6 +3388,8 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_FAR = SoundTypes.key(ResourceKey.minecraft("music_disc.far"));
 
+    public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_LAVA_CHICKEN = SoundTypes.key(ResourceKey.minecraft("music_disc.lava_chicken"));
+
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_MALL = SoundTypes.key(ResourceKey.minecraft("music_disc.mall"));
 
     public static final DefaultedRegistryReference<SoundType> MUSIC_DISC_MELLOHI = SoundTypes.key(ResourceKey.minecraft("music_disc.mellohi"));

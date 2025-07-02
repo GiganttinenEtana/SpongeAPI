@@ -1634,6 +1634,8 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_FAR = ItemTypes.key(ResourceKey.minecraft("music_disc_far"));
 
+    public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_LAVA_CHICKEN = ItemTypes.key(ResourceKey.minecraft("music_disc_lava_chicken"));
+
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_MALL = ItemTypes.key(ResourceKey.minecraft("music_disc_mall"));
 
     public static final DefaultedRegistryReference<ItemType> MUSIC_DISC_MELLOHI = ItemTypes.key(ResourceKey.minecraft("music_disc_mellohi"));
