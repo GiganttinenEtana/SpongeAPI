@@ -35,6 +35,15 @@ configurations {
     }
 }
 
+nexusPublishing {
+    repositories {
+        named("sonatype") {
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
+        }
+    }
+}
+
 // Project dependencies
 dependencies {
     // Directly tied to what's available from Minecraft
