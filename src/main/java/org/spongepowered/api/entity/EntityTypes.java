@@ -78,6 +78,7 @@ import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Cod;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
+import org.spongepowered.api.entity.living.golem.CopperGolem;
 import org.spongepowered.api.entity.living.golem.IronGolem;
 import org.spongepowered.api.entity.living.golem.Shulker;
 import org.spongepowered.api.entity.living.golem.SnowGolem;
@@ -222,6 +223,8 @@ public final class EntityTypes {
     public static final DefaultedRegistryReference<EntityType<Cod>> COD = EntityTypes.key(ResourceKey.minecraft("cod"));
 
     public static final DefaultedRegistryReference<EntityType<CommandBlockMinecart>> COMMAND_BLOCK_MINECART = EntityTypes.key(ResourceKey.minecraft("command_block_minecart"));
+
+    public static final DefaultedRegistryReference<EntityType<CopperGolem>> COPPER_GOLEM = EntityTypes.key(ResourceKey.minecraft("copper_golem"));
 
     public static final DefaultedRegistryReference<EntityType<Cow>> COW = EntityTypes.key(ResourceKey.minecraft("cow"));
 

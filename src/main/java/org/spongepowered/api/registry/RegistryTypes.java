@@ -56,6 +56,8 @@ import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ChickenVariant;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CopperGolemPose;
+import org.spongepowered.api.data.type.CopperOxidation;
 import org.spongepowered.api.data.type.CowVariant;
 import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
@@ -88,6 +90,7 @@ import org.spongepowered.api.data.type.RaidStatus;
 import org.spongepowered.api.data.type.RailDirection;
 import org.spongepowered.api.data.type.SalmonSize;
 import org.spongepowered.api.data.type.SculkSensorState;
+import org.spongepowered.api.data.type.SideChain;
 import org.spongepowered.api.data.type.SkinPart;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.SpellType;
@@ -347,6 +350,10 @@ public final class RegistryTypes {
 
     public static final DefaultedRegistryType<ComparatorMode> COMPARATOR_MODE = RegistryTypes.spongeKeyInGame("comparator_mode");
 
+    public static final DefaultedRegistryType<CopperGolemPose> COPPER_GOLEM_POSE = RegistryTypes.spongeKeyInGame("copper_golem_pose");
+
+    public static final DefaultedRegistryType<CopperOxidation> COPPER_OXIDATION = RegistryTypes.spongeKeyInGame("copper_oxidation");
+
     public static final DefaultedRegistryType<CowVariant> COW_VARIANT = RegistryTypes.minecraftKeyInServer("cow_variant");
 
     public static final DefaultedRegistryType<CreakingHeartState> CREAKING_HEART_STATES = RegistryTypes.spongeKeyInGame("creaking_heart_state");
@@ -500,6 +507,8 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<SalmonSize> SALMON_SIZE = RegistryTypes.spongeKeyInGame("salmon_size");
 
     public static final DefaultedRegistryType<SculkSensorState> SCULK_SENSOR_STATE = RegistryTypes.spongeKeyInGame("sculk_sensor_state");
+
+    public static final DefaultedRegistryType<SideChain> SIDE_CHAIN = RegistryTypes.spongeKeyInGame("side_chain");
 
     public static final DefaultedRegistryType<SelectorSortAlgorithm> SELECTOR_SORT_ALGORITHM = RegistryTypes.spongeKeyInGame("selector_sort_algorithm");
 

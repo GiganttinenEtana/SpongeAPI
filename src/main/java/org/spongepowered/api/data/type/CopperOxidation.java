@@ -24,10 +24,11 @@
  */
 package org.spongepowered.api.data.type;
 
-import org.spongepowered.api.registry.DefaultedRegistryValue;
+import org.spongepowered.api.registry.DefaultedRegistryType;
+import org.spongepowered.api.util.Cycleable;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
-@CatalogedBy(TestBlockModes.class)
-public interface TestBlockMode extends Comparable<TestBlockMode>, DefaultedRegistryValue<TestBlockMode>, StringRepresentable {
+@CatalogedBy(CopperOxidations.class)
+public interface CopperOxidation extends DefaultedRegistryType<CopperOxidations>, Comparable<CopperOxidation>, StringRepresentable, Cycleable<CopperOxidation> {
 
 }

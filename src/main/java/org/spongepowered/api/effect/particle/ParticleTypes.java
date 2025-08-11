@@ -66,6 +66,8 @@ public final class ParticleTypes {
 
     public static final DefaultedRegistryReference<ParticleType> COMPOSTER = ParticleTypes.key(ResourceKey.minecraft("composter"));
 
+    public static final DefaultedRegistryReference<ParticleType> COPPER_FIRE_FLAME = ParticleTypes.key(ResourceKey.minecraft("copper_fire_flame"));
+
     public static final DefaultedRegistryReference<ParticleType> CRIMSON_SPORE = ParticleTypes.key(ResourceKey.minecraft("crimson_spore"));
 
     public static final DefaultedRegistryReference<ParticleType> CRIT = ParticleTypes.key(ResourceKey.minecraft("crit"));

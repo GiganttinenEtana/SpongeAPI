@@ -72,6 +72,8 @@ public final class BlockEntityTypes {
 
     public static final DefaultedRegistryReference<BlockEntityType> CONDUIT = BlockEntityTypes.key(ResourceKey.minecraft("conduit"));
 
+    public static final DefaultedRegistryReference<BlockEntityType> COPPER_GOLEM_STATUE = BlockEntityTypes.key(ResourceKey.minecraft("copper_golem_statue"));
+
     public static final DefaultedRegistryReference<BlockEntityType> CRAFTER = BlockEntityTypes.key(ResourceKey.minecraft("crafter"));
 
     public static final DefaultedRegistryReference<BlockEntityType> CREAKING_HEART = BlockEntityTypes.key(ResourceKey.minecraft("creaking_heart"));
@@ -113,6 +115,8 @@ public final class BlockEntityTypes {
     public static final DefaultedRegistryReference<BlockEntityType> SCULK_SENSOR = BlockEntityTypes.key(ResourceKey.minecraft("sculk_sensor"));
 
     public static final DefaultedRegistryReference<BlockEntityType> SCULK_SHRIEKER = BlockEntityTypes.key(ResourceKey.minecraft("sculk_shrieker"));
+
+    public static final DefaultedRegistryReference<BlockEntityType> SHELF = BlockEntityTypes.key(ResourceKey.minecraft("shelf"));
 
     public static final DefaultedRegistryReference<BlockEntityType> SHULKER_BOX = BlockEntityTypes.key(ResourceKey.minecraft("shulker_box"));
 

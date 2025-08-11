@@ -61,6 +61,7 @@ import org.spongepowered.api.data.type.BodyParts;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CopperOxidation;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.DyeColor;
@@ -173,6 +174,7 @@ import org.spongepowered.api.entity.living.aquatic.Dolphin;
 import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
+import org.spongepowered.api.entity.living.golem.CopperGolem;
 import org.spongepowered.api.entity.living.golem.IronGolem;
 import org.spongepowered.api.entity.living.golem.Shulker;
 import org.spongepowered.api.entity.living.monster.Blaze;
@@ -256,6 +258,7 @@ import org.spongepowered.api.raid.Raid;
 import org.spongepowered.api.raid.RaidWave;
 import org.spongepowered.api.registry.DefaultedRegistryType;
 import org.spongepowered.api.statistic.Statistic;
+import org.spongepowered.api.tag.BlockTypeTags;
 import org.spongepowered.api.tag.Tag;
 import org.spongepowered.api.util.Axis;
 import org.spongepowered.api.util.Color;
@@ -787,6 +790,13 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<ItemType>> CONTAINER_ITEM = Keys.key(ResourceKey.sponge("container_item"), ItemType.class);
+
+    /**
+     * The {@link CopperOxidation} state of a {@link BlockState block}
+     * (given that it applies to the {@link BlockTypeTags#COPPER} tag) or
+     * a {@link CopperGolem}
+     */
+    public static final Key<Value<CopperOxidation>> COPPER_OXIDATION = Keys.key(ResourceKey.sponge("copper_oxidation"), CopperOxidation.class);
 
     /**
      * The {@link ItemStack} a food {@link ItemStack} converts to when eaten.
@@ -3506,6 +3516,12 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<Color>> WATER_FOG_COLOR = Keys.key(ResourceKey.sponge("water_fog_color"), Color.class);
+
+    /**
+     * The state of whether a {@link BlockState} that is a copper block is waxed, or if a {@link CopperGolem}
+     * is waxed.
+     */
+    public static final Key<Value<Boolean>> WAXED = Keys.key(ResourceKey.sponge("waxed"), Boolean.class);
 
     /**
      * The weather of a {@link ServerWorldProperties}.

@@ -28,5 +28,5 @@ import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 @CatalogedBy(PigTypes.class)
-public interface PigType extends DefaultedRegistryValue {
+public interface PigType extends DefaultedRegistryValue<PigType> {
 }

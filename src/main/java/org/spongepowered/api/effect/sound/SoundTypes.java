@@ -472,11 +472,33 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_BULB_TURN_ON = SoundTypes.key(ResourceKey.minecraft("block.copper_bulb.turn_on"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.copper_chest.close"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_OPEN = SoundTypes.key(ResourceKey.minecraft("block.copper_chest.open"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_OXIDIZED_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.copper_chest_oxidized.close"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_OXIDIZED_OPEN = SoundTypes.key(ResourceKey.minecraft("block.copper_chest_oxidized.open"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_WEATHERED_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.copper_chest_weathered.close"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_CHEST_WEATHERED_OPEN = SoundTypes.key(ResourceKey.minecraft("block.copper_chest_weathered.open"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_DOOR_CLOSE = SoundTypes.key(ResourceKey.minecraft("block.copper_door.close"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_DOOR_OPEN = SoundTypes.key(ResourceKey.minecraft("block.copper_door.open"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_FALL = SoundTypes.key(ResourceKey.minecraft("block.copper.fall"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GOLEM_STATUE_BREAK = SoundTypes.key(ResourceKey.minecraft("block.copper_golem_statue.break"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GOLEM_STATUE_FALL = SoundTypes.key(ResourceKey.minecraft("block.copper_golem_statue.fall"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GOLEM_STATUE_HIT = SoundTypes.key(ResourceKey.minecraft("block.copper_golem_statue.hit"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GOLEM_STATUE_PLACE = SoundTypes.key(ResourceKey.minecraft("block.copper_golem_statue.place"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GOLEM_STATUE_STEP = SoundTypes.key(ResourceKey.minecraft("block.copper_golem_statue.step"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_COPPER_GRATE_BREAK = SoundTypes.key(ResourceKey.minecraft("block.copper_grate.break"));
 
@@ -1298,6 +1320,26 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SCULK_VEIN_STEP = SoundTypes.key(ResourceKey.minecraft("block.sculk_vein.step"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_ACTIVATE = SoundTypes.key(ResourceKey.minecraft("block.shelf.activate"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_BREAK = SoundTypes.key(ResourceKey.minecraft("block.shelf.break"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_DEACTIVATE = SoundTypes.key(ResourceKey.minecraft("block.shelf.deactivate"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_FALL = SoundTypes.key(ResourceKey.minecraft("block.shelf.fall"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_HIT = SoundTypes.key(ResourceKey.minecraft("block.shelf.hit"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_MULTI_SWAP = SoundTypes.key(ResourceKey.minecraft("block.shelf.multi_swap"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_PLACE = SoundTypes.key(ResourceKey.minecraft("block.shelf.place"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_PLACE_ITEM = SoundTypes.key(ResourceKey.minecraft("block.shelf.place_item"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_SINGLE_SWAP = SoundTypes.key(ResourceKey.minecraft("block.shelf.single_swap"));
+
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_STEP = SoundTypes.key(ResourceKey.minecraft("block.shelf.step"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_SHROOMLIGHT_BREAK = SoundTypes.key(ResourceKey.minecraft("block.shroomlight.break"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SHROOMLIGHT_FALL = SoundTypes.key(ResourceKey.minecraft("block.shroomlight.fall"));
@@ -1841,6 +1883,42 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> ENTITY_COD_FLOP = SoundTypes.key(ResourceKey.minecraft("entity.cod.flop"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_COD_HURT = SoundTypes.key(ResourceKey.minecraft("entity.cod.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_BECOME_STATUE = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_become_statue"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_HURT = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_ITEM_DROP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.item_drop"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_ITEM_NO_DROP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.item_no_drop"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_NO_ITEM_GET = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.no_item_get"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_NO_ITEM_NO_GET = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.no_item_no_get"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_OXIDIZED_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_oxidized.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_OXIDIZED_HURT = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_oxidized.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_OXIDIZED_SPIN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_oxidized.spin"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_OXIDIZED_STEP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_oxidized.step"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_SPAWN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.spawn"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_SPIN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.spin"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_STEP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.step"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_WEATHERED_DEATH = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_weathered.death"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_WEATHERED_HURT = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_weathered.hurt"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_WEATHERED_SPIN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_weathered.spin"));
+
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_WEATHERED_STEP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_weathered.step"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_COW_AMBIENT = SoundTypes.key(ResourceKey.minecraft("entity.cow.ambient"));
 
@@ -3169,6 +3247,8 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> INTENTIONALLY_EMPTY = SoundTypes.key(ResourceKey.minecraft("intentionally_empty"));
 
     public static final DefaultedRegistryReference<SoundType> ITEM_ARMOR_EQUIP_CHAIN = SoundTypes.key(ResourceKey.minecraft("item.armor.equip_chain"));
+
+    public static final DefaultedRegistryReference<SoundType> ITEM_ARMOR_EQUIP_COPPER = SoundTypes.key(ResourceKey.minecraft("item.armor.equip_copper"));
 
     public static final DefaultedRegistryReference<SoundType> ITEM_ARMOR_EQUIP_DIAMOND = SoundTypes.key(ResourceKey.minecraft("item.armor.equip_diamond"));
 

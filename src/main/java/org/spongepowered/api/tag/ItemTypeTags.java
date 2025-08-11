@@ -53,6 +53,8 @@ public final class ItemTypeTags {
 
     public static final DefaultedTag<ItemType> BANNERS = ItemTypeTags.key(ResourceKey.minecraft("banners"));
 
+    public static final DefaultedTag<ItemType> BARS = ItemTypeTags.key(ResourceKey.minecraft("bars"));
+
     public static final DefaultedTag<ItemType> BEACON_PAYMENT_ITEMS = ItemTypeTags.key(ResourceKey.minecraft("beacon_payment_items"));
 
     public static final DefaultedTag<ItemType> BEDS = ItemTypeTags.key(ResourceKey.minecraft("beds"));
@@ -81,6 +83,8 @@ public final class ItemTypeTags {
 
     public static final DefaultedTag<ItemType> CAT_FOOD = ItemTypeTags.key(ResourceKey.minecraft("cat_food"));
 
+    public static final DefaultedTag<ItemType> CHAINS = ItemTypeTags.key(ResourceKey.minecraft("chains"));
+
     public static final DefaultedTag<ItemType> CHERRY_LOGS = ItemTypeTags.key(ResourceKey.minecraft("cherry_logs"));
 
     public static final DefaultedTag<ItemType> CHEST_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("chest_armor"));
@@ -99,7 +103,15 @@ public final class ItemTypeTags {
 
     public static final DefaultedTag<ItemType> COMPLETES_FIND_TREE_TUTORIAL = ItemTypeTags.key(ResourceKey.minecraft("completes_find_tree_tutorial"));
 
+    public static final DefaultedTag<ItemType> COPPER = ItemTypeTags.key(ResourceKey.minecraft("copper"));
+
+    public static final DefaultedTag<ItemType> COPPER_CHESTS = ItemTypeTags.key(ResourceKey.minecraft("copper_chests"));
+
+    public static final DefaultedTag<ItemType> COPPER_GOLEM_STATUES = ItemTypeTags.key(ResourceKey.minecraft("copper_golem_statues"));
+
     public static final DefaultedTag<ItemType> COPPER_ORES = ItemTypeTags.key(ResourceKey.minecraft("copper_ores"));
+
+    public static final DefaultedTag<ItemType> COPPER_TOOL_MATERIALS = ItemTypeTags.key(ResourceKey.minecraft("copper_tool_materials"));
 
     public static final DefaultedTag<ItemType> COW_FOOD = ItemTypeTags.key(ResourceKey.minecraft("cow_food"));
 
@@ -225,6 +237,8 @@ public final class ItemTypeTags {
 
     public static final DefaultedTag<ItemType> JUNGLE_LOGS = ItemTypeTags.key(ResourceKey.minecraft("jungle_logs"));
 
+    public static final DefaultedTag<ItemType> LANTERNS = ItemTypeTags.key(ResourceKey.minecraft("lanterns"));
+
     public static final DefaultedTag<ItemType> LAPIS_ORES = ItemTypeTags.key(ResourceKey.minecraft("lapis_ores"));
 
     public static final DefaultedTag<ItemType> LEAVES = ItemTypeTags.key(ResourceKey.minecraft("leaves"));
@@ -232,6 +246,8 @@ public final class ItemTypeTags {
     public static final DefaultedTag<ItemType> LECTERN_BOOKS = ItemTypeTags.key(ResourceKey.minecraft("lectern_books"));
 
     public static final DefaultedTag<ItemType> LEG_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("leg_armor"));
+
+    public static final DefaultedTag<ItemType> LIGHTNING_RODS = ItemTypeTags.key(ResourceKey.minecraft("lightning_rods"));
 
     public static final DefaultedTag<ItemType> LLAMA_FOOD = ItemTypeTags.key(ResourceKey.minecraft("llama_food"));
 
@@ -292,6 +308,8 @@ public final class ItemTypeTags {
     public static final DefaultedTag<ItemType> REDSTONE_ORES = ItemTypeTags.key(ResourceKey.minecraft("redstone_ores"));
 
     public static final DefaultedTag<ItemType> REPAIRS_CHAIN_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("repairs_chain_armor"));
+
+    public static final DefaultedTag<ItemType> REPAIRS_COPPER_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("repairs_copper_armor"));
 
     public static final DefaultedTag<ItemType> REPAIRS_DIAMOND_ARMOR = ItemTypeTags.key(ResourceKey.minecraft("repairs_diamond_armor"));
 
@@ -382,6 +400,8 @@ public final class ItemTypeTags {
     public static final DefaultedTag<ItemType> WOODEN_FENCES = ItemTypeTags.key(ResourceKey.minecraft("wooden_fences"));
 
     public static final DefaultedTag<ItemType> WOODEN_PRESSURE_PLATES = ItemTypeTags.key(ResourceKey.minecraft("wooden_pressure_plates"));
+
+    public static final DefaultedTag<ItemType> WOODEN_SHELVES = ItemTypeTags.key(ResourceKey.minecraft("wooden_shelves"));
 
     public static final DefaultedTag<ItemType> WOODEN_SLABS = ItemTypeTags.key(ResourceKey.minecraft("wooden_slabs"));
 

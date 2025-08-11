@@ -28,5 +28,5 @@ import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 @CatalogedBy(ChickenVariants.class)
-public interface ChickenVariant extends DefaultedRegistryValue {
+public interface ChickenVariant extends DefaultedRegistryValue<ChickenVariant> {
 }
