@@ -101,13 +101,6 @@ public interface NoiseRouter {
     DensityFunction ridges();
 
     /**
-     * Returns the density function for initialDensityWithoutJaggedness
-     *
-     * @return The density function
-     */
-    DensityFunction initialDensityWithoutJaggedness();
-
-    /**
      * Returns the density function for finalDensity
      *
      * @return The density function
