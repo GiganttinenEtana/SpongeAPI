@@ -448,8 +448,6 @@ public final class ItemTypes {
 
     public static final DefaultedRegistryReference<ItemType> CAVE_SPIDER_SPAWN_EGG = ItemTypes.key(ResourceKey.minecraft("cave_spider_spawn_egg"));
 
-    public static final DefaultedRegistryReference<ItemType> CHAIN = ItemTypes.key(ResourceKey.minecraft("chain"));
-
     public static final DefaultedRegistryReference<ItemType> CHAINMAIL_BOOTS = ItemTypes.key(ResourceKey.minecraft("chainmail_boots"));
 
     public static final DefaultedRegistryReference<ItemType> CHAINMAIL_CHESTPLATE = ItemTypes.key(ResourceKey.minecraft("chainmail_chestplate"));
@@ -1321,6 +1319,8 @@ public final class ItemTypes {
     public static final DefaultedRegistryReference<ItemType> IRON_BLOCK = ItemTypes.key(ResourceKey.minecraft("iron_block"));
 
     public static final DefaultedRegistryReference<ItemType> IRON_BOOTS = ItemTypes.key(ResourceKey.minecraft("iron_boots"));
+
+    public static final DefaultedRegistryReference<ItemType> IRON_CHAIN = ItemTypes.key(ResourceKey.minecraft("iron_chain"));
 
     public static final DefaultedRegistryReference<ItemType> IRON_CHESTPLATE = ItemTypes.key(ResourceKey.minecraft("iron_chestplate"));
 

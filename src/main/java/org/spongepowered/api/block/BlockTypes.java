@@ -374,8 +374,6 @@ public final class BlockTypes {
 
     public static final DefaultedRegistryReference<BlockType> CAVE_VINES_PLANT = BlockTypes.key(ResourceKey.minecraft("cave_vines_plant"));
 
-    public static final DefaultedRegistryReference<BlockType> CHAIN = BlockTypes.key(ResourceKey.minecraft("chain"));
-
     public static final DefaultedRegistryReference<BlockType> CHAIN_COMMAND_BLOCK = BlockTypes.key(ResourceKey.minecraft("chain_command_block"));
 
     public static final DefaultedRegistryReference<BlockType> CHERRY_BUTTON = BlockTypes.key(ResourceKey.minecraft("cherry_button"));
@@ -985,6 +983,8 @@ public final class BlockTypes {
     public static final DefaultedRegistryReference<BlockType> IRON_BARS = BlockTypes.key(ResourceKey.minecraft("iron_bars"));
 
     public static final DefaultedRegistryReference<BlockType> IRON_BLOCK = BlockTypes.key(ResourceKey.minecraft("iron_block"));
+
+    public static final DefaultedRegistryReference<BlockType> IRON_CHAIN = BlockTypes.key(ResourceKey.minecraft("iron_chain"));
 
     public static final DefaultedRegistryReference<BlockType> IRON_DOOR = BlockTypes.key(ResourceKey.minecraft("iron_door"));
 

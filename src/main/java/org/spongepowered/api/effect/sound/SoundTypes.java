@@ -1340,6 +1340,8 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_STEP = SoundTypes.key(ResourceKey.minecraft("block.shelf.step"));
 
+    public static final DefaultedRegistryReference<SoundType> BLOCK_SHELF_TAKE_ITEM = SoundTypes.key(ResourceKey.minecraft("block.shelf.take_item"));
+
     public static final DefaultedRegistryReference<SoundType> BLOCK_SHROOMLIGHT_BREAK = SoundTypes.key(ResourceKey.minecraft("block.shroomlight.break"));
 
     public static final DefaultedRegistryReference<SoundType> BLOCK_SHROOMLIGHT_FALL = SoundTypes.key(ResourceKey.minecraft("block.shroomlight.fall"));

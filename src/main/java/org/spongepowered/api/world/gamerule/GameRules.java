@@ -40,6 +40,8 @@ import org.spongepowered.api.registry.RegistryTypes;
 @RegistryScopes(scopes = RegistryScope.GAME)
 public final class GameRules {
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> ALLOW_ENTERING_NETHER_USING_PORTALS = GameRules.key(ResourceKey.sponge("allow_entering_nether_using_portals"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> ALLOW_FIRE_TICKS_AWAY_FROM_PLAYER = GameRules.key(ResourceKey.sponge("allow_fire_ticks_away_from_player"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> ANNOUNCE_ADVANCEMENTS = GameRules.key(ResourceKey.sponge("announce_advancements"));
@@ -86,6 +88,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> DROWNING_DAMAGE = GameRules.key(ResourceKey.sponge("drowning_damage"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> ENABLE_COMMAND_BLOCKS = GameRules.key(ResourceKey.sponge("enable_command_blocks"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> ENDER_PEARLS_VANISH_ON_DEATH = GameRules.key(ResourceKey.sponge("ender_pearls_vanish_on_death"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> FALL_DAMAGE = GameRules.key(ResourceKey.sponge("fall_damage"));
@@ -128,6 +132,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> PROJECTILES_CAN_BREAK_BLOCKS = GameRules.key(ResourceKey.sponge("projectiles_can_break_blocks"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> PVP = GameRules.key(ResourceKey.sponge("pvp"));
+
     public static final DefaultedRegistryReference<GameRule<Integer>> RANDOM_TICK_SPEED = GameRules.key(ResourceKey.sponge("random_tick_speed"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> REDUCED_DEBUG_INFO = GameRules.key(ResourceKey.sponge("reduced_debug_info"));
@@ -137,6 +143,8 @@ public final class GameRules {
     public static final DefaultedRegistryReference<GameRule<Boolean>> SHOW_DEATH_MESSAGES = GameRules.key(ResourceKey.sponge("show_death_messages"));
 
     public static final DefaultedRegistryReference<GameRule<Integer>> SNOW_ACCUMULATION_HEIGHT = GameRules.key(ResourceKey.sponge("snow_accumulation_height"));
+
+    public static final DefaultedRegistryReference<GameRule<Boolean>> SPAWN_MONSTERS = GameRules.key(ResourceKey.sponge("spawn_monsters"));
 
     public static final DefaultedRegistryReference<GameRule<Integer>> SPAWN_RADIUS = GameRules.key(ResourceKey.sponge("spawn_radius"));
 
