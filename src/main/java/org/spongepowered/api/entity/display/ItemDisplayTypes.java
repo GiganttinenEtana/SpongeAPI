@@ -54,6 +54,8 @@ public final class ItemDisplayTypes {
 
     public static final DefaultedRegistryReference<ItemDisplayType> NONE = ItemDisplayTypes.key(ResourceKey.sponge("none"));
 
+    public static final DefaultedRegistryReference<ItemDisplayType> ON_SHELF = ItemDisplayTypes.key(ResourceKey.sponge("on_shelf"));
+
     public static final DefaultedRegistryReference<ItemDisplayType> THIRDPERSON_LEFTHAND = ItemDisplayTypes.key(ResourceKey.sponge("thirdperson_lefthand"));
 
     public static final DefaultedRegistryReference<ItemDisplayType> THIRDPERSON_RIGHTHAND = ItemDisplayTypes.key(ResourceKey.sponge("thirdperson_righthand"));

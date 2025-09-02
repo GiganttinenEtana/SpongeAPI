@@ -1906,6 +1906,8 @@ public final class SoundTypes {
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_OXIDIZED_STEP = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem_oxidized.step"));
 
+    public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_SHEAR = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.shear"));
+
     public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_SPAWN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.spawn"));
 
     public static final DefaultedRegistryReference<SoundType> ENTITY_COPPER_GOLEM_SPIN = SoundTypes.key(ResourceKey.minecraft("entity.copper_golem.spin"));
@@ -3571,6 +3573,8 @@ public final class SoundTypes {
     public static final DefaultedRegistryReference<SoundType> UI_TOAST_IN = SoundTypes.key(ResourceKey.minecraft("ui.toast.in"));
 
     public static final DefaultedRegistryReference<SoundType> UI_TOAST_OUT = SoundTypes.key(ResourceKey.minecraft("ui.toast.out"));
+
+    public static final DefaultedRegistryReference<SoundType> WEATHER_END_FLASH = SoundTypes.key(ResourceKey.minecraft("weather.end_flash"));
 
     public static final DefaultedRegistryReference<SoundType> WEATHER_RAIN = SoundTypes.key(ResourceKey.minecraft("weather.rain"));
 

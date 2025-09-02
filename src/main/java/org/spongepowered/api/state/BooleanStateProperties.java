@@ -33,6 +33,10 @@ public final class BooleanStateProperties {
     private BooleanStateProperties() {
     }
 
+    public static BooleanStateProperty property_ALIGN_ITEMS_TO_BOTTOM() {
+        return BooleanStateProperty.of("ALIGN_ITEMS_TO_BOTTOM");
+    }
+
     public static BooleanStateProperty property_ATTACHED() {
         return BooleanStateProperty.of("ATTACHED");
     }
@@ -51,30 +55,6 @@ public final class BooleanStateProperties {
 
     public static BooleanStateProperty property_CAN_SUMMON() {
         return BooleanStateProperty.of("CAN_SUMMON");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_0_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_0_OCCUPIED");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_1_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_1_OCCUPIED");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_2_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_2_OCCUPIED");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_3_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_3_OCCUPIED");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_4_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_4_OCCUPIED");
-    }
-
-    public static BooleanStateProperty property_CHISELED_BOOKSHELF_SLOT_5_OCCUPIED() {
-        return BooleanStateProperty.of("CHISELED_BOOKSHELF_SLOT_5_OCCUPIED");
     }
 
     public static BooleanStateProperty property_CONDITIONAL() {
@@ -195,6 +175,30 @@ public final class BooleanStateProperties {
 
     public static BooleanStateProperty property_SIGNAL_FIRE() {
         return BooleanStateProperty.of("SIGNAL_FIRE");
+    }
+
+    public static BooleanStateProperty property_SLOT_0_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_0_OCCUPIED");
+    }
+
+    public static BooleanStateProperty property_SLOT_1_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_1_OCCUPIED");
+    }
+
+    public static BooleanStateProperty property_SLOT_2_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_2_OCCUPIED");
+    }
+
+    public static BooleanStateProperty property_SLOT_3_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_3_OCCUPIED");
+    }
+
+    public static BooleanStateProperty property_SLOT_4_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_4_OCCUPIED");
+    }
+
+    public static BooleanStateProperty property_SLOT_5_OCCUPIED() {
+        return BooleanStateProperty.of("SLOT_5_OCCUPIED");
     }
 
     public static BooleanStateProperty property_SNOWY() {

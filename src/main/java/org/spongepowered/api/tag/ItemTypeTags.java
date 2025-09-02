@@ -329,6 +329,8 @@ public final class ItemTypeTags {
 
     public static final DefaultedTag<ItemType> SAPLINGS = ItemTypeTags.key(ResourceKey.minecraft("saplings"));
 
+    public static final DefaultedTag<ItemType> SHEARABLE_FROM_COPPER_GOLEM = ItemTypeTags.key(ResourceKey.minecraft("shearable_from_copper_golem"));
+
     public static final DefaultedTag<ItemType> SHEEP_FOOD = ItemTypeTags.key(ResourceKey.minecraft("sheep_food"));
 
     public static final DefaultedTag<ItemType> SHOVELS = ItemTypeTags.key(ResourceKey.minecraft("shovels"));

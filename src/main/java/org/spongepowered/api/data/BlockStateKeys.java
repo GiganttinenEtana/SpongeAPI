@@ -76,6 +76,8 @@ public final class BlockStateKeys {
 
     public static final Key<Value<Integer>> AGE_7 = BlockStateKeys.key(ResourceKey.minecraft("property/age"), Integer.class);
 
+    public static final Key<Value<Boolean>> ALIGN_ITEMS_TO_BOTTOM = BlockStateKeys.key(ResourceKey.minecraft("property/align_items_to_bottom"), Boolean.class);
+
     public static final Key<Value<Boolean>> ATTACHED = BlockStateKeys.key(ResourceKey.minecraft("property/attached"), Boolean.class);
 
     public static final Key<Value<AttachmentSurface>> ATTACH_FACE = BlockStateKeys.key(ResourceKey.minecraft("property/face"), AttachmentSurface.class);
@@ -101,18 +103,6 @@ public final class BlockStateKeys {
     public static final Key<Value<Boolean>> CAN_SUMMON = BlockStateKeys.key(ResourceKey.minecraft("property/can_summon"), Boolean.class);
 
     public static final Key<Value<ChestAttachmentType>> CHEST_TYPE = BlockStateKeys.key(ResourceKey.minecraft("property/type"), ChestAttachmentType.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_0_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_0_occupied"), Boolean.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_1_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_1_occupied"), Boolean.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_2_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_2_occupied"), Boolean.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_3_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_3_occupied"), Boolean.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_4_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_4_occupied"), Boolean.class);
-
-    public static final Key<Value<Boolean>> CHISELED_BOOKSHELF_SLOT_5_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_5_occupied"), Boolean.class);
 
     public static final Key<Value<Boolean>> CONDITIONAL = BlockStateKeys.key(ResourceKey.minecraft("property/conditional"), Boolean.class);
 
@@ -263,6 +253,18 @@ public final class BlockStateKeys {
     public static final Key<Value<Boolean>> SIGNAL_FIRE = BlockStateKeys.key(ResourceKey.minecraft("property/signal_fire"), Boolean.class);
 
     public static final Key<Value<SlabPortion>> SLAB_TYPE = BlockStateKeys.key(ResourceKey.minecraft("property/type"), SlabPortion.class);
+
+    public static final Key<Value<Boolean>> SLOT_0_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_0_occupied"), Boolean.class);
+
+    public static final Key<Value<Boolean>> SLOT_1_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_1_occupied"), Boolean.class);
+
+    public static final Key<Value<Boolean>> SLOT_2_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_2_occupied"), Boolean.class);
+
+    public static final Key<Value<Boolean>> SLOT_3_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_3_occupied"), Boolean.class);
+
+    public static final Key<Value<Boolean>> SLOT_4_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_4_occupied"), Boolean.class);
+
+    public static final Key<Value<Boolean>> SLOT_5_OCCUPIED = BlockStateKeys.key(ResourceKey.minecraft("property/slot_5_occupied"), Boolean.class);
 
     public static final Key<Value<Boolean>> SNOWY = BlockStateKeys.key(ResourceKey.minecraft("property/snowy"), Boolean.class);
 
