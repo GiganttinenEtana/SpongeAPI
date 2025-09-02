@@ -76,8 +76,6 @@ public final class BlockStateKeys {
 
     public static final Key<Value<Integer>> AGE_7 = BlockStateKeys.key(ResourceKey.minecraft("property/age"), Integer.class);
 
-    public static final Key<Value<Boolean>> ALIGN_ITEMS_TO_BOTTOM = BlockStateKeys.key(ResourceKey.minecraft("property/align_items_to_bottom"), Boolean.class);
-
     public static final Key<Value<Boolean>> ATTACHED = BlockStateKeys.key(ResourceKey.minecraft("property/attached"), Boolean.class);
 
     public static final Key<Value<AttachmentSurface>> ATTACH_FACE = BlockStateKeys.key(ResourceKey.minecraft("property/face"), AttachmentSurface.class);

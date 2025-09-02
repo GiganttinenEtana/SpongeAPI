@@ -33,10 +33,6 @@ public final class BooleanStateProperties {
     private BooleanStateProperties() {
     }
 
-    public static BooleanStateProperty property_ALIGN_ITEMS_TO_BOTTOM() {
-        return BooleanStateProperty.of("ALIGN_ITEMS_TO_BOTTOM");
-    }
-
     public static BooleanStateProperty property_ATTACHED() {
         return BooleanStateProperty.of("ATTACHED");
     }
