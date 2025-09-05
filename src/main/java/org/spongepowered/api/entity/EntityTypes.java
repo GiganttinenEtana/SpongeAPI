@@ -338,6 +338,8 @@ public final class EntityTypes {
 
     public static final DefaultedRegistryReference<EntityType<ChestBoat>> MANGROVE_CHEST_BOAT = EntityTypes.key(ResourceKey.minecraft("mangrove_chest_boat"));
 
+    public static final DefaultedRegistryReference<EntityType<Mannequin>> MANNEQUIN = EntityTypes.key(ResourceKey.minecraft("mannequin"));
+
     public static final DefaultedRegistryReference<EntityType<Marker>> MARKER = EntityTypes.key(ResourceKey.minecraft("marker"));
 
     public static final DefaultedRegistryReference<EntityType<Minecart>> MINECART = EntityTypes.key(ResourceKey.minecraft("minecart"));
