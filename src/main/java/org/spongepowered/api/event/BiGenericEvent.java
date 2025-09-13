@@ -29,26 +29,21 @@ import io.leangen.geantyref.TypeToken;
 import java.util.List;
 
 /**
- * All {@link Event}s that require a generic type should implement this
- * interface.
+ * {@link GenericEvent} that requires two type parameters.
  *
- * @param <T> The generic type
+ * @param <T> The primary generic type
+ * @param <U> The secondary generic type
  */
-public interface GenericEvent<T> extends Event {
+public interface BiGenericEvent<T, U> extends GenericEvent<T> {
 
     /**
-     * Gets the {@link TypeToken generic type}.
+     * Gets the secondary {@link TypeToken generic type}.
      *
      * @return The type token
      */
-    TypeToken<T> paramType();
+    TypeToken<U> secondaryParamType();
 
-    /**
-     * Gets all the {@link TypeToken generic type}'s.
-     *
-     * @return The list of type tokens
-     */
     default List<? extends TypeToken<?>> paramTypes() {
-        return List.of(this.paramType());
+        return List.of(this.paramType(), this.secondaryParamType());
     }
 }
