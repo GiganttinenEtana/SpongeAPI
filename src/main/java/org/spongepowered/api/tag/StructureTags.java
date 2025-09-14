@@ -49,7 +49,21 @@ public final class StructureTags {
 
     public static final DefaultedTag<Structure> OCEAN_RUIN = StructureTags.key(ResourceKey.minecraft("ocean_ruin"));
 
+    public static final DefaultedTag<Structure> ON_DESERT_VILLAGE_MAPS = StructureTags.key(ResourceKey.minecraft("on_desert_village_maps"));
+
+    public static final DefaultedTag<Structure> ON_JUNGLE_EXPLORER_MAPS = StructureTags.key(ResourceKey.minecraft("on_jungle_explorer_maps"));
+
     public static final DefaultedTag<Structure> ON_OCEAN_EXPLORER_MAPS = StructureTags.key(ResourceKey.minecraft("on_ocean_explorer_maps"));
+
+    public static final DefaultedTag<Structure> ON_PLAINS_VILLAGE_MAPS = StructureTags.key(ResourceKey.minecraft("on_plains_village_maps"));
+
+    public static final DefaultedTag<Structure> ON_SAVANNA_VILLAGE_MAPS = StructureTags.key(ResourceKey.minecraft("on_savanna_village_maps"));
+
+    public static final DefaultedTag<Structure> ON_SNOWY_VILLAGE_MAPS = StructureTags.key(ResourceKey.minecraft("on_snowy_village_maps"));
+
+    public static final DefaultedTag<Structure> ON_SWAMP_EXPLORER_MAPS = StructureTags.key(ResourceKey.minecraft("on_swamp_explorer_maps"));
+
+    public static final DefaultedTag<Structure> ON_TAIGA_VILLAGE_MAPS = StructureTags.key(ResourceKey.minecraft("on_taiga_village_maps"));
 
     public static final DefaultedTag<Structure> ON_TREASURE_MAPS = StructureTags.key(ResourceKey.minecraft("on_treasure_maps"));
 
