@@ -24,6 +24,7 @@
  */
 package org.spongepowered.api.world.biome.climate;
 
+import org.spongepowered.api.data.type.StringRepresentable;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
@@ -31,6 +32,6 @@ import org.spongepowered.api.util.annotation.CatalogedBy;
  * The temperature modifier of a biome
  */
 @CatalogedBy(TemperatureModifiers.class)
-public interface TemperatureModifier extends DefaultedRegistryValue<TemperatureModifier> {
+public interface TemperatureModifier extends DefaultedRegistryValue<TemperatureModifier>, StringRepresentable {
 
 }

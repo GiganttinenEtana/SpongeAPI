@@ -25,6 +25,7 @@
 package org.spongepowered.api.event.lifecycle;
 
 import org.spongepowered.api.Engine;
+import org.spongepowered.api.event.BiGenericEvent;
 import org.spongepowered.api.event.GenericEvent;
 import org.spongepowered.eventgen.annotations.NoFactoryMethod;
 
@@ -72,18 +73,12 @@ public interface ProvideServiceEvent<T> extends GenericEvent<T>, LifecycleEvent 
      * <p>It is up to the provider to determine which engine a service is to be
      * supplied for. Services that are engine scoped may not support all
      * engines. Plugins can check to see what {@link Engine} the service will
-     * be provided for via the {@link #engine()} method, and can choose to
+     * be provided for via the {@link E} type parameter, and can choose to
      * forgo providing a service based on this information.</p>
      *
      * @param <T> The service to provide.
+     * @param <E> The target engine.
      */
-    interface EngineScoped<T> extends ProvideServiceEvent<T> {
-
-        /**
-         * Gets the {@link Engine} that is associated with this event.
-         *
-         * @return The engine.
-         */
-        Engine engine();
+    interface EngineScoped<T, E extends Engine> extends ProvideServiceEvent<T>, BiGenericEvent<T, E> {
     }
 }

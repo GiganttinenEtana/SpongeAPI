@@ -22,18 +22,28 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.player.gamemode;
+package org.spongepowered.api.event;
 
-import net.kyori.adventure.text.ComponentLike;
-import org.spongepowered.api.data.type.StringRepresentable;
-import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.registry.DefaultedRegistryValue;
-import org.spongepowered.api.util.annotation.CatalogedBy;
+import io.leangen.geantyref.TypeToken;
+
+import java.util.List;
 
 /**
- * Represents a game mode that a {@link Player} may have.
+ * {@link GenericEvent} that requires two type parameters.
+ *
+ * @param <T> The primary generic type
+ * @param <U> The secondary generic type
  */
-@CatalogedBy(GameModes.class)
-public interface GameMode extends DefaultedRegistryValue<GameMode>, ComponentLike, StringRepresentable {
+public interface BiGenericEvent<T, U> extends GenericEvent<T> {
 
+    /**
+     * Gets the secondary {@link TypeToken generic type}.
+     *
+     * @return The type token
+     */
+    TypeToken<U> secondaryParamType();
+
+    default List<? extends TypeToken<?>> paramTypes() {
+        return List.of(this.paramType(), this.secondaryParamType());
+    }
 }
