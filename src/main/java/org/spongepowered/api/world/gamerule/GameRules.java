@@ -48,6 +48,8 @@ public final class GameRules {
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> BLOCK_EXPLOSION_DROP_DECAY = GameRules.key(ResourceKey.sponge("block_explosion_drop_decay"));
 
+    public static final DefaultedRegistryReference<GameRule<Boolean>> COMMAND_BLOCKS_ENABLED = GameRules.key(ResourceKey.sponge("command_blocks_enabled"));
+
     public static final DefaultedRegistryReference<GameRule<Boolean>> COMMAND_BLOCK_OUTPUT = GameRules.key(ResourceKey.sponge("command_block_output"));
 
     public static final DefaultedRegistryReference<GameRule<Integer>> COMMAND_MODIFICATION_BLOCK_LIMIT = GameRules.key(ResourceKey.sponge("command_modification_block_limit"));
@@ -87,8 +89,6 @@ public final class GameRules {
     public static final DefaultedRegistryReference<GameRule<Boolean>> DO_WEATHER_CYCLE = GameRules.key(ResourceKey.sponge("do_weather_cycle"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> DROWNING_DAMAGE = GameRules.key(ResourceKey.sponge("drowning_damage"));
-
-    public static final DefaultedRegistryReference<GameRule<Boolean>> ENABLE_COMMAND_BLOCKS = GameRules.key(ResourceKey.sponge("enable_command_blocks"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> ENDER_PEARLS_VANISH_ON_DEATH = GameRules.key(ResourceKey.sponge("ender_pearls_vanish_on_death"));
 
@@ -143,6 +143,8 @@ public final class GameRules {
     public static final DefaultedRegistryReference<GameRule<Boolean>> SHOW_DEATH_MESSAGES = GameRules.key(ResourceKey.sponge("show_death_messages"));
 
     public static final DefaultedRegistryReference<GameRule<Integer>> SNOW_ACCUMULATION_HEIGHT = GameRules.key(ResourceKey.sponge("snow_accumulation_height"));
+
+    public static final DefaultedRegistryReference<GameRule<Boolean>> SPAWNER_BLOCKS_ENABLED = GameRules.key(ResourceKey.sponge("spawner_blocks_enabled"));
 
     public static final DefaultedRegistryReference<GameRule<Boolean>> SPAWN_MONSTERS = GameRules.key(ResourceKey.sponge("spawn_monsters"));
 
