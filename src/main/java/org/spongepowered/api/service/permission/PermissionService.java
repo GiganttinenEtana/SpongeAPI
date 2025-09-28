@@ -103,6 +103,12 @@ public interface PermissionService {
     String SUBJECTS_COMMAND_BLOCK = "commandblock";
 
     /**
+     * The standard identifier for the collection which stores function
+     * subjects.
+     */
+    String SUBJECTS_FUNCTION = "function";
+
+    /**
      * The standard identifier for the collection which stores role templates.
      *
      * <p>Role templates are registered alongside {@link PermissionDescription}s,

@@ -22,18 +22,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.entity.living.player.gamemode;
+package org.spongepowered.api.data.type;
 
-import net.kyori.adventure.text.ComponentLike;
-import org.spongepowered.api.data.type.StringRepresentable;
-import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 /**
- * Represents a game mode that a {@link Player} may have.
+ * Represents a possible type of {@link ItemAction}.
  */
-@CatalogedBy(GameModes.class)
-public interface GameMode extends DefaultedRegistryValue<GameMode>, ComponentLike, StringRepresentable {
-
+@CatalogedBy(ItemActionTypes.class)
+public interface ItemActionType extends DefaultedRegistryValue {
 }

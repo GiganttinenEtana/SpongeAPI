@@ -70,6 +70,7 @@ import org.spongepowered.api.data.type.HandPreference;
 import org.spongepowered.api.data.type.HorseColor;
 import org.spongepowered.api.data.type.HorseStyle;
 import org.spongepowered.api.data.type.InstrumentType;
+import org.spongepowered.api.data.type.ItemAction;
 import org.spongepowered.api.data.type.ItemTier;
 import org.spongepowered.api.data.type.LlamaType;
 import org.spongepowered.api.data.type.MatterType;
@@ -782,6 +783,11 @@ public final class Keys {
     public static final Key<SetValue<Direction>> CONNECTED_DIRECTIONS = Keys.setKey(ResourceKey.sponge("connected_directions"), Direction.class);
 
     /**
+     * The {@link ItemAction}s an {@link ItemStack} will apply when consumed.
+     */
+    public static final Key<ListValue<ItemAction>> CONSUME_ACTIONS = Keys.listKey(ResourceKey.sponge("consume_effects"), ItemAction.class);
+
+    /**
      * The container {@link ItemType} of an {@link ItemStack}.
      * e.g. {@link ItemTypes#BUCKET} for a {@link ItemTypes#WATER_BUCKET} stack.
      * Readonly
@@ -930,6 +936,11 @@ public final class Keys {
      * <p>This damage is capped by {@link #MAX_FALL_DAMAGE}.</p>
      */
     public static final Key<Value<Double>> DAMAGE_PER_BLOCK = Keys.key(ResourceKey.sponge("damage_per_block"), Double.class);
+
+    /**
+     * The {@link ItemAction}s an {@link ItemStack} will apply on death.
+     */
+    public static final Key<ListValue<ItemAction>> DEATH_PROTECTION_ACTIONS = Keys.listKey(ResourceKey.sponge("death_protection_effects"), ItemAction.class);
 
     /**
      * The distance at which a {@link BlockState} will decay.
@@ -1193,6 +1204,13 @@ public final class Keys {
      * A {@link Fox fox's} first trusted {@link UUID}, usually a {@link Player}.
      */
     public static final Key<Value<UUID>> FIRST_TRUSTED = Keys.key(ResourceKey.sponge("first_trusted"), UUID.class);
+
+    /**
+     * Whether a {@link ItemFrame} is "fixed".
+     *
+     * <p>Fixed item frames can not have their contents modified.</p>
+     */
+    public static final Key<Value<Boolean>> FIXED = Keys.key(ResourceKey.sponge("fixed"), Boolean.class);
 
     /**
      * The fixed time in a {@link ServerWorld world} of a {@link WorldType}.
@@ -3364,6 +3382,15 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<ItemTier>> TOOL_TYPE = Keys.key(ResourceKey.sponge("tool_type"), ItemTier.class);
+
+    /**
+     * For a given {@link ResourceKey}, the textures for the tooltip of an {@link ItemStack} will be looked up from the following locations in the
+     * active resource packs:
+     *
+     * <p>Background: {@literal /assets/<namespace>/textures/gui/sprites/tooltip/<id>_background}
+     * <p>Frame: {@literal /assets/<namespace>/textures/gui/sprites/tooltip/<id>_frame}
+     */
+    public static final Key<Value<ResourceKey>> TOOLTIP_STYLE = Keys.key(ResourceKey.sponge("tooltip_style"), ResourceKey.class);
 
     /**
      * Whether a {@link CommandBlock} does track its output.

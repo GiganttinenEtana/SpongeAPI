@@ -26,6 +26,8 @@ package org.spongepowered.api.event;
 
 import io.leangen.geantyref.TypeToken;
 
+import java.util.List;
+
 /**
  * All {@link Event}s that require a generic type should implement this
  * interface.
@@ -40,4 +42,13 @@ public interface GenericEvent<T> extends Event {
      * @return The type token
      */
     TypeToken<T> paramType();
+
+    /**
+     * Gets all the {@link TypeToken generic type}'s.
+     *
+     * @return The list of type tokens
+     */
+    default List<? extends TypeToken<?>> paramTypes() {
+        return List.of(this.paramType());
+    }
 }
