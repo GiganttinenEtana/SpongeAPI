@@ -28,5 +28,5 @@ import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 @CatalogedBy(WolfSoundVariants.class)
-public interface WolfSoundVariant extends DefaultedRegistryValue {
+public interface WolfSoundVariant extends DefaultedRegistryValue<WolfSoundVariant> {
 }

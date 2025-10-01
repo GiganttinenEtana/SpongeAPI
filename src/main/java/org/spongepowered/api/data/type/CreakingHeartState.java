@@ -29,5 +29,5 @@ import org.spongepowered.api.util.annotation.CatalogedBy;
 
 
 @CatalogedBy(CreakingHeartStates.class)
-public interface CreakingHeartState extends DefaultedRegistryValue, Comparable<CreakingHeartState>, StringRepresentable  {
+public interface CreakingHeartState extends DefaultedRegistryValue<CreakingHeartState>, Comparable<CreakingHeartState>, StringRepresentable  {
 }

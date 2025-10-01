@@ -78,6 +78,7 @@ import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Cod;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
+import org.spongepowered.api.entity.living.golem.CopperGolem;
 import org.spongepowered.api.entity.living.golem.IronGolem;
 import org.spongepowered.api.entity.living.golem.Shulker;
 import org.spongepowered.api.entity.living.golem.SnowGolem;
@@ -223,6 +224,8 @@ public final class EntityTypes {
 
     public static final DefaultedRegistryReference<EntityType<CommandBlockMinecart>> COMMAND_BLOCK_MINECART = EntityTypes.key(ResourceKey.minecraft("command_block_minecart"));
 
+    public static final DefaultedRegistryReference<EntityType<CopperGolem>> COPPER_GOLEM = EntityTypes.key(ResourceKey.minecraft("copper_golem"));
+
     public static final DefaultedRegistryReference<EntityType<Cow>> COW = EntityTypes.key(ResourceKey.minecraft("cow"));
 
     public static final DefaultedRegistryReference<EntityType<Creaking>> CREAKING = EntityTypes.key(ResourceKey.minecraft("creaking"));
@@ -334,6 +337,8 @@ public final class EntityTypes {
     public static final DefaultedRegistryReference<EntityType<Boat>> MANGROVE_BOAT = EntityTypes.key(ResourceKey.minecraft("mangrove_boat"));
 
     public static final DefaultedRegistryReference<EntityType<ChestBoat>> MANGROVE_CHEST_BOAT = EntityTypes.key(ResourceKey.minecraft("mangrove_chest_boat"));
+
+    public static final DefaultedRegistryReference<EntityType<Mannequin>> MANNEQUIN = EntityTypes.key(ResourceKey.minecraft("mannequin"));
 
     public static final DefaultedRegistryReference<EntityType<Marker>> MARKER = EntityTypes.key(ResourceKey.minecraft("marker"));
 

@@ -44,6 +44,8 @@ public final class ArmorMaterials {
 
     public static final DefaultedRegistryReference<ArmorMaterial> CHAINMAIL = ArmorMaterials.key(ResourceKey.minecraft("chainmail"));
 
+    public static final DefaultedRegistryReference<ArmorMaterial> COPPER = ArmorMaterials.key(ResourceKey.minecraft("copper"));
+
     public static final DefaultedRegistryReference<ArmorMaterial> DIAMOND = ArmorMaterials.key(ResourceKey.minecraft("diamond"));
 
     public static final DefaultedRegistryReference<ArmorMaterial> GOLD = ArmorMaterials.key(ResourceKey.minecraft("gold"));

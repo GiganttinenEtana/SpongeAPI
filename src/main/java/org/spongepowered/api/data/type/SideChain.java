@@ -27,7 +27,6 @@ package org.spongepowered.api.data.type;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
-@CatalogedBy(TestBlockModes.class)
-public interface TestBlockMode extends Comparable<TestBlockMode>, DefaultedRegistryValue<TestBlockMode>, StringRepresentable {
-
+@CatalogedBy(SideChains.class)
+public interface SideChain extends DefaultedRegistryValue<SideChain>, StringRepresentable, Comparable<SideChain> {
 }

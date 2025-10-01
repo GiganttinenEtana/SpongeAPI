@@ -34,7 +34,7 @@ import org.spongepowered.api.entity.Entity;
 public interface VanishState {
 
     /**
-     * Gets a vanished state via {@link Factory#vanish()} with the following
+     * Gets a vanished state via {@link Factory#vanished()} with the following
      * defaults:
      * <ul>
      *     <li>{@link VanishState#invisible()} = {@code true}</li>

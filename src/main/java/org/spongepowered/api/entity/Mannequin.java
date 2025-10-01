@@ -22,12 +22,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.data.type;
+package org.spongepowered.api.entity;
 
-import org.spongepowered.api.registry.DefaultedRegistryValue;
-import org.spongepowered.api.util.annotation.CatalogedBy;
+import org.spongepowered.api.data.Keys;
+import org.spongepowered.api.data.type.HandPreference;
+import org.spongepowered.api.data.value.Value;
+import org.spongepowered.api.entity.living.Living;
 
-@CatalogedBy(TestBlockModes.class)
-public interface TestBlockMode extends Comparable<TestBlockMode>, DefaultedRegistryValue<TestBlockMode>, StringRepresentable {
+public interface Mannequin extends Living {
 
+    /**
+     * {@link Keys#DOMINANT_HAND}
+     *
+     * @return The dominant HandPreference of the player
+     */
+    default Value.Mutable<HandPreference> dominantHand() {
+        return this.requireValue(Keys.DOMINANT_HAND).asMutable();
+    }
 }

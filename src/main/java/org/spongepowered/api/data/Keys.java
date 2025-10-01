@@ -61,6 +61,7 @@ import org.spongepowered.api.data.type.BodyParts;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CopperOxidation;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.DyeColor;
@@ -90,6 +91,8 @@ import org.spongepowered.api.data.type.RabbitType;
 import org.spongepowered.api.data.type.RailDirection;
 import org.spongepowered.api.data.type.SalmonSize;
 import org.spongepowered.api.data.type.SculkSensorState;
+import org.spongepowered.api.data.type.ShieldDamageReduction;
+import org.spongepowered.api.data.type.ShieldItemDamageFunction;
 import org.spongepowered.api.data.type.SkinPart;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.SpellType;
@@ -174,6 +177,7 @@ import org.spongepowered.api.entity.living.aquatic.Dolphin;
 import org.spongepowered.api.entity.living.aquatic.fish.Pufferfish;
 import org.spongepowered.api.entity.living.aquatic.fish.school.Salmon;
 import org.spongepowered.api.entity.living.aquatic.fish.school.TropicalFish;
+import org.spongepowered.api.entity.living.golem.CopperGolem;
 import org.spongepowered.api.entity.living.golem.IronGolem;
 import org.spongepowered.api.entity.living.golem.Shulker;
 import org.spongepowered.api.entity.living.monster.Blaze;
@@ -224,6 +228,7 @@ import org.spongepowered.api.entity.vehicle.minecart.FurnaceMinecart;
 import org.spongepowered.api.entity.vehicle.minecart.Minecart;
 import org.spongepowered.api.entity.vehicle.minecart.MinecartLike;
 import org.spongepowered.api.entity.weather.LightningBolt;
+import org.spongepowered.api.event.cause.entity.damage.DamageType;
 import org.spongepowered.api.event.cause.entity.damage.source.DamageSource;
 import org.spongepowered.api.event.cause.entity.damage.source.DamageSources;
 import org.spongepowered.api.fluid.FluidStackSnapshot;
@@ -257,6 +262,7 @@ import org.spongepowered.api.raid.Raid;
 import org.spongepowered.api.raid.RaidWave;
 import org.spongepowered.api.registry.DefaultedRegistryType;
 import org.spongepowered.api.statistic.Statistic;
+import org.spongepowered.api.tag.BlockTypeTags;
 import org.spongepowered.api.tag.Tag;
 import org.spongepowered.api.util.Axis;
 import org.spongepowered.api.util.Color;
@@ -640,6 +646,11 @@ public final class Keys {
     public static final Key<Value<Integer>> BURN_TIME = Keys.key(ResourceKey.sponge("burn_time"), Integer.class);
 
     /**
+     * The {@link DamageType} tag that bypasses a shield-like {@link ItemStack}.
+     */
+    public static final Key<Value<Tag<DamageType>>> BYPASS_DAMAGE_TAG = Keys.key(ResourceKey.sponge("bypass_damage_tag"), new TypeToken<>() {});
+
+    /**
      * Whether an {@link ItemStack} can always be eaten.
      */
     public static final Key<Value<Boolean>> CAN_ALWAYS_EAT = Keys.key(ResourceKey.sponge("can_always_eat"), Boolean.class);
@@ -793,6 +804,13 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<ItemType>> CONTAINER_ITEM = Keys.key(ResourceKey.sponge("container_item"), ItemType.class);
+
+    /**
+     * The {@link CopperOxidation} state of a {@link BlockState block}
+     * (given that it applies to the {@link BlockTypeTags#COPPER} tag) or
+     * a {@link CopperGolem}
+     */
+    public static final Key<Value<CopperOxidation>> COPPER_OXIDATION = Keys.key(ResourceKey.sponge("copper_oxidation"), CopperOxidation.class);
 
     /**
      * The {@link ItemStack} a food {@link ItemStack} converts to when eaten.
@@ -975,6 +993,17 @@ public final class Keys {
      * heading of a {@link ShulkerBullet}.
      */
     public static final Key<Value<Direction>> DIRECTION = Keys.key(ResourceKey.sponge("direction"), Direction.class);
+
+    /**
+     * The amount of {@link Ticks} this {@link ItemStack} disables blocking with a shield-like {@link ItemStack} on a successful attack.
+     */
+    public static final Key<Value<Ticks>> DISABLE_SHIELD_TICKS = Keys.key(ResourceKey.sponge("disable_shield_ticks"), Ticks.class);
+
+    /**
+     * The multiplier applied to the cooldown time during which blocking using this shield-like {@link ItemStack} is disabled.
+     * If set to 0, this item can never be disabled by attacks.
+     */
+    public static final Key<Value<Double>> DISABLE_SHIELD_TICKS_SCALE = Keys.key(ResourceKey.sponge("disable_shield_ticks_scale"), Double.class);
 
     /**
      * The display name of an {@link Entity}, {@link ItemStack} or {@link BlockEntity}.
@@ -3047,6 +3076,31 @@ public final class Keys {
     public static final Key<Value<Double>> SHADOW_STRENGTH = Keys.key(ResourceKey.sponge("shadow_strength"), Double.class);
 
     /**
+     * The sound played when blocking an attack with a shield-like {@link ItemStack}.
+     */
+    public static final Key<Value<SoundType>> SHIELD_BLOCK_SOUND = Keys.key(ResourceKey.sponge("shield_block_sound"), SoundType.class);
+
+    /**
+     * The amount of attack damage a shield-like {@link ItemStack} reduces for certain {@link DamageType}s
+     */
+    public static final Key<ListValue<ShieldDamageReduction<?>>> SHIELD_DAMAGE_REDUCTIONS = Keys.listKey(ResourceKey.sponge("shield_damage_reductions"), new TypeToken<>() {});
+
+    /**
+     * The amount of {@link Ticks} player must use this shield-like {@link ItemStack} for to block attacks successfully.
+     */
+    public static final Key<Value<Ticks>> SHIELD_DEPLOY_TICKS = Keys.key(ResourceKey.sponge("shield_deploy_ticks"), Ticks.class);
+
+    /**
+     * The sound played when a shield-like {@link ItemStack} is disabled.
+     */
+    public static final Key<Value<SoundType>> SHIELD_DISABLE_SOUND = Keys.key(ResourceKey.sponge("shield_disable_sound"), SoundType.class);
+
+    /**
+     * Function for the amount of {@link Keys#ITEM_DURABILITY} damage a shield-like {@link ItemStack} takes when blocking an attack.
+     */
+    public static final Key<Value<ShieldItemDamageFunction<?>>> SHIELD_ITEM_DAMAGE_FUNCTION = Keys.key(ResourceKey.sponge("shield_item_damage_function"), new TypeToken<>() {});
+
+    /**
      * The shooter of a {@link Projectile}.
      */
     public static final Key<Value<ProjectileSource>> SHOOTER = Keys.key(ResourceKey.sponge("shooter"), ProjectileSource.class);
@@ -3533,6 +3587,17 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<Color>> WATER_FOG_COLOR = Keys.key(ResourceKey.sponge("water_fog_color"), Color.class);
+
+    /**
+     * The state of whether a {@link BlockState} that is a copper block is waxed, or if a {@link CopperGolem}
+     * is waxed.
+     */
+    public static final Key<Value<Boolean>> WAXED = Keys.key(ResourceKey.sponge("waxed"), Boolean.class);
+
+    /**
+     * The {@link #ITEM_DURABILITY} damage an {@link ItemStack} takes per attack.
+     */
+    public static final Key<Value<Integer>> WEAPON_DAMAGE_PER_ATTACK = Keys.key(ResourceKey.sponge("weapon_damage_per_attack"), Integer.class);
 
     /**
      * The weather of a {@link ServerWorldProperties}.

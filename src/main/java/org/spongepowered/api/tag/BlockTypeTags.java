@@ -67,6 +67,8 @@ public final class BlockTypeTags {
 
     public static final DefaultedTag<BlockType> BANNERS = BlockTypeTags.key(ResourceKey.minecraft("banners"));
 
+    public static final DefaultedTag<BlockType> BARS = BlockTypeTags.key(ResourceKey.minecraft("bars"));
+
     public static final DefaultedTag<BlockType> BASE_STONE_NETHER = BlockTypeTags.key(ResourceKey.minecraft("base_stone_nether"));
 
     public static final DefaultedTag<BlockType> BASE_STONE_OVERWORLD = BlockTypeTags.key(ResourceKey.minecraft("base_stone_overworld"));
@@ -107,6 +109,8 @@ public final class BlockTypeTags {
 
     public static final DefaultedTag<BlockType> CEILING_HANGING_SIGNS = BlockTypeTags.key(ResourceKey.minecraft("ceiling_hanging_signs"));
 
+    public static final DefaultedTag<BlockType> CHAINS = BlockTypeTags.key(ResourceKey.minecraft("chains"));
+
     public static final DefaultedTag<BlockType> CHERRY_LOGS = BlockTypeTags.key(ResourceKey.minecraft("cherry_logs"));
 
     public static final DefaultedTag<BlockType> CLIMBABLE = BlockTypeTags.key(ResourceKey.minecraft("climbable"));
@@ -120,6 +124,12 @@ public final class BlockTypeTags {
     public static final DefaultedTag<BlockType> CONCRETE_POWDER = BlockTypeTags.key(ResourceKey.minecraft("concrete_powder"));
 
     public static final DefaultedTag<BlockType> CONVERTABLE_TO_MUD = BlockTypeTags.key(ResourceKey.minecraft("convertable_to_mud"));
+
+    public static final DefaultedTag<BlockType> COPPER = BlockTypeTags.key(ResourceKey.minecraft("copper"));
+
+    public static final DefaultedTag<BlockType> COPPER_CHESTS = BlockTypeTags.key(ResourceKey.minecraft("copper_chests"));
+
+    public static final DefaultedTag<BlockType> COPPER_GOLEM_STATUES = BlockTypeTags.key(ResourceKey.minecraft("copper_golem_statues"));
 
     public static final DefaultedTag<BlockType> COPPER_ORES = BlockTypeTags.key(ResourceKey.minecraft("copper_ores"));
 
@@ -203,6 +213,8 @@ public final class BlockTypeTags {
 
     public static final DefaultedTag<BlockType> IMPERMEABLE = BlockTypeTags.key(ResourceKey.minecraft("impermeable"));
 
+    public static final DefaultedTag<BlockType> INCORRECT_FOR_COPPER_TOOL = BlockTypeTags.key(ResourceKey.minecraft("incorrect_for_copper_tool"));
+
     public static final DefaultedTag<BlockType> INCORRECT_FOR_DIAMOND_TOOL = BlockTypeTags.key(ResourceKey.minecraft("incorrect_for_diamond_tool"));
 
     public static final DefaultedTag<BlockType> INCORRECT_FOR_GOLD_TOOL = BlockTypeTags.key(ResourceKey.minecraft("incorrect_for_gold_tool"));
@@ -229,11 +241,15 @@ public final class BlockTypeTags {
 
     public static final DefaultedTag<BlockType> JUNGLE_LOGS = BlockTypeTags.key(ResourceKey.minecraft("jungle_logs"));
 
+    public static final DefaultedTag<BlockType> LANTERNS = BlockTypeTags.key(ResourceKey.minecraft("lanterns"));
+
     public static final DefaultedTag<BlockType> LAPIS_ORES = BlockTypeTags.key(ResourceKey.minecraft("lapis_ores"));
 
     public static final DefaultedTag<BlockType> LAVA_POOL_STONE_CANNOT_REPLACE = BlockTypeTags.key(ResourceKey.minecraft("lava_pool_stone_cannot_replace"));
 
     public static final DefaultedTag<BlockType> LEAVES = BlockTypeTags.key(ResourceKey.minecraft("leaves"));
+
+    public static final DefaultedTag<BlockType> LIGHTNING_RODS = BlockTypeTags.key(ResourceKey.minecraft("lightning_rods"));
 
     public static final DefaultedTag<BlockType> LOGS = BlockTypeTags.key(ResourceKey.minecraft("logs"));
 
@@ -414,6 +430,8 @@ public final class BlockTypeTags {
     public static final DefaultedTag<BlockType> WOODEN_FENCES = BlockTypeTags.key(ResourceKey.minecraft("wooden_fences"));
 
     public static final DefaultedTag<BlockType> WOODEN_PRESSURE_PLATES = BlockTypeTags.key(ResourceKey.minecraft("wooden_pressure_plates"));
+
+    public static final DefaultedTag<BlockType> WOODEN_SHELVES = BlockTypeTags.key(ResourceKey.minecraft("wooden_shelves"));
 
     public static final DefaultedTag<BlockType> WOODEN_SLABS = BlockTypeTags.key(ResourceKey.minecraft("wooden_slabs"));
 

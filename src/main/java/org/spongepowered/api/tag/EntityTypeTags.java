@@ -37,6 +37,8 @@ import org.spongepowered.api.registry.RegistryTypes;
 @RegistryScopes(scopes = RegistryScope.GAME)
 public final class EntityTypeTags {
 
+    public static final DefaultedTag<EntityType<?>> ACCEPTS_IRON_GOLEM_GIFT = EntityTypeTags.key(ResourceKey.minecraft("accepts_iron_golem_gift"));
+
     public static final DefaultedTag<EntityType<?>> AQUATIC = EntityTypeTags.key(ResourceKey.minecraft("aquatic"));
 
     public static final DefaultedTag<EntityType<?>> ARROWS = EntityTypeTags.key(ResourceKey.minecraft("arrows"));
@@ -60,6 +62,10 @@ public final class EntityTypeTags {
     public static final DefaultedTag<EntityType<?>> CAN_TURN_IN_BOATS = EntityTypeTags.key(ResourceKey.minecraft("can_turn_in_boats"));
 
     public static final DefaultedTag<EntityType<?>> CAN_WEAR_HORSE_ARMOR = EntityTypeTags.key(ResourceKey.minecraft("can_wear_horse_armor"));
+
+    public static final DefaultedTag<EntityType<?>> CANDIDATE_FOR_IRON_GOLEM_GIFT = EntityTypeTags.key(ResourceKey.minecraft("candidate_for_iron_golem_gift"));
+
+    public static final DefaultedTag<EntityType<?>> CANNOT_BE_PUSHED_ONTO_BOATS = EntityTypeTags.key(ResourceKey.minecraft("cannot_be_pushed_onto_boats"));
 
     public static final DefaultedTag<EntityType<?>> DEFLECTS_PROJECTILES = EntityTypeTags.key(ResourceKey.minecraft("deflects_projectiles"));
 

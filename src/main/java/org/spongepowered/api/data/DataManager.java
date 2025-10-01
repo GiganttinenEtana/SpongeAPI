@@ -131,7 +131,7 @@ public interface DataManager {
      * be read by a plugin-data datastore.
      *
      * @param legacyId The legacy id
-     * @param dataStoreKey The dataStore key set in {@link org.spongepowered.api.data.persistence.DataStore.Builder.HolderStep#pluginData(ResourceKey)}
+     * @param dataStoreKey The dataStore key set in {@link org.spongepowered.api.data.persistence.DataStore.Builder#pluginData(ResourceKey)}
      */
     void registerLegacyManipulatorIds(String legacyId, ResourceKey dataStoreKey);
 

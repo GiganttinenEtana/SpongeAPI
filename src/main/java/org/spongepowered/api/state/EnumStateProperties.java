@@ -29,6 +29,7 @@ import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BellAttachmentType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CopperGolemPose;
 import org.spongepowered.api.data.type.CreakingHeartState;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
@@ -38,6 +39,7 @@ import org.spongepowered.api.data.type.PistonType;
 import org.spongepowered.api.data.type.PortionType;
 import org.spongepowered.api.data.type.RailDirection;
 import org.spongepowered.api.data.type.SculkSensorState;
+import org.spongepowered.api.data.type.SideChain;
 import org.spongepowered.api.data.type.SlabPortion;
 import org.spongepowered.api.data.type.StairShape;
 import org.spongepowered.api.data.type.StructureMode;
@@ -81,6 +83,10 @@ public final class EnumStateProperties {
 
     public static EnumStateProperty<ChestAttachmentType> property_CHEST_TYPE() {
         return EnumStateProperty.of("CHEST_TYPE");
+    }
+
+    public static EnumStateProperty<CopperGolemPose> property_COPPER_GOLEM_POSE() {
+        return EnumStateProperty.of("COPPER_GOLEM_POSE");
     }
 
     public static EnumStateProperty<CreakingHeartState> property_CREAKING_HEART_STATE() {
@@ -161,6 +167,10 @@ public final class EnumStateProperties {
 
     public static EnumStateProperty<SculkSensorState> property_SCULK_SENSOR_PHASE() {
         return EnumStateProperty.of("SCULK_SENSOR_PHASE");
+    }
+
+    public static EnumStateProperty<SideChain> property_SIDE_CHAIN_PART() {
+        return EnumStateProperty.of("SIDE_CHAIN_PART");
     }
 
     public static EnumStateProperty<SlabPortion> property_SLAB_TYPE() {

@@ -22,12 +22,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.data.type;
+package org.spongepowered.api.entity.living.golem;
 
-import org.spongepowered.api.registry.DefaultedRegistryValue;
-import org.spongepowered.api.util.annotation.CatalogedBy;
+import org.spongepowered.api.data.Keys;
+import org.spongepowered.api.data.type.CopperOxidation;
+import org.spongepowered.api.data.value.Value;
 
-@CatalogedBy(TestBlockModes.class)
-public interface TestBlockMode extends Comparable<TestBlockMode>, DefaultedRegistryValue<TestBlockMode>, StringRepresentable {
+public interface CopperGolem extends Golem {
 
+    /**
+     * Gets the {@link Value.Mutable} value of the current {@link CopperOxidation} state
+     * for this golem.
+     *
+     * @return The mutable value, to set it back, use {@link #offer(Value)}
+     * @see <a href="https://minecraft.wiki/w/Oxidation">Oxidation</a>
+     */
+    default Value.Mutable<CopperOxidation> oxidation() {
+        return this.requireValue(Keys.COPPER_OXIDATION).asMutable();
+    }
+
+    /**
+     * Gets the {@link Value.Mutable} value of the current waxed state.
+     *
+     * @return The mutable value, to set it back, use {@link #offer(Value)}
+     * @see <a href="https://minecraft.wiki/w/Oxidation#Waxing">Waxing</a>
+     */
+    default Value.Mutable<Boolean> waxed() {
+        return this.requireValue(Keys.WAXED).asMutable();
+    }
 }
