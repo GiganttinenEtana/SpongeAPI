@@ -60,7 +60,9 @@ import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.BodyParts;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
+import org.spongepowered.api.data.type.ChickenVariant;
 import org.spongepowered.api.data.type.ComparatorMode;
+import org.spongepowered.api.data.type.CowVariant;
 import org.spongepowered.api.data.type.DoorHinge;
 import org.spongepowered.api.data.type.DripstoneSegment;
 import org.spongepowered.api.data.type.DyeColor;
@@ -166,6 +168,7 @@ import org.spongepowered.api.entity.living.animal.Sheep;
 import org.spongepowered.api.entity.living.animal.TameableAnimal;
 import org.spongepowered.api.entity.living.animal.Turtle;
 import org.spongepowered.api.entity.living.animal.Wolf;
+import org.spongepowered.api.entity.living.animal.cow.Cow;
 import org.spongepowered.api.entity.living.animal.cow.Mooshroom;
 import org.spongepowered.api.entity.living.animal.frog.Frog;
 import org.spongepowered.api.entity.living.animal.horse.Horse;
@@ -752,6 +755,11 @@ public final class Keys {
     public static final Key<Value<Vector3d>> CHEST_ROTATION = Keys.key(ResourceKey.sponge("chest_rotation"), Vector3d.class);
 
     /**
+     * The {@link ChickenVariant} of a {@link Chicken}.
+     */
+    public static final Key<Value<ChickenVariant>> CHICKEN_VARIANT = Keys.key(ResourceKey.sponge("chicken_variant"), ChickenVariant.class);
+
+    /**
      * The chunk generator of a {@link World}
      * Readonly
      */
@@ -801,6 +809,11 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<ItemType>> CONTAINER_ITEM = Keys.key(ResourceKey.sponge("container_item"), ItemType.class);
+
+    /**
+     * The {@link CowVariant} of a {@link Cow}.
+     */
+    public static final Key<Value<CowVariant>> COW_VARIANT = Keys.key(ResourceKey.sponge("cow_variant"), CowVariant.class);
 
     /**
      * The {@link ItemStack} a food {@link ItemStack} converts to when eaten.
