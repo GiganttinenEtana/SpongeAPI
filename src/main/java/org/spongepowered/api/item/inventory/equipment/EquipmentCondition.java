@@ -24,27 +24,35 @@
  */
 package org.spongepowered.api.item.inventory.equipment;
 
+import net.kyori.adventure.text.ComponentLike;
 import org.spongepowered.api.data.type.StringRepresentable;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
+import java.util.Objects;
+import java.util.function.Supplier;
+
 /**
- * Represents a equipment type.
+ * Represents some condition for {@link EquipmentType}.
  */
-@CatalogedBy(EquipmentTypes.class)
-public interface EquipmentType extends DefaultedRegistryValue<EquipmentType>, StringRepresentable {
+@CatalogedBy(EquipmentConditions.class)
+public interface EquipmentCondition extends DefaultedRegistryValue<EquipmentCondition>, StringRepresentable, ComponentLike {
 
     /**
-     * Gets the {@link EquipmentGroup group} this equipment falls under.
+     * Tests whether the equipment type is suitable for this condition.
      *
-     * @return The group
+     * @param type The equipment type to test
+     * @return True if the equipment type is suitable for this condition
      */
-    EquipmentGroup group();
+    default boolean test(final Supplier<? extends EquipmentType> type) {
+        return this.test(Objects.requireNonNull(type, "type").get());
+    }
 
     /**
-     * Gets the most specific {@link EquipmentCondition} for this equipment type.
+     * Tests whether the equipment type is suitable for this condition.
      *
-     * @return The condition
+     * @param type The equipment type to test
+     * @return True if the equipment type is suitable for this condition
      */
-    EquipmentCondition condition();
+    boolean test(EquipmentType type);
 }
