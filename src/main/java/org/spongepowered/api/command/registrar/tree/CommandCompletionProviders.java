@@ -50,7 +50,10 @@ public final class CommandCompletionProviders {
      *
      * <p>This provider is intended for use with a {@link ResourceKey} parser.
      * </p>
+     *
+     * @deprecated Feature removed in Minecraft version 1.21.2.
      */
+    @Deprecated(forRemoval = true)
     public static final DefaultedRegistryReference<CommandCompletionProvider> ALL_RECIPES = CommandCompletionProviders.key(ResourceKey.minecraft("all_recipes"));
 
     /**
