@@ -573,7 +573,10 @@ public final class Keys {
 
     /**
      * The type of the boat.
+     *
+     * @deprecated Feature removed in Minecraft version 1.21.2.
      */
+    @Deprecated(forRemoval = true)
     public static final Key<Value<BoatType>> BOAT_TYPE = Keys.key(ResourceKey.sponge("boat_type"), BoatType.class);
 
     /**

@@ -27,6 +27,10 @@ package org.spongepowered.api.data.type;
 import org.spongepowered.api.registry.DefaultedRegistryValue;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
+/**
+ * @deprecated Feature removed in Minecraft version 1.21.2.
+ */
+@Deprecated(forRemoval = true)
 @CatalogedBy(BoatTypes.class)
 public interface BoatType extends DefaultedRegistryValue<BoatType> {
 
