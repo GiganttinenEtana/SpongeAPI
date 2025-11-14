@@ -38,7 +38,10 @@ public interface Boat extends Vehicle, Leashable {
      * {@link Keys#BOAT_TYPE}
      *
      * @return The type of the boat
+     *
+     * @deprecated Feature removed in Minecraft version 1.21.2.
      */
+    @Deprecated(forRemoval = true)
     default Value.Mutable<BoatType> boatType() {
         return this.requireValue(Keys.BOAT_TYPE).asMutable();
     }
