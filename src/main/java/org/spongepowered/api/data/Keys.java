@@ -55,7 +55,6 @@ import org.spongepowered.api.data.type.ArmorMaterial;
 import org.spongepowered.api.data.type.ArtType;
 import org.spongepowered.api.data.type.AttachmentSurface;
 import org.spongepowered.api.data.type.AxolotlVariant;
-import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.BodyParts;
 import org.spongepowered.api.data.type.CatType;
@@ -578,14 +577,6 @@ public final class Keys {
      * Readonly
      */
     public static final Key<Value<Double>> BLOCK_TEMPERATURE = Keys.key(ResourceKey.sponge("block_temperature"), Double.class);
-
-    /**
-     * The type of the boat.
-     *
-     * @deprecated Feature removed in Minecraft version 1.21.2.
-     */
-    @Deprecated(forRemoval = true)
-    public static final Key<Value<BoatType>> BOAT_TYPE = Keys.key(ResourceKey.sponge("boat_type"), BoatType.class);
 
     /**
      * The rotation of specific body parts of a {@link ArmorStand} or {@link Living}.

@@ -50,7 +50,6 @@ import org.spongepowered.api.data.type.AxolotlVariant;
 import org.spongepowered.api.data.type.BambooLeavesType;
 import org.spongepowered.api.data.type.BannerPatternShape;
 import org.spongepowered.api.data.type.BellAttachmentType;
-import org.spongepowered.api.data.type.BoatType;
 import org.spongepowered.api.data.type.BodyPart;
 import org.spongepowered.api.data.type.CatType;
 import org.spongepowered.api.data.type.ChestAttachmentType;
@@ -322,8 +321,6 @@ public final class RegistryTypes {
     public static final DefaultedRegistryType<BellAttachmentType> BELL_ATTACHMENT_TYPE = RegistryTypes.spongeKeyInGame("bell_attachment_type");
 
     public static final DefaultedRegistryType<BillboardType> BILLBOARD_TYPE = RegistryTypes.spongeKeyInGame("billboard_type");
-
-    public static final DefaultedRegistryType<BoatType> BOAT_TYPE = RegistryTypes.spongeKeyInGame("boat_type");
 
     public static final DefaultedRegistryType<BodyPart> BODY_PART = RegistryTypes.spongeKeyInGame("body_part");
 
