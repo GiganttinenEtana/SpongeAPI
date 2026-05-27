@@ -394,6 +394,18 @@ public interface DataView {
     DataView createView(DataQuery path);
 
     /**
+     * Creates a new {@link DataView} at the desired key.
+     * <p>If any data existed at the given path, that data will be
+     * overwritten with the newly constructed {@link DataView}.</p>
+     *
+     * @param key The key of the new view
+     * @return The newly created view
+     */
+    default DataView createView(String key) {
+        return this.createView(DataQuery.of(key));
+    }
+
+    /**
      * Creates a new {@link DataView} with the given data at the desired
      * path.
      *
@@ -417,6 +429,20 @@ public interface DataView {
      * @return The data view, if available
      */
     Optional<DataView> getView(DataQuery path);
+
+    /**
+     * Gets the {@link DataView} by key, if available.
+     *
+     * <p>If a {@link DataView} does not exist, or the data residing at
+     * the path is not an instance of a {@link DataView}, an absent is
+     * returned.</p>
+     *
+     * @param key The key of the value to get
+     * @return The data view, if available
+     */
+    default Optional<DataView> getView(String key) {
+        return this.getView(DataQuery.of(key));
+    }
 
     /**
      * Gets the underlying {@link Map} by path, if available.
