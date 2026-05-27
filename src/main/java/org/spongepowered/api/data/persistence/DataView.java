@@ -178,6 +178,102 @@ public interface DataView {
     DataView set(DataQuery path, Object value);
 
     /**
+     * Sets the given String value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the string to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, String value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given boolean value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the boolean to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, boolean value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given byte value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the byte to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, byte value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given short value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the short to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, short value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given int value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the int to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, int value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given long value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the long to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, long value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given float value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the float to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, float value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
+     * Sets the given double value according to the given path relative to
+     * this {@link DataView}'s path.
+     *
+     * @param path The path of the double to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(DataQuery path, double value) {
+        return this.set(path, (Object) value);
+    }
+
+    /**
      * Sets the given Object value to this {@link DataView}'s key.
      *
      * @param key The key of the object to set
@@ -186,6 +282,94 @@ public interface DataView {
      */
     default DataView set(String key, Object value) {
         return this.set(DataQuery.of(key), value);
+    }
+
+    /**
+     * Sets the given String value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, String value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given boolean value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, boolean value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given byte value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, byte value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given short value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, short value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given int value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, int value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given long value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, long value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given float value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, float value) {
+        return this.set(key, (Object) value);
+    }
+
+    /**
+     * Sets the given double value to this {@link DataView}'s key.
+     *
+     * @param key The key of the object to set
+     * @param value The value of the data
+     * @return This view, for chaining
+     */
+    default DataView set(String key, double value) {
+        return this.set(key, (Object) value);
     }
 
     /**
