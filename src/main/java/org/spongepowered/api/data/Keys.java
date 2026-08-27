@@ -1590,9 +1590,13 @@ public final class Keys {
 
     /**
      * Whether miscellaneous values of an {@link ItemStack} are hidden.
-     * e.g. potion effects or shield pattern info
      */
     public static final Key<Value<Boolean>> HIDE_MISCELLANEOUS = Keys.key(ResourceKey.sponge("hide_miscellaneous"), Boolean.class);
+
+    /**
+     * Whether the potion effects (e.g. {@link #CUSTOM_POTION_EFFECTS}) of an {@link ItemStack} are hidden.
+     */
+    public static final Key<Value<Boolean>> HIDE_POTION_EFFECTS = Keys.key(ResourceKey.sponge("hide_potion_effects"), Boolean.class);
 
     /**
      * Whether the {@link #STORED_ENCHANTMENTS} of an {@link ItemStack} are hidden.
