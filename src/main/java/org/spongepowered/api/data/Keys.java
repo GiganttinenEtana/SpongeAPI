@@ -1569,6 +1569,11 @@ public final class Keys {
     public static final Key<Value<PandaGene>> HIDDEN_GENE = Keys.key(ResourceKey.sponge("hidden_gene"), PandaGene.class);
 
     /**
+     * Whether the {@link #ARMOR_TRIM} of an {@link ItemStack} is hidden.
+     */
+    public static final Key<Value<Boolean>> HIDE_ARMOR_TRIM = Keys.key(ResourceKey.sponge("hide_armor_trim"), Boolean.class);
+
+    /**
      * Whether the attributes of an {@link ItemStack} are hidden.
      */
     public static final Key<Value<Boolean>> HIDE_ATTRIBUTES = Keys.key(ResourceKey.sponge("hide_attributes"), Boolean.class);
